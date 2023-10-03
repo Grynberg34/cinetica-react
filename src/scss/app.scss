@@ -1,0 +1,11 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+#home {
+    position: relative;
+
+    .home {
+        background-color: $preto;
+        height: 100vh;
+    }
+}

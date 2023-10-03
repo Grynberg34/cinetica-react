@@ -1,0 +1,77 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+#header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .header {
+        background-color: rgba($color: $laranja, $alpha: 0.9);
+        padding-top: 1vw;
+        padding-bottom: 1.5vw;
+        padding-left: 7vw;
+        padding-right: 7vw;
+
+        .header__logo {
+            width: 80%;
+        }
+
+        .header__menu {
+            border-bottom: $laranja-claro 1px solid;
+            padding-top: 2vw;
+            padding-bottom: 1vw;
+
+            .header__menu__link {
+                display: block;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                text-align: center;
+                color: $laranja-claro;
+                font-size: 26px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $branco;
+                }
+            }
+        }
+
+        .header__sub {
+            padding-top: 1.5vw;
+
+            .header__sub__lens {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 20%;
+            }
+
+            .header__sub__link {
+                display: block;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                text-align: center;
+                color: $laranja-claro;
+                font-size: 18px;
+                text-decoration: none;
+                padding: 0.25vw;
+                border: 1px solid $laranja-claro;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $branco;
+                    border: 1px solid $branco;
+                }
+            }
+
+        }
+
+        .header__social {
+            padding-top: 4vw;
+
+            .header__social__img {
+    
+            }
+        }
+    }
+}
