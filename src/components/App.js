@@ -1,17 +1,15 @@
-import { connect } from 'react-redux';
-import { store } from '../store';
-import { Navigate } from "react-router-dom";
 import Header from './Header';
+import Banner from './Banner';
 import "../scss/app.scss";
 
 function App(props) {
-
 
   return (
     <div id="home">
       <div className="home">
 
         <Header></Header>
+        <Banner></Banner>
 
       </div>
     </div>
@@ -19,12 +17,5 @@ function App(props) {
   
 }
 
-function mapStateToProps(state) {
-  return {
 
-  }
-}
-
-export default connect(
-  mapStateToProps
-)(App);
+export default App;

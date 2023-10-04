@@ -61,22 +61,34 @@ function Header() {
                   <Container fluid>
                     <Row>
 
-                      <Col md={3}>
+                      <Col md={1}>
 
                         <Link to="/"><img className="header__sub__lens" src="/images/header/lupa.svg" alt="" /></Link>
                         
                       </Col>
 
-                      <Col md={3}>
-                        <Link className="header__sub__link" to="/">Categorias</Link>
-                      </Col>
+                      <Col md={11}>
 
-                      <Col md={3}>
-                        <Link className="header__sub__link" to="/">Tags</Link>
-                      </Col>
+                        <Container fluid>
+                          <Row>
+                            <Col md={3}>
+                              <Link className="header__sub__link" to="/">Categorias</Link>
+                            </Col>
 
-                      <Col md={3}>
-                        <Link className="header__sub__link" to="/">Autores</Link>
+                            <Col md={3}>
+                              <Link className="header__sub__link" to="/">Tags</Link>
+                            </Col>
+
+                            <Col md={3}>
+                              <Link className="header__sub__link" to="/">Autores</Link>
+                            </Col>
+
+                            <Col md={3}>
+                              <Link className="header__sub__link" to="/">Anos</Link>
+                            </Col>
+                          </Row>
+                        </Container>
+
                       </Col>
 
                     </Row>
