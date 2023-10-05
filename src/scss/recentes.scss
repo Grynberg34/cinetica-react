@@ -1,0 +1,136 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+.recentes {
+    background-color: $cinza-escuro;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    .recentes__title {
+        font-family: "bebas-neue-by-fontfabric", sans-serif;
+        color: $branco;
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 2vw;
+    }
+
+
+    .recentes__text {
+        border: 1px solid $laranja-escuro;
+        height: 32vw;
+        margin-bottom: 2vw;
+        padding: 1vw;
+
+        .recentes__text__inner {
+            border: 1px solid $laranja-claro;
+            padding: 0.25vw;
+            height: 30vw;
+            overflow-y: hidden;
+
+            .recentes__text__inner__img {
+                height: 15vw;
+                background-size: cover;
+            }
+
+            .recentes__text__inner__link {
+                text-decoration: none;
+            }
+
+            .recentes__text__inner__info {
+                padding-top: 1vw;
+
+                .recentes__text__inner__info__title {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $laranja-claro;
+                    font-size: 30px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 0.5vw;
+                }
+
+                .recentes__text__inner__info__film {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $branco;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 0.5vw;
+                }
+            }
+
+            .recentes__text__inner__date {
+                padding-top: 1vw;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $branco;
+                font-size: 20px;
+                font-weight: 300;
+                text-transform: uppercase;
+                text-align: right;
+            }
+
+            .recentes__text__inner__words {
+                padding-top: 1vw;
+                padding-left: 1.25vw;
+                padding-right: 1.25vw;
+                padding-bottom: 2vw;
+                height: 10vw;
+                overflow-y: auto;
+
+                
+                .recentes__text__inner__words__categories {
+                    display: inline-block;
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $laranja-claro;
+                    font-size: 20px;
+                    padding: 0.25vw;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    border: 1px solid $laranja-escuro;
+                    text-decoration: none;
+                    margin-right: 0.5vw;
+                    margin-bottom: 0.5vw;
+
+                    &:hover {
+                        border: 1px solid $laranja-claro;
+                    }
+                }
+
+                .recentes__text__inner__words__tag {
+                    display: inline-block;
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $branco;
+                    font-size: 20px;
+                    padding: 0.25vw;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    border: 1px solid $laranja-escuro;
+                    text-decoration: none;
+                    margin-right: 0.5vw;
+                    margin-bottom: 0.5vw;
+
+                    &:hover {
+                        border: 1px solid $branco;
+                    }
+                }
+            }
+
+            .recentes__text__inner__words::-webkit-scrollbar-track {
+                border: 2px solid $laranja-claro;
+            }
+               
+            .recentes__text__inner__words::-webkit-scrollbar-thumb {
+                background-color: $laranja-escuro;
+                outline: none;
+            }
+
+            .recentes__text__inner__words::-webkit-scrollbar {
+                width: 1vw;
+            }
+               
+
+        }
+    }
+}

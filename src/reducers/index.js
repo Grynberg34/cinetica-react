@@ -10,7 +10,18 @@ const getBannerTextsReducer = (banner = null, action) => {
     return banner;
 };
 
+const getRecentTextsReducer = (recentes = null, action) => {
+  if (action.type === 'GET_RECENT') {
+
+    return action.payload;
+    
+  }
+  
+  return recentes;
+};
+
 export default combineReducers({
   
-    banner: getBannerTextsReducer
+    banner: getBannerTextsReducer,
+    recentes: getRecentTextsReducer
 });

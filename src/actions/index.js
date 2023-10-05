@@ -11,3 +11,15 @@ export const GetBannerTexts = () => async dispatch => {
     })
 
 };
+
+export const GetRecentTexts = () => async dispatch => {
+
+    await api.get('/front/recentes', {
+    }).then(async function(response){
+        dispatch({ type: 'GET_RECENT', payload: response.data });
+    })  
+    .catch(function(err){
+        console.log(err)
+    })
+
+};

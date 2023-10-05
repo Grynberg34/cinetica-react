@@ -1,5 +1,6 @@
 import Header from './Header';
 import Banner from './Banner';
+import Recentes from './Recentes';
 import "../scss/app.scss";
 
 function App(props) {
@@ -10,6 +11,7 @@ function App(props) {
 
         <Header></Header>
         <Banner></Banner>
+        <Recentes></Recentes>
 
       </div>
     </div>
