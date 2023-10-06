@@ -20,8 +20,29 @@ const getRecentTextsReducer = (recentes = null, action) => {
   return recentes;
 };
 
-export default combineReducers({
+const getDestaquesTextsReducer = (destaques = null, action) => {
+  if (action.type === 'GET_DESTAQUES') {
+
+    return action.payload;
+    
+  }
   
-    banner: getBannerTextsReducer,
-    recentes: getRecentTextsReducer
+  return destaques;
+};
+
+const getBibliotecaReducer = (biblioteca = null, action) => {
+  if (action.type === 'GET_BIBLIOTECA') {
+
+    return action.payload;
+    
+  }
+  
+  return biblioteca;
+};
+
+export default combineReducers({
+  banner: getBannerTextsReducer,
+  recentes: getRecentTextsReducer,
+  destaques: getDestaquesTextsReducer,
+  biblioteca: getBibliotecaReducer,
 });

@@ -1,0 +1,49 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+.biblioteca {
+    background-color: $laranja-medio;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    .biblioteca__title {
+        font-family: "bebas-neue-by-fontfabric", sans-serif;
+        color: $branco;
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 2vw;
+    }
+
+    .biblioteca__container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .biblioteca__categorias {
+        .biblioteca__categorias__categoria {
+            position: relative;
+            height: 20vw;
+            background-size: cover;;
+            background-color: $cinza-escuro;
+            margin-bottom: 1vw;
+
+            .biblioteca__categorias__categoria__title {
+                position: absolute;
+                width: 50%;
+                left: 25%;
+                top: 40%;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $branco;
+                font-size: 70px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+                vertical-align: middle;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

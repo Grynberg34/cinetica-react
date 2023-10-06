@@ -24,7 +24,7 @@ function Recentes(props) {
       <div className='recentes'>
         <h1 className='recentes__title'>Recentes</h1>
 
-        <Container fluid>
+        <Container fluid className='recentes__container'>
           <Row>
           { recentes.map( (text, index) =>
             <Col key={text.id} md={4}>
@@ -57,11 +57,11 @@ function Recentes(props) {
 
                     )}
 
-                  { text.tags.map( (item, index) =>
+                    { text.tags.map( (item, index) =>
 
-                  <Link key={item.id} className="recentes__text__inner__words__tag" to="/">{item.tag}</Link>
+                      <Link key={item.id} className="recentes__text__inner__words__tag" to="/">{item.tag}</Link>
 
-                  )}
+                    )}
 
                   
                   </div>

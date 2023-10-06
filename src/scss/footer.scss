@@ -1,0 +1,48 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+.footer {
+    background-color: $cinza-claro;
+    padding-left: 10vw;
+    border-top: 2px solid $cinza-escuro;
+    
+    .footer__left {
+        padding-bottom: 4vw;
+
+        .footer__left__title {
+            padding-top: 4vw;
+            margin-bottom: 2vw;
+    
+            .footer__left__title__link {
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $laranja-medio;
+                font-size: 80px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-right: 4vw;
+                text-decoration: none;
+            }
+        }
+    
+        .footer__left__info {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $cinza-escuro;
+            font-size: 40px;
+            font-weight: 300;
+        }
+    }
+
+    .footer__right {
+        background-color: $cinza-medio;
+        border-left: 2px solid $cinza-escuro;
+        height: 100%;
+
+        .footer__right__img {
+            display: block;
+            padding-top: 4vw;
+            width: 35%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
