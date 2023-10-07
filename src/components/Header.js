@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 function Header() {
 
@@ -13,7 +14,7 @@ function Header() {
         <Container fluid>
             <Row>
               <Col md={2}>
-                <img className='header__logo' src="/images/header/logo.svg" alt="" />
+                <Link to="/"><img className='header__logo' src="/images/header/logo.svg" alt="" /></Link>
               </Col>
 
               <Col md={1}></Col>
@@ -46,7 +47,7 @@ function Header() {
 
                       <Col md={3}>
                         
-                        <Link className="header__menu__link" to="/">Biblioteca</Link>
+                        <HashLink className="header__menu__link" to="#biblioteca">Biblioteca</HashLink>
 
                       </Col>
 

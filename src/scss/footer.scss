@@ -4,7 +4,11 @@
 .footer {
     background-color: $cinza-claro;
     padding-left: 10vw;
-    border-top: 2px solid $cinza-escuro;
+    border-top: 4px solid $cinza-escuro;
+
+    .footer__col {
+        padding-right: 0;
+    }
     
     .footer__left {
         padding-bottom: 4vw;
@@ -21,6 +25,10 @@
                 text-transform: uppercase;
                 margin-right: 4vw;
                 text-decoration: none;
+
+                &:hover {
+                    color: $laranja-escuro;
+                }
             }
         }
     
@@ -34,7 +42,7 @@
 
     .footer__right {
         background-color: $cinza-medio;
-        border-left: 2px solid $cinza-escuro;
+        border-left: 4px solid $cinza-escuro;
         height: 100%;
 
         .footer__right__img {

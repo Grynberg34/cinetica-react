@@ -5,8 +5,7 @@
     background-color: $laranja-medio;
     padding-top: 4vw;
     padding-bottom: 4vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    overflow-x: hidden;
 
     .biblioteca__title {
         font-family: "bebas-neue-by-fontfabric", sans-serif;
@@ -15,6 +14,8 @@
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 2vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 
     .biblioteca__container {
@@ -22,13 +23,18 @@
         padding-right: 0;
     }
 
+    .biblioteca__col {
+        padding-left: 0.25vw;
+        padding-right: 0.25vw;
+    }
+
     .biblioteca__categorias {
         .biblioteca__categorias__categoria {
             position: relative;
-            height: 20vw;
+            height: 25vw;
             background-size: cover;;
             background-color: $cinza-escuro;
-            margin-bottom: 1vw;
+            margin-bottom: 0.5vw;
 
             .biblioteca__categorias__categoria__title {
                 position: absolute;

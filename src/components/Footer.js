@@ -17,7 +17,7 @@ function Footer() {
             </div>
           </Col>
 
-          <Col md={4}>
+          <Col md={4} className="footer__col">
             <div className="footer__right">
               <img className="footer__right__img" src="/images/footer/logo-rodape.svg" alt="" />
             </div>
