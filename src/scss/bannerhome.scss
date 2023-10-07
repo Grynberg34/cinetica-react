@@ -1,69 +1,189 @@
 @import '../scss/colors.scss';
 @import '../scss/font.scss';
 
-.banner {
+#bannerhome {
+    .banner {
 
-    .banner__first {
-        position: relative;
-        background-size: cover;
-        height: 90vh;
-
-        .banner__first__caption {
-            position: absolute;
-            bottom: 10%;
-            width: 100%;
-
-            .banner__first__caption__title {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $branco;
-                font-size: 80px;
-                font-weight: 700;
-                text-transform: uppercase;
+        .banner__first {
+            position: relative;
+            background-size: cover;
+            height: 90vh;
+    
+            .banner__first__caption {
+                position: absolute;
+                bottom: 10%;
+                left: 15%;
+                width: 100%;
+    
+                .banner__first__caption__title {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $branco;
+                    font-size: 80px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+    
             }
-
-            .banner__first__caption__text {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $branco;
-                font-size: 20px;
-                font-weight: 400;
-                text-transform: uppercase;
-                margin-bottom: 0;
-                padding-top: 0.5vw;
+        }
+    
+        .banner__item {
+            position: relative;
+            background-size: cover;
+            height: 90vh;
+    
+    
+            .banner__item__caption {
+                position: absolute;
+                bottom: 10%;
+                left: 15%;
+                width: 100%;
+    
+                .banner__item__caption__title {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $branco;
+                    font-size: 80px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+    
+    
+                .banner__item__caption__author {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $laranja-claro;
+                    font-size: 28px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    
+                }
             }
+        }
+    
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    #bannerhome {
+        .banner {
+    
+            .banner__first {
+        
+                .banner__first__caption {
+        
+                    .banner__first__caption__title {
+                        font-size: 60px;
+                    }
+
+                }
+            }
+        
+            .banner__item {
+        
+                .banner__item__caption {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 15%;
+                    width: 100%;
+        
+                    .banner__item__caption__title {
+                        font-size: 50px;
+                    }
+        
+        
+                    .banner__item__caption__author {
+                        font-size: 18px;
+                    }
+                }
+            }
+        
         }
     }
 
-    .banner__item {
-        position: relative;
-        background-size: cover;
-        height: 90vh;
 
+}
 
-        .banner__item__caption {
-            position: absolute;
-            bottom: 10%;
-            left: 15%;
-            width: 100%;
+@media only screen and (min-width:1025px) and (max-width:1399px) {
 
-            .banner__item__caption__title {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $branco;
-                font-size: 80px;
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-bottom: 0;
+    #bannerhome {
+        .banner {
+    
+            .banner__first {
+        
+                .banner__first__caption {
+        
+                    .banner__first__caption__title {
+                        font-size: 60px;
+                    }
+
+                }
             }
-
-
-            .banner__item__caption__author {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $laranja-claro;
-                font-size: 28px;
-                font-weight: 400;
-                text-transform: uppercase;
-                
+        
+            .banner__item {
+        
+                .banner__item__caption {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 15%;
+                    width: 100%;
+        
+                    .banner__item__caption__title {
+                        font-size: 50px;
+                    }
+        
+        
+                    .banner__item__caption__author {
+                        font-size: 18px;
+                    }
+                }
             }
+        
         }
     }
+
+}
+
+@media only screen and (min-width:1400px) and (max-width:1599px) {
+
+    #bannerhome {
+        .banner {
+    
+            .banner__first {
+        
+                .banner__first__caption {
+        
+                    .banner__first__caption__title {
+                        font-size: 70px;
+                    }
+
+                }
+            }
+        
+            .banner__item {
+        
+                .banner__item__caption {
+                    position: absolute;
+                    bottom: 10%;
+                    left: 15%;
+                    width: 100%;
+        
+                    .banner__item__caption__title {
+                        font-size: 60px;
+                    }
+        
+        
+                    .banner__item__caption__author {
+                        font-size: 22px;
+                    }
+                }
+            }
+        
+        }
+    }
+}
+
+@media only screen and (min-width:1600px) and (max-width:1799px) {
+
 
 }

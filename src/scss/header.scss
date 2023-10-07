@@ -69,7 +69,115 @@
 
         .header__social {
             padding-top: 4vw;
+            
+            .header__social__img {
+                width: 80%;
+            }
 
         }
     }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    #header {
+        .header {
+            .header__logo {
+                padding-top: 1vw;
+            }
+    
+            .header__menu {
+                .header__menu__link {
+                    font-size: 18px;
+                }
+            }
+
+            .header__sub {
+                .header__sub__lens {
+                    width: 250%;
+                }
+
+                .header__sub__link {
+                    font-size: 12px;
+                }
+            }
+
+            .header__social {
+                .header__social__img {
+                    width: 250%;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1399px) {
+
+    #header {
+        .header {
+    
+            .header__menu {
+                .header__menu__link {
+                    font-size: 24px;
+                }
+            }
+
+            .header__sub {
+                .header__sub__lens {
+                    width: 125%;
+                }
+
+                .header__sub__link {
+                    font-size: 16px;
+                }
+            }
+
+            .header__social {
+                .header__social__img {
+                    width: 125%;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1400px) and (max-width:1599px) {
+
+    #header {
+        .header {
+    
+            .header__sub {
+                .header__sub__lens {
+                    width: 110%;
+                }
+
+            }
+
+            .header__social {
+                .header__social__img {
+                    width: 120%;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1600px) and (max-width:1799px) {
+    #header {
+        .header {
+    
+            .header__sub {
+                .header__sub__lens {
+                    width: 110%;
+                }
+
+            }
+
+        }
+    }
+
 }

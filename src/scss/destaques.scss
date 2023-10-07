@@ -158,3 +158,197 @@ div.destaques > div > div > div:nth-child(4) > div {
 div.destaques > div > div > div:nth-child(6) > div {
     background-color: $laranja-escuro;
 }
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    .destaques {
+
+        .destaques__title {
+            font-size: 60px;
+        }
+    
+    
+        .destaques__text {
+    
+            .destaques__text__inner {
+    
+                .destaques__text__inner__info {
+    
+                    .destaques__text__inner__info__title {
+                        font-size: 16px;
+                    }
+    
+                    .destaques__text__inner__info__film {
+                        font-size: 10px;
+                    }
+                }
+    
+                .destaques__text__inner__date {
+                    font-size: 14px;
+                }
+    
+                .destaques__text__inner__words {
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                    
+                    .destaques__text__inner__words__categories {
+                        font-size: 10px;
+                    }
+    
+                    .destaques__text__inner__words__tag {
+                        font-size: 10px;
+                    }
+                }
+    
+                   
+            }
+        }
+    }
+
+    
+}
+
+@media only screen and (min-width:1025px) and (max-width:1399px) {
+
+    .destaques {
+
+        .destaques__title {
+            font-size: 60px;
+        }
+    
+    
+        .destaques__text {
+    
+            .destaques__text__inner {
+    
+                .destaques__text__inner__info {
+    
+                    .destaques__text__inner__info__title {
+                        font-size: 20px;
+                    }
+    
+                    .destaques__text__inner__info__film {
+                        font-size: 14px;
+                    }
+                }
+    
+                .destaques__text__inner__date {
+                    font-size: 18px;
+                }
+    
+                .destaques__text__inner__words {
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                    
+                    .destaques__text__inner__words__categories {
+                        font-size: 14px;
+                    }
+    
+                    .destaques__text__inner__words__tag {
+                        font-size: 14px;
+                    }
+                }
+    
+                   
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1400px) and (max-width:1599px) {
+
+    .destaques {
+
+        .destaques__title {
+            font-size: 60px;
+        }
+    
+    
+        .destaques__text {
+    
+            .destaques__text__inner {
+    
+                .destaques__text__inner__info {
+    
+                    .destaques__text__inner__info__title {
+                        font-size: 24px;
+                    }
+    
+                    .destaques__text__inner__info__film {
+                        font-size: 18px;
+                    }
+                }
+    
+                .destaques__text__inner__date {
+                    font-size: 20px;
+                }
+    
+                .destaques__text__inner__words {
+                    padding-left: 1.75vw;
+                    padding-right: 1.75vw;
+                    
+                    .destaques__text__inner__words__categories {
+                        font-size: 16px;
+                    }
+    
+                    .destaques__text__inner__words__tag {
+                        font-size: 16px;
+                    }
+                }
+    
+                   
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1600px) and (max-width:1799px) {
+
+    .destaques {
+
+        .destaques__title {
+            font-size: 70px;
+        }
+    
+    
+        .destaques__text {
+    
+            .destaques__text__inner {
+    
+                .destaques__text__inner__info {
+    
+                    .destaques__text__inner__info__title {
+                        font-size: 26px;
+                    }
+    
+                    .destaques__text__inner__info__film {
+                        font-size: 20px;
+                    }
+                }
+    
+                .destaques__text__inner__date {
+                    font-size: 22px;
+                }
+    
+                .destaques__text__inner__words {
+                    padding-left: 1.5vw;
+                    padding-right: 1.5vw;
+                    
+                    .destaques__text__inner__words__categories {
+                        font-size: 18px;
+                    }
+    
+                    .destaques__text__inner__words__tag {
+                        font-size: 18px;
+                    }
+                }
+    
+                   
+            }
+        }
+    }
+
+}

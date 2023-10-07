@@ -53,3 +53,88 @@
         }
     }
 }
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+    .biblioteca {
+    
+        .biblioteca__title {
+            font-size: 60px;
+        }
+    
+    
+        .biblioteca__categorias {
+            .biblioteca__categorias__categoria {
+    
+                .biblioteca__categorias__categoria__title {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1399px) {
+
+    .biblioteca {
+    
+        .biblioteca__title {
+            font-size: 60px;
+        }
+    
+    
+        .biblioteca__categorias {
+            .biblioteca__categorias__categoria {
+    
+                .biblioteca__categorias__categoria__title {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1400px) and (max-width:1599px) {
+
+    .biblioteca {
+    
+        .biblioteca__title {
+            font-size: 60px;
+        }
+    
+    
+        .biblioteca__categorias {
+            .biblioteca__categorias__categoria {
+    
+                .biblioteca__categorias__categoria__title {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width:1600px) and (max-width:1799px) {
+
+    .biblioteca {
+    
+        .biblioteca__title {
+            font-size: 70px;
+        }
+    
+    
+        .biblioteca__categorias {
+            .biblioteca__categorias__categoria {
+    
+                .biblioteca__categorias__categoria__title {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+}

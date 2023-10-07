@@ -21,7 +21,7 @@ function Banner(props) {
   } else {
 
     return (
-      <Carousel autoPlay={true} interval={5000} controls={false} indicators={false}>
+      <Carousel id="bannerhome" autoPlay={true} interval={5000} controls={false} indicators={false}>
 
         <Carousel.Item className="banner">
 
@@ -31,17 +31,7 @@ function Banner(props) {
 
             <div className="banner__first__caption">
 
-              <Container>
-                <Row>
-                  <Col md={4}>
-                    <h1 className="banner__first__caption__title">Quem Somos</h1>
-                  </Col>
-
-                  <Col md={4}>
-                    <p className="banner__first__caption__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </Col>
-                </Row>
-              </Container>
+              <h1 className="banner__first__caption__title">Quem Somos</h1>
 
             </div>
 
