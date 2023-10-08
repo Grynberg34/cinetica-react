@@ -3,9 +3,6 @@ import { store } from '../store';
 import { GetBannerTexts } from '../actions';
 import { Link } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import "../scss/bannerhome.scss";
 
 function Banner(props) {
@@ -44,7 +41,7 @@ function Banner(props) {
 
           <Carousel.Item key={text.id} className="banner">
 
-            <Link  to={`/`}>
+            <Link  to={`/texto/${text.id}`}>
 
               <div className="banner__item" style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}>
 

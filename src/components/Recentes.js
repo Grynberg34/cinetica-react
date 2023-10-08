@@ -32,7 +32,7 @@ function Recentes(props) {
               <div className='recentes__text'>
                 <div className='recentes__text__inner'>
 
-                  <Link to="/"><div className='recentes__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}></div></Link>
+                  <Link to={`/texto/${text.id}`}><div className='recentes__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}></div></Link>
                   <Container fluid>
                     <Row>
                       <Col md={8}>

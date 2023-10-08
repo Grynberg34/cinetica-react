@@ -1,2 +1,111 @@
 @import '../scss/colors.scss';
 @import '../scss/font.scss';
+
+
+.texto {
+    .texto__banner {
+        position: relative;
+        background-size: cover;
+        height: 90vh;
+    }
+
+    .texto__header {
+        background-color: $cinza-escuro;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+        .texto__header__title {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $laranja-claro;
+            font-size: 100px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 1vw;
+        }
+
+        .texto__header__film {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $branco;
+            font-size: 60px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 1vw;
+        }
+
+        .texto__header__date {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $laranja;
+            font-size: 50px;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 1vw;
+        }
+    }
+
+    .texto__main {
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+
+        .texto__main__text {
+            font-family: "Merriweather", sans-serif;
+            padding-left: 20vw;
+            padding-right: 20vw;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: left;
+            white-space: pre-wrap;
+            padding-bottom: 2vw;            
+        }
+    }
+
+    .texto__footer {
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding-left: 30vw;
+        padding-right: 30vw;
+        background-color: $laranja;
+
+        .texto__footer__categories {
+            display: inline-block;
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $branco;
+            font-size: 30px;
+            padding: 0.25vw;
+            font-weight: 400;
+            text-transform: uppercase;
+            border: 1px solid $branco;
+            text-decoration: none;
+            margin-right: 1vw;
+            margin-bottom: 1vw;
+
+            &:hover {
+                border: 1px solid $cinza-escuro;
+                color: $cinza-escuro;
+            }
+        }
+
+        .texto__footer__tags {
+            display: inline-block;
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $laranja-claro;
+            font-size: 30px;
+            padding: 0.25vw;
+            font-weight: 400;
+            text-transform: uppercase;
+            border: 1px solid $laranja-claro;
+            text-decoration: none;
+            margin-right: 1vw;
+            margin-bottom: 1vw;
+
+            &:hover {
+                border: 1px solid $cinza-escuro;
+                color: $cinza-escuro;
+            }
+        }
+    }
+}

@@ -32,7 +32,7 @@ function Destaques(props) {
               <div className='destaques__text'>
                 <div className='destaques__text__inner'>
 
-                  <Link to="/"><div className='destaques__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.Texto.imagem}')`}}></div></Link>
+                  <Link to={`/texto/${text.Texto.id}`}><div className='destaques__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.Texto.imagem}')`}}></div></Link>
                   <Container fluid>
                     <Row>
                       <Col md={8}>

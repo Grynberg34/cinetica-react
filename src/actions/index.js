@@ -47,3 +47,15 @@ export const GetBiblioteca = () => async dispatch => {
     })
 
 };
+
+export const GetText = (id) => async dispatch => {
+
+    await api.get(`/front/texto/${id}`, {
+    }).then(async function(response){
+        dispatch({ type: 'GET_TEXT', payload: response.data });
+    })  
+    .catch(function(err){
+        console.log(err)
+    })
+
+};

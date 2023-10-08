@@ -40,9 +40,20 @@ const getBibliotecaReducer = (biblioteca = null, action) => {
   return biblioteca;
 };
 
+const getTextReducer = (texto = null, action) => {
+  if (action.type === 'GET_TEXT') {
+
+    return action.payload;
+    
+  }
+  
+  return texto;
+};
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
   destaques: getDestaquesTextsReducer,
   biblioteca: getBibliotecaReducer,
+  texto: getTextReducer
 });
