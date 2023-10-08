@@ -53,6 +53,7 @@
 
         .texto__main__text {
             font-family: "Merriweather", sans-serif;
+            padding-top: 4vw;
             padding-left: 20vw;
             padding-right: 20vw;
             font-size: 16px;
@@ -60,6 +61,56 @@
             text-align: left;
             white-space: pre-wrap;
             padding-bottom: 2vw;            
+        }
+
+        .texto__main__info {
+            background-color: $cinza-claro;
+            padding-top: 2vw;
+            padding-bottom:1vw;
+            padding-left: 20vw;
+            padding-right: 20vw;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+
+            .texto__main__info__title {
+                font-family: "Merriweather", sans-serif;
+                color: $cinza-escuro;
+                font-size: 30px;
+                font-weight: 600;
+                text-align: left;
+                font-style: italic;
+
+            }
+
+            .texto__main__info__author {
+                font-family: "Merriweather", sans-serif;
+                color: $cinza-escuro;
+                font-size: 26px;
+                font-weight: 600;
+                text-align: right;
+                font-style: italic;
+
+            }
+        }
+
+        .texto__main__carousel {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .texto__main__gallery {
+            padding-top: 1vw;
+            padding-bottom: 1vw;
+            background-color: $cinza-escuro;
+
+            .texto__main__gallery__img {
+                width: 100%;
+                padding: 0.5vw;
+                cursor: pointer;
+            }
         }
     }
 
@@ -108,4 +159,42 @@
             }
         }
     }
+}
+
+.modal {
+
+    .modal__img {
+        width: 100%;
+    }
+
+    .modal__close {
+        font-family: "bebas-neue-by-fontfabric", sans-serif;
+        color: $laranja;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        background: none;
+        border: none;
+        margin-top: 1vw;
+
+        &:hover {
+            color: $cinza-claro;
+        }
+    }
+}
+
+.modal-content {
+    margin-top: 10vw;
+    background-color:none !important;
+    background: none !important;
+    border: none;
+
+}
+
+.modal.show .modal-dialog {
+    min-width: 44vw;
+}
+
+.modal-backdrop.show {
+    opacity: 0.9 !important;
 }

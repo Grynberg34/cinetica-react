@@ -59,3 +59,9 @@ export const GetText = (id) => async dispatch => {
     })
 
 };
+
+export const GetImgLink = (link) => async dispatch => {
+
+    dispatch({ type: 'GET_IMG_LINK', payload: link });
+
+};

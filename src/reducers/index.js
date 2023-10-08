@@ -50,10 +50,21 @@ const getTextReducer = (texto = null, action) => {
   return texto;
 };
 
+const getImgLinkReducer = (link = null, action) => {
+  if (action.type === 'GET_IMG_LINK') {
+
+    return action.payload;
+    
+  }
+  
+  return link;
+};
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
   destaques: getDestaquesTextsReducer,
   biblioteca: getBibliotecaReducer,
-  texto: getTextReducer
+  texto: getTextReducer,
+  link: getImgLinkReducer
 });
