@@ -18,7 +18,7 @@ function Banner(props) {
   } else {
 
     return (
-      <Carousel id="bannerhome" autoPlay={true} interval={5000} controls={false} indicators={false}>
+      <Carousel id="bannerhome" autoPlay={true} interval={5000} controls={false} indicators={false} pause={false}>
 
         <Carousel.Item className="banner">
 
