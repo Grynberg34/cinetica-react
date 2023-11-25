@@ -1,0 +1,171 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+.tags {
+    background-color: $cinza-escuro;
+
+    #header {
+        position: relative;
+    }
+
+    .tags__banner {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+
+        .tags__banner__text {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            text-align: center;
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $branco;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .tags__content {
+        padding-bottom: 10vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+        .tags__content__header {
+            background-color: $cinza-escuro;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            padding-top: 4vw;
+
+            .tags__content__header__title {
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $branco;
+                font-size: 80px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 2vw;
+            }
+    
+            .tags__content__header__label {
+                display: block;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $laranja;
+                font-size: 24px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 0.5vw;
+                text-align: right;
+            }
+    
+            .tags__content__header__input {
+                display: block;
+                border: none;
+                outline: none;
+                font-size: 16px;
+                margin-left: auto;
+    
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+
+        }
+
+        .tags__content__tag {
+            position: relative;
+            height: 15vw;
+            background-size: cover;;
+            background-color: $laranja-medio-2;
+            margin-bottom: 1vw;
+            cursor: pointer;
+
+
+            .tags__content__tag__title {
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                width: 100%;
+                height: 15vw;
+                color: $cinza-claro;
+                font-size: 50px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+                vertical-align: middle;
+                margin-bottom: 0;
+                text-decoration: none;
+                padding-left: 2vw;
+                padding-right: 2vw;
+
+                &:hover {
+                    background-color: rgba($color: $cinza-escuro, $alpha: 0.75);
+                }
+            }
+        }
+    }
+
+}
+
+#tags > div.tags__content > div > div > div > div:nth-child(4n - 1) > div > a {
+    background-color: $laranja-medio-2;
+
+    &:hover {
+        background-color: rgba($color: $cinza-escuro, $alpha: 0.75);
+    }
+}
+
+#tags > div.tags__content > div > div > div > div:nth-child(4n - 2) > div > a {
+    background-color: $laranja-claro-2;
+
+    &:hover {
+        background-color: rgba($color: $cinza-escuro, $alpha: 0.75);
+    }
+}
+
+#tags > div.tags__content > div > div > div > div:nth-child(4n -3) > div > a {
+    background-color: $laranja-escuro;
+
+    &:hover {
+        background-color: rgba($color: $cinza-escuro, $alpha: 0.75);
+    }
+}
+
+#tags > div.tags__content > div > div > div > div:nth-child(4n -4) > div > a {
+    background-color: $laranja-medio;
+
+    &:hover {
+        background-color: rgba($color: $cinza-escuro, $alpha: 0.75);
+    }
+}
+
+
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1399px) {
+
+
+
+}
+
+@media only screen and (min-width:1400px) and (max-width:1599px) {
+
+
+}
+
+@media only screen and (min-width:1600px) and (max-width:1799px) {
+
+
+
+}

@@ -1,0 +1,305 @@
+@import '../scss/colors.scss';
+@import '../scss/font.scss';
+
+.autor {
+    background-color: $cinza-escuro;
+
+    #header {
+        position: relative;
+    }
+
+    .autor__banner {
+        height: 30vh;
+        background-color: $cinza-escuro;
+        background-size: cover;
+        background-position-y: 30%;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        border-bottom: 1px solid $laranja;
+
+        .autor__banner__title {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $cinza-claro;
+            font-size: 34px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.5vw;
+        }
+
+        
+        .autor__banner__film{
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $cinza-claro;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .autor__banner__date {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $laranja;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 1vw;
+            margin-top: 3vw;
+        }
+
+        .autor__banner__author {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $laranja-claro;
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 1vw;
+        }
+
+        .autor__banner__link {
+            display: block;
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $cinza-claro;
+            padding: 0.5vw;
+            font-size: 30px;
+            font-weight:700;
+            text-transform: uppercase;
+            margin-top: 6vw;
+            text-decoration: none;
+            border: 2px solid $laranja;
+            text-align: center;
+
+            &:hover {
+                color: $cinza-claro;
+                border: 2px solid $cinza-claro;
+            }
+        }
+        
+        .autor__banner__words {
+            margin-top: 6vw;
+            padding-left: 1.25vw;
+            padding-right: 1.25vw;
+            padding-bottom: 2vw;
+            height: 5vw;
+            margin-right: 8vw;
+            overflow-y: auto;
+
+            .autor__banner__words__categories {
+                display: inline-flex;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $laranja-claro;
+                font-size: 20px;
+                padding: 0.25vw;
+                font-weight: 400;
+                text-transform: uppercase;
+                border: 1px solid $laranja-escuro;
+                text-decoration: none;
+                margin-right: 0.5vw;
+                margin-bottom: 0.5vw;
+    
+                &:hover {
+                    border: 1px solid $laranja-claro;
+                }
+            }
+    
+            .autor__banner__words__tag {
+                display: inline-flex;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $branco;
+                font-size: 20px;
+                padding: 0.25vw;
+                font-weight: 400;
+                text-transform: uppercase;
+                border: 1px solid $laranja-escuro;
+                text-decoration: none;
+                margin-right: 0.5vw;
+                margin-bottom: 0.5vw;
+                width: fit-content;
+    
+                &:hover {
+                    border: 1px solid $branco;
+                }
+            }
+        }
+
+        .autor__banner__words::-webkit-scrollbar-track {
+            border: 2px solid $laranja-claro;
+        }
+           
+        .autor__banner__words::-webkit-scrollbar-thumb {
+            background-color: $laranja-escuro;
+            outline: none;
+        }
+
+        .autor__banner__words::-webkit-scrollbar {
+            width: 1vw;
+        }
+
+    }
+
+    .autor__content {
+        padding-top: 4vw;
+        padding-bottom: 10vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+        .autor__content__header {
+
+            .autor__content__header__title {
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $branco;
+                font-size: 80px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 2vw;
+            }
+
+            .autor__content__header__icon {
+                display: block;
+                font-size: 40px;
+                color: $laranja-claro;
+                width: 75%;
+                margin-top: 0.5vw;
+                cursor: pointer;
+            }
+        }
+
+        .autor__content__texts {
+            margin-top: 2vw;
+
+            .autor__content__texts__text {
+                height: 18vw;
+                margin-bottom: 2vw;
+                cursor: pointer;
+        
+                .autor__content__texts__text__inner {
+                    border: 1px solid $laranja-claro;
+                    padding: 1vw;
+                    height: 18vw;
+                    overflow-y: hidden;
+        
+                    .autor__content__texts__text__inner__img {
+                        height: 10vw;
+                        background-size: cover;
+                    }
+        
+                    .autor__content__texts__text__inner__link {
+                        text-decoration: none;
+                    }
+        
+                    .autor__content__texts__text__inner__info {
+                        padding-top: 1vw;
+        
+                        .autor__content__texts__text__inner__info__title {
+                            font-family: "bebas-neue-by-fontfabric", sans-serif;
+                            color: $laranja-claro;
+                            font-size: 24px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            margin-bottom: 0.5vw;
+                        }
+        
+                        .autor__content__texts__text__inner__info__film {
+                            font-family: "bebas-neue-by-fontfabric", sans-serif;
+                            color: $branco;
+                            font-size: 16px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            margin-bottom: 0.5vw;
+                        }
+                    }
+        
+                    .autor__content__texts__text__inner__date {
+                        padding-top: 1vw;
+                        font-family: "bebas-neue-by-fontfabric", sans-serif;
+                        color: $branco;
+                        font-size: 20px;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                        text-align: right;
+                    }
+        
+                }
+            }
+        }
+
+        .autor__content__pages {
+            position: relative;
+            padding: 2vw;
+            border: 1px solid $cinza-claro;
+            margin-top: 2vw;
+            margin-right: var(--bs-gutter-x,.75rem);
+            margin-left: var(--bs-gutter-x,.75rem);
+
+            .autor__content__pages__icon {
+                display: block;
+                width: 25%;
+                margin-right: auto;
+                cursor: pointer;
+            }
+
+            .next {
+                transform: scaleX(-1);
+                margin-left: auto;
+                margin-right: unset;
+            }
+
+            .autor__content__pages__text {
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $cinza-claro;
+                font-size: 40px;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 0.5vw;
+
+                .autor__content__pages__text__sub {
+                    font-size: 24px;
+                }
+            }
+
+            .autor__content__pages__number {
+                position: absolute;
+                font-family: "bebas-neue-by-fontfabric", sans-serif;
+                color: $cinza-claro;
+                font-size: 40px;
+            }
+
+            .left {
+                top: 2vw;
+                left: 8vw;
+                transform: rotate(90deg);
+            }
+
+            .right {
+                top: 2vw;
+                right: 8vw;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+
+
+}
+
+@media only screen and (min-width:1025px) and (max-width:1399px) {
+
+
+
+}
+
+@media only screen and (min-width:1400px) and (max-width:1599px) {
+
+
+}
+
+@media only screen and (min-width:1600px) and (max-width:1799px) {
+
+
+
+}

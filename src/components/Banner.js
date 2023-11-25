@@ -20,23 +20,6 @@ function Banner(props) {
     return (
       <Carousel id="bannerhome" autoPlay={true} interval={5000} controls={false} indicators={false} pause={false}>
 
-        <Carousel.Item className="banner">
-
-
-          <div className="banner__first" style={{backgroundImage: `url('/images/banner/banner.png')`}}>
-          
-
-            <div className="banner__first__caption">
-
-              <h1 className="banner__first__caption__title">Quem Somos</h1>
-
-            </div>
-
-          </div>
-
-
-        </Carousel.Item>
-
         { banner.map( (text, index) => 
 
           <Carousel.Item key={text.id} className="banner">

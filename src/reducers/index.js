@@ -60,11 +60,108 @@ const getImgLinkReducer = (link = null, action) => {
   return link;
 };
 
+const getCategoriesReducer = (categorias = null, action) => {
+  if (action.type === 'GET_CATEGORIES') {
+
+    return action.payload;
+    
+  }
+  
+  return categorias;
+};
+
+
+const getTagsReducer = (tags = null, action) => {
+  switch(action.type){
+    case 'GET_TAGS':
+      return {
+        ...tags,
+        all: action.payload,
+        filter: action.payload
+      };
+    case 'FILTER_TAGS':
+      return {
+        ...tags,
+        filter: action.payload
+      };
+    default:
+      return tags;
+    }
+};
+
+const getAuthorsReducer = (autores = null, action) => {
+  if (action.type === 'GET_AUTHORS') {
+
+    return action.payload;
+    
+  }
+  
+  return autores;
+};
+
+const getYearsReducer = (anos = null, action) => {
+  if (action.type === 'GET_YEARS') {
+
+    return action.payload;
+    
+  }
+  
+  return anos;
+};
+
+const getCategoryReducer = (categoria = null, action) => {
+  if (action.type === 'GET_CATEGORY') {
+
+    return action.payload;
+    
+  }
+  
+  return categoria;
+};
+
+const getTagReducer = (tag = null, action) => {
+  if (action.type === 'GET_TAG') {
+
+    return action.payload;
+    
+  }
+  
+  return tag;
+};
+
+const getAuthorReducer = (autor = null, action) => {
+  if (action.type === 'GET_AUTHOR') {
+
+    return action.payload;
+    
+  }
+  
+  return autor;
+};
+
+const getAnoReducer = (ano = null, action) => {
+  if (action.type === 'GET_YEAR') {
+
+    return action.payload;
+    
+  }
+  
+  return ano;
+};
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
   destaques: getDestaquesTextsReducer,
   biblioteca: getBibliotecaReducer,
   texto: getTextReducer,
-  link: getImgLinkReducer
+  link: getImgLinkReducer,
+  categorias: getCategoriesReducer,
+  tags: getTagsReducer,
+  autores: getAuthorsReducer,
+  anos: getYearsReducer,
+  categoria: getCategoryReducer,
+  tag: getTagReducer,
+  autor: getAuthorReducer,
+  ano: getAnoReducer,
 });

@@ -14,6 +14,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
+import parse from 'html-react-parser';
 
 function Texto(props) {
 
@@ -127,19 +128,19 @@ function Texto(props) {
             }
 
 
-            <p className='texto__main__text' style={{color: `${cores_texto[numero_texto]}`}}>{texto.texto}</p>
+            <p className='texto__main__text' style={{color: `${cores_texto[numero_texto]}`}}>{parse(texto.texto)}</p>
           </div>
 
           <div className='texto__footer'>
             { texto.categorias.map( (item, index) =>
 
-              <Link key={item.id} className="texto__footer__categories" to="/">{item.categoria}</Link>
+              <Link key={item.id} className="texto__footer__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
 
             )}
 
             { texto.tags.map( (item, index) =>
 
-              <Link key={item.id} className="texto__footer__tags" to="/">{item.tag}</Link>
+              <Link key={item.id} className="texto__footer__tags"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
 
             )}
           </div>

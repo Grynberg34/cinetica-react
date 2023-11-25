@@ -2,7 +2,7 @@ import "../scss/header.scss";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 function Header() {
@@ -28,26 +28,26 @@ function Header() {
 
                       <Col md={3}>
                         
-                        <Link className="header__menu__link" to="/">Circuito</Link>
+                        <NavLink className="header__menu__link" to="/categorias/circuito/1">Circuito</NavLink>
 
                       </Col>
 
                       <Col md={3}>
                         
-                        <Link className="header__menu__link" to="/">Pauta</Link>
+                        <NavLink className="header__menu__link" to="/categorias/pauta/1">Pauta</NavLink>
 
                       </Col>
 
 
                       <Col md={3}>
                         
-                        <Link className="header__menu__link" to="/">Cobertura</Link>
+                        <NavLink className="header__menu__link" to="/categorias/cobertura/1">Cobertura</NavLink>
 
                       </Col>
 
                       <Col md={3}>
                         
-                        <HashLink className="header__menu__link" to="#biblioteca">Biblioteca</HashLink>
+                        <HashLink className="header__menu__link" to="/#biblioteca">Biblioteca</HashLink>
 
                       </Col>
 
@@ -73,19 +73,19 @@ function Header() {
                         <Container fluid>
                           <Row>
                             <Col md={3}>
-                              <Link className="header__sub__link" to="/">Categorias</Link>
+                              <NavLink className="header__sub__link" to="/categorias">Categorias</NavLink>
                             </Col>
 
                             <Col md={3}>
-                              <Link className="header__sub__link" to="/">Tags</Link>
+                              <NavLink className="header__sub__link" to="/tags">Tags</NavLink>
                             </Col>
 
                             <Col md={3}>
-                              <Link className="header__sub__link" to="/">Autores</Link>
+                              <NavLink className="header__sub__link" to="/autores">Autores</NavLink>
                             </Col>
 
                             <Col md={3}>
-                              <Link className="header__sub__link" to="/">Anos</Link>
+                              <NavLink className="header__sub__link" to="/anos">Anos</NavLink>
                             </Col>
                           </Row>
                         </Container>

@@ -53,13 +53,13 @@ function Recentes(props) {
                   
                     { text.categorias.map( (item, index) =>
 
-                      <Link key={item.id} className="recentes__text__inner__words__categories" to="/">{item.categoria}</Link>
+                      <Link key={item.id} className="recentes__text__inner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
 
                     )}
 
                     { text.tags.map( (item, index) =>
 
-                      <Link key={item.id} className="recentes__text__inner__words__tag" to="/">{item.tag}</Link>
+                      <Link key={item.id} className="recentes__text__inner__words__tag" to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
 
                     )}
 
