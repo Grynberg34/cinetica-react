@@ -17,7 +17,7 @@
     .destaques__title {
         font-family: "bebas-neue-by-fontfabric", sans-serif;
         color: $branco;
-        font-size: 80px;
+        font-size: 4.16vw;
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 2vw;
@@ -53,7 +53,7 @@
                 .destaques__text__inner__info__title {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $cinza-escuro;
-                    font-size: 30px;
+                    font-size: 1.56vw;
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-bottom: 0.5vw;
@@ -62,7 +62,7 @@
                 .destaques__text__inner__info__film {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
-                    font-size: 24px;
+                    font-size: 1.25vw;
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-bottom: 0.5vw;
@@ -73,7 +73,7 @@
                 padding-top: 1vw;
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $branco;
-                font-size: 20px;
+                font-size: 1vw;
                 font-weight: 300;
                 text-transform: uppercase;
                 text-align: right;
@@ -92,7 +92,7 @@
                     display: inline-block;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
-                    font-size: 20px;
+                    font-size: 1vw;
                     padding: 0.25vw;
                     font-weight: 400;
                     text-transform: uppercase;
@@ -110,7 +110,7 @@
                     display: inline-block;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $cinza-escuro;
-                    font-size: 20px;
+                    font-size: 1vw;
                     padding: 0.25vw;
                     font-weight: 400;
                     text-transform: uppercase;
@@ -164,44 +164,16 @@ div.destaques > div > div > div:nth-child(6) > div {
 
     .destaques {
 
-        .destaques__title {
-            font-size: 60px;
-        }
-    
-    
         .destaques__text {
     
             .destaques__text__inner {
-    
-                .destaques__text__inner__info {
-    
-                    .destaques__text__inner__info__title {
-                        font-size: 16px;
-                    }
-    
-                    .destaques__text__inner__info__film {
-                        font-size: 10px;
-                    }
-                }
-    
-                .destaques__text__inner__date {
-                    font-size: 14px;
-                }
     
                 .destaques__text__inner__words {
                     padding-left: 2vw;
                     padding-right: 2vw;
                     
-                    .destaques__text__inner__words__categories {
-                        font-size: 10px;
-                    }
-    
-                    .destaques__text__inner__words__tag {
-                        font-size: 10px;
-                    }
                 }
     
-                   
             }
         }
     }
@@ -213,41 +185,17 @@ div.destaques > div > div > div:nth-child(6) > div {
 
     .destaques {
 
-        .destaques__title {
-            font-size: 60px;
-        }
-    
+
     
         .destaques__text {
     
             .destaques__text__inner {
-    
-                .destaques__text__inner__info {
-    
-                    .destaques__text__inner__info__title {
-                        font-size: 20px;
-                    }
-    
-                    .destaques__text__inner__info__film {
-                        font-size: 14px;
-                    }
-                }
-    
-                .destaques__text__inner__date {
-                    font-size: 18px;
-                }
+
     
                 .destaques__text__inner__words {
                     padding-left: 2vw;
                     padding-right: 2vw;
                     
-                    .destaques__text__inner__words__categories {
-                        font-size: 14px;
-                    }
-    
-                    .destaques__text__inner__words__tag {
-                        font-size: 14px;
-                    }
                 }
     
                    
@@ -261,41 +209,15 @@ div.destaques > div > div > div:nth-child(6) > div {
 
     .destaques {
 
-        .destaques__title {
-            font-size: 60px;
-        }
-    
-    
+
         .destaques__text {
     
             .destaques__text__inner {
-    
-                .destaques__text__inner__info {
-    
-                    .destaques__text__inner__info__title {
-                        font-size: 24px;
-                    }
-    
-                    .destaques__text__inner__info__film {
-                        font-size: 18px;
-                    }
-                }
-    
-                .destaques__text__inner__date {
-                    font-size: 20px;
-                }
     
                 .destaques__text__inner__words {
                     padding-left: 1.75vw;
                     padding-right: 1.75vw;
                     
-                    .destaques__text__inner__words__categories {
-                        font-size: 16px;
-                    }
-    
-                    .destaques__text__inner__words__tag {
-                        font-size: 16px;
-                    }
                 }
     
                    
@@ -308,42 +230,15 @@ div.destaques > div > div > div:nth-child(6) > div {
 @media only screen and (min-width:1600px) and (max-width:1799px) {
 
     .destaques {
-
-        .destaques__title {
-            font-size: 70px;
-        }
-    
     
         .destaques__text {
     
             .destaques__text__inner {
     
-                .destaques__text__inner__info {
-    
-                    .destaques__text__inner__info__title {
-                        font-size: 26px;
-                    }
-    
-                    .destaques__text__inner__info__film {
-                        font-size: 20px;
-                    }
-                }
-    
-                .destaques__text__inner__date {
-                    font-size: 22px;
-                }
-    
                 .destaques__text__inner__words {
                     padding-left: 1.5vw;
                     padding-right: 1.5vw;
-                    
-                    .destaques__text__inner__words__categories {
-                        font-size: 18px;
-                    }
-    
-                    .destaques__text__inner__words__tag {
-                        font-size: 18px;
-                    }
+
                 }
     
                    

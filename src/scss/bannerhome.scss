@@ -7,7 +7,7 @@
         .banner__first {
             position: relative;
             background-size: cover;
-            height: 90vh;
+            height: 44vw;
     
             .banner__first__caption {
                 position: absolute;
@@ -18,7 +18,7 @@
                 .banner__first__caption__title {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
-                    font-size: 80px;
+                    font-size: 4.16vw;
                     font-weight: 700;
                     text-transform: uppercase;
                 }
@@ -29,7 +29,7 @@
         .banner__item {
             position: relative;
             background-size: cover;
-            height: 90vh;
+            height: 44vw;
     
     
             .banner__item__caption {
@@ -41,7 +41,7 @@
                 .banner__item__caption__title {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
-                    font-size: 80px;
+                    font-size: 4.16vw;
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-bottom: 0;
@@ -51,7 +51,7 @@
                 .banner__item__caption__author {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $laranja-claro;
-                    font-size: 28px;
+                    font-size: 1.45vw;
                     font-weight: 400;
                     text-transform: uppercase;
                     
@@ -68,16 +68,6 @@
     #bannerhome {
         .banner {
     
-            .banner__first {
-        
-                .banner__first__caption {
-        
-                    .banner__first__caption__title {
-                        font-size: 60px;
-                    }
-
-                }
-            }
         
             .banner__item {
         
@@ -87,14 +77,6 @@
                     left: 15%;
                     width: 100%;
         
-                    .banner__item__caption__title {
-                        font-size: 50px;
-                    }
-        
-        
-                    .banner__item__caption__author {
-                        font-size: 18px;
-                    }
                 }
             }
         
@@ -109,16 +91,7 @@
     #bannerhome {
         .banner {
     
-            .banner__first {
-        
-                .banner__first__caption {
-        
-                    .banner__first__caption__title {
-                        font-size: 60px;
-                    }
 
-                }
-            }
         
             .banner__item {
         
@@ -127,15 +100,7 @@
                     bottom: 10%;
                     left: 15%;
                     width: 100%;
-        
-                    .banner__item__caption__title {
-                        font-size: 50px;
-                    }
-        
-        
-                    .banner__item__caption__author {
-                        font-size: 18px;
-                    }
+    
                 }
             }
         
@@ -149,16 +114,7 @@
     #bannerhome {
         .banner {
     
-            .banner__first {
-        
-                .banner__first__caption {
-        
-                    .banner__first__caption__title {
-                        font-size: 70px;
-                    }
 
-                }
-            }
         
             .banner__item {
         
@@ -168,14 +124,7 @@
                     left: 15%;
                     width: 100%;
         
-                    .banner__item__caption__title {
-                        font-size: 60px;
-                    }
-        
-        
-                    .banner__item__caption__author {
-                        font-size: 22px;
-                    }
+
                 }
             }
         

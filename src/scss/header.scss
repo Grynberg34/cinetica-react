@@ -28,7 +28,7 @@
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 text-align: center;
                 color: $laranja-claro;
-                font-size: 26px;
+                font-size: 1.35vw;
                 text-decoration: none;
                 text-transform: uppercase;
 
@@ -57,7 +57,7 @@
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 text-align: center;
                 color: $laranja-claro;
-                font-size: 18px;
+                font-size: 0.93vw;
                 text-decoration: none;
                 padding: 0.25vw;
                 border: 1px solid $laranja-claro;
@@ -97,20 +97,11 @@
                 padding-top: 1vw;
             }
     
-            .header__menu {
-                .header__menu__link {
-                    font-size: 18px;
-                }
-            }
-
             .header__sub {
                 .header__sub__lens {
                     width: 250%;
                 }
 
-                .header__sub__link {
-                    font-size: 12px;
-                }
             }
 
             .header__social {
@@ -128,20 +119,12 @@
     #header {
         .header {
     
-            .header__menu {
-                .header__menu__link {
-                    font-size: 24px;
-                }
-            }
 
             .header__sub {
                 .header__sub__lens {
                     width: 125%;
                 }
 
-                .header__sub__link {
-                    font-size: 16px;
-                }
             }
 
             .header__social {

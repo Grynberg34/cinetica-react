@@ -22,13 +22,25 @@ function Texto(props) {
 
   var link = props.link;
 
+  var index = props.index;
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = (link) => {
-    store.dispatch(GetImgLink(link))
+  const handleShow = (link, index) => {
+    store.dispatch(GetImgLink(link, index))
     setShow(true)
   };
+
+  const getNextImage = (link, index) => {
+
+    store.dispatch(GetImgLink(link, index))
+  }
+
+  const getPrevImage = (link, index) => {
+
+    store.dispatch(GetImgLink(link, index))
+  }
 
   var texto = props.texto;
 
@@ -43,7 +55,7 @@ function Texto(props) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 6,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -118,7 +130,7 @@ function Texto(props) {
                 >
 
                   { texto.galeria.map( (item, index) =>
-                    <img key={index} className='texto__main__gallery__img' src={`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${item.imagem}`} alt="" onClick={() => handleShow(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${item.imagem}`)} />
+                    <img key={index} className='texto__main__gallery__img' src={`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${item.imagem}`} alt="" onClick={() => handleShow(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${item.imagem}`, index)} />
                   )}
 
                 </Carousel>
@@ -150,8 +162,27 @@ function Texto(props) {
         <Footer></Footer>
 
         <Modal show={show} onHide={handleClose} className="modal">
+          <span className="modal__index">#{index}</span>
           <img className='modal__img' src={link} alt="" />
-          <button className="modal__close" onClick={handleClose}>VOLTAR</button>
+          <Container fluid>
+            <Row>
+              <Col xs={4}>
+                { index-1 > -1?
+                  <button className="modal__option" onClick={() => getPrevImage(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${texto.galeria[index-1].imagem}`, index-1)}><img className="modal__option__icon left" src="/images/icons/galeria.svg" alt="" /></button>
+                  :null
+                }
+              </Col>
+              <Col xs={4}>
+              <button className="modal__close" onClick={handleClose}>Fechar</button>
+              </Col>
+              <Col xs={4}>
+                { texto.galeria.length > index+1?
+                  <button className="modal__option" onClick={() => getNextImage(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${texto.galeria[index+1].imagem}`, index+1)}><img className="modal__option__icon" src="/images/icons/galeria.svg" alt="" /></button>
+                  :null
+                }
+              </Col>
+            </Row>
+          </Container>
         </Modal>
 
       </div>
@@ -165,7 +196,8 @@ function Texto(props) {
 function mapStateToProps(state) {
   return {
     texto: state.texto,
-    link: state.link
+    link: state.link,
+    index: state.index
   }
 }
 

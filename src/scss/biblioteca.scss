@@ -10,7 +10,7 @@
     .biblioteca__title {
         font-family: "bebas-neue-by-fontfabric", sans-serif;
         color: $branco;
-        font-size: 80px;
+        font-size: 4.16vw;
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 2vw;
@@ -43,7 +43,7 @@
                 top: 40%;
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $branco;
-                font-size: 70px;
+                font-size: 3.65vw;
                 font-weight: 400;
                 text-transform: uppercase;
                 text-align: center;
@@ -61,84 +61,21 @@
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 
-    .biblioteca {
-    
-        .biblioteca__title {
-            font-size: 60px;
-        }
-    
-    
-        .biblioteca__categorias {
-            .biblioteca__categorias__categoria {
-    
-                .biblioteca__categorias__categoria__title {
-                    font-size: 50px;
-                }
-            }
-        }
-    }
 
 }
 
 @media only screen and (min-width:1025px) and (max-width:1399px) {
 
-    .biblioteca {
-    
-        .biblioteca__title {
-            font-size: 60px;
-        }
-    
-    
-        .biblioteca__categorias {
-            .biblioteca__categorias__categoria {
-    
-                .biblioteca__categorias__categoria__title {
-                    font-size: 50px;
-                }
-            }
-        }
-    }
 
 }
 
 @media only screen and (min-width:1400px) and (max-width:1599px) {
 
-    .biblioteca {
-    
-        .biblioteca__title {
-            font-size: 60px;
-        }
-    
-    
-        .biblioteca__categorias {
-            .biblioteca__categorias__categoria {
-    
-                .biblioteca__categorias__categoria__title {
-                    font-size: 50px;
-                }
-            }
-        }
-    }
+
 
 }
 
 @media only screen and (min-width:1600px) and (max-width:1799px) {
 
-    .biblioteca {
-    
-        .biblioteca__title {
-            font-size: 70px;
-        }
-    
-    
-        .biblioteca__categorias {
-            .biblioteca__categorias__categoria {
-    
-                .biblioteca__categorias__categoria__title {
-                    font-size: 60px;
-                }
-            }
-        }
-    }
 
 }

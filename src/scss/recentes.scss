@@ -16,7 +16,7 @@
     .recentes__title {
         font-family: "bebas-neue-by-fontfabric", sans-serif;
         color: $branco;
-        font-size: 80px;
+        font-size: 4.16vw;
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 2vw;
@@ -50,7 +50,7 @@
                 .recentes__text__inner__info__title {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $laranja-claro;
-                    font-size: 30px;
+                    font-size: 1.56vw;
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-bottom: 0.5vw;
@@ -59,7 +59,7 @@
                 .recentes__text__inner__info__film {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
-                    font-size: 24px;
+                    font-size: 1.25vw;
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-bottom: 0.5vw;
@@ -70,7 +70,7 @@
                 padding-top: 1vw;
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $branco;
-                font-size: 20px;
+                font-size: 1vw;
                 font-weight: 300;
                 text-transform: uppercase;
                 text-align: right;
@@ -89,7 +89,7 @@
                     display: inline-block;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $laranja-claro;
-                    font-size: 20px;
+                    font-size: 1vw;
                     padding: 0.25vw;
                     font-weight: 400;
                     text-transform: uppercase;
@@ -107,7 +107,7 @@
                     display: inline-block;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
-                    font-size: 20px;
+                    font-size: 1vw;
                     padding: 0.25vw;
                     font-weight: 400;
                     text-transform: uppercase;
@@ -145,41 +145,16 @@
 
     .recentes {
 
-        .recentes__title {
-            font-size: 60px;
-        }
-    
-    
+
         .recentes__text {
     
             .recentes__text__inner {
-    
-                .recentes__text__inner__info {
-    
-                    .recentes__text__inner__info__title {
-                        font-size: 16px;
-                    }
-    
-                    .recentes__text__inner__info__film {
-                        font-size: 10px;
-                    }
-                }
-    
-                .recentes__text__inner__date {
-                    font-size: 14px;
-                }
+
     
                 .recentes__text__inner__words {
                     padding-left: 2vw;
                     padding-right: 2vw;
-                    
-                    .recentes__text__inner__words__categories {
-                        font-size: 10px;
-                    }
-    
-                    .recentes__text__inner__words__tag {
-                        font-size: 10px;
-                    }
+
                 }
     
                    
@@ -194,41 +169,15 @@
 
     .recentes {
 
-        .recentes__title {
-            font-size: 60px;
-        }
-    
     
         .recentes__text {
     
             .recentes__text__inner {
     
-                .recentes__text__inner__info {
-    
-                    .recentes__text__inner__info__title {
-                        font-size: 20px;
-                    }
-    
-                    .recentes__text__inner__info__film {
-                        font-size: 14px;
-                    }
-                }
-    
-                .recentes__text__inner__date {
-                    font-size: 18px;
-                }
-    
                 .recentes__text__inner__words {
                     padding-left: 2vw;
                     padding-right: 2vw;
-                    
-                    .recentes__text__inner__words__categories {
-                        font-size: 14px;
-                    }
-    
-                    .recentes__text__inner__words__tag {
-                        font-size: 14px;
-                    }
+
                 }
     
                    
@@ -241,42 +190,15 @@
 @media only screen and (min-width:1400px) and (max-width:1599px) {
 
     .recentes {
-
-        .recentes__title {
-            font-size: 60px;
-        }
-    
     
         .recentes__text {
     
             .recentes__text__inner {
     
-                .recentes__text__inner__info {
-    
-                    .recentes__text__inner__info__title {
-                        font-size: 24px;
-                    }
-    
-                    .recentes__text__inner__info__film {
-                        font-size: 18px;
-                    }
-                }
-    
-                .recentes__text__inner__date {
-                    font-size: 20px;
-                }
-    
                 .recentes__text__inner__words {
                     padding-left: 1.75vw;
                     padding-right: 1.75vw;
-                    
-                    .recentes__text__inner__words__categories {
-                        font-size: 16px;
-                    }
-    
-                    .recentes__text__inner__words__tag {
-                        font-size: 16px;
-                    }
+
                 }
     
                    
@@ -289,42 +211,15 @@
 @media only screen and (min-width:1600px) and (max-width:1799px) {
 
     .recentes {
-
-        .recentes__title {
-            font-size: 70px;
-        }
-    
     
         .recentes__text {
     
             .recentes__text__inner {
-    
-                .recentes__text__inner__info {
-    
-                    .recentes__text__inner__info__title {
-                        font-size: 26px;
-                    }
-    
-                    .recentes__text__inner__info__film {
-                        font-size: 20px;
-                    }
-                }
-    
-                .recentes__text__inner__date {
-                    font-size: 22px;
-                }
-    
+
                 .recentes__text__inner__words {
                     padding-left: 1.5vw;
                     padding-right: 1.5vw;
-                    
-                    .recentes__text__inner__words__categories {
-                        font-size: 18px;
-                    }
-    
-                    .recentes__text__inner__words__tag {
-                        font-size: 18px;
-                    }
+
                 }
     
                    

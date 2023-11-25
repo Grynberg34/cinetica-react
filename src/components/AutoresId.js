@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import moment from 'moment';
-import "../scss/autoresId.scss";
+import "../scss/selection.scss";
 
 
 function AutoresId(props) {
@@ -50,35 +50,35 @@ function AutoresId(props) {
       )
     } else {
       return (
-        <div className='autor'>
+        <div className='selection'>
           <Header></Header>
   
-          <div className='autor__banner' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}>
+          <div className='selection__banner' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}>
   
             <Container fluid>
               <Row>
                 <Col md={6}>
 
-                  <h2 className="autor__banner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
-                  <h1 className="autor__banner__title">{texto.titulo}</h1>
-                  <h1 className="autor__banner__film">{texto.filme}</h1>
-                  <h2 className="autor__banner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
+                  <h2 className="selection__banner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
+                  <h1 className="selection__banner__title">{texto.titulo}</h1>
+                  <h1 className="selection__banner__film">{texto.filme}</h1>
+                  <h2 className="selection__banner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
 
                 </Col>
 
                 <Col md={4}>
 
-                  <div className="autor__banner__words">
+                  <div className="selection__banner__words">
 
                   { texto.categorias.map( (item, index) =>
 
-                    <Link key={item.id} className="autor__banner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+                    <Link key={item.id} className="selection__banner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
 
                     )}
 
                     { texto.tags.map( (item, index) =>
 
-                    <Link key={item.id} className="autor__banner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+                    <Link key={item.id} className="selection__banner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
 
                   )}
 
@@ -88,51 +88,51 @@ function AutoresId(props) {
                 </Col>
 
                 <Col md={2}>
-                  <Link className="autor__banner__link" to={`/texto/${texto.id}`}>Acessar</Link>
+                  <Link className="selection__banner__link" to={`/texto/${texto.id}`}>Acessar</Link>
                 </Col>
               </Row>
             </Container>
   
           </div>
   
-          <div className='autor__content'>
+          <div className='selection__content'>
             
-            <div className='autor__content__header'>
+            <div className='selection__content__header'>
               <Container fluid>
                 <Row>
                   <Col md={1}>
-                    <img onClick={() => history(-1)} className='autor__content__header__icon' src="/images/icons/previous.svg" alt="" />
+                    <img onClick={() => history(-1)} className='selection__content__header__icon' src="/images/icons/previous.svg" alt="" />
                   </Col>
   
                   <Col md={8}>
-                    <h2 className='autor__content__header__title'>{autor.titulo}</h2>
+                    <h2 className='selection__content__header__title'>{autor.titulo}</h2>
                   </Col>
                 </Row>
               </Container>
   
             </div>
   
-            <div className="autor__content__texts">
+            <div className="selection__content__texts">
               <Container fluid>
                 <Row>
                   { autor.textos.map( (text, index) =>
                     <Col key={text.Texto.id} md={3}>
-                      <div onClick={()=> getTextBanner(text.Texto.id)} className='autor__content__texts__text'>
-                        <div className='autor__content__texts__text__inner'>
+                      <div onClick={()=> getTextBanner(text.Texto.id)} className='selection__content__texts__text'>
+                        <div className='selection__content__texts__text__inner'>
     
-                          <div className='autor__content__texts__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.Texto.imagem}')`}}></div>
+                          <div className='selection__content__texts__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.Texto.imagem}')`}}></div>
                           <Container fluid>
                             <Row>
                               <Col md={8}>
-                                <Link className='autor__content__texts__text__inner__link' to="/">
-                                  <div className="autor__content__texts__text__inner__info">
-                                    <h2 className="autor__content__texts__text__inner__info__title"> {text.Texto.titulo.length > 25 ? <span>{text.Texto.titulo.substring(0, 25) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
-                                    <h3 className='autor__content__texts__text__inner__info__film'>{text.Texto.filme}</h3>
+                                <Link className='selection__content__texts__text__inner__link' to="/">
+                                  <div className="selection__content__texts__text__inner__info">
+                                    <h2 className="selection__content__texts__text__inner__info__title"> {text.Texto.titulo.length > 25 ? <span>{text.Texto.titulo.substring(0, 25) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
+                                    <h3 className='selection__content__texts__text__inner__info__film'>{text.Texto.filme}</h3>
                                   </div>
                                 </Link>
                               </Col>
                               <Col md={4}>
-                                <h4 className="autor__content__texts__text__inner__date">{moment(text.Texto.data).utcOffset('+000').format('D/M/Y')}</h4>
+                                <h4 className="selection__content__texts__text__inner__date">{moment(text.Texto.data).utcOffset('+000').format('D/M/Y')}</h4>
                               </Col>
                             </Row>
                           </Container>
@@ -147,30 +147,30 @@ function AutoresId(props) {
             </div>
 
             {parseInt(autor.total_pages) > 1?
-                <div className="autor__content__pages">
+                <div className="selection__content__pages">
                 <Container fluid>
                   <Row>
                     <Col md={2}>
                       {
                         parseInt(autor.page) - 1 > 0 ?
                         <div>
-                          <Link to={`/autores/${id}/${(parseInt(page) -1)}`}><img  className='autor__content__pages__icon' src="/images/icons/previous.svg" alt="" /></Link>
-                          <span className="autor__content__pages__number left">{(parseInt(page) -1)}</span>
+                          <Link to={`/autores/${id}/${(parseInt(page) -1)}`}><img  className='selection__content__pages__icon' src="/images/icons/previous.svg" alt="" /></Link>
+                          <span className="selection__content__pages__number left">{(parseInt(page) -1)}</span>
                         </div>
                         :null
                       }
                     </Col>
                     
                     <Col md={8}>
-                      <h1 className='autor__content__pages__text'>{page}<span className="autor__content__pages__text__sub">/{autor.total_pages}</span></h1>
+                      <h1 className='selection__content__pages__text'>{page}<span className="selection__content__pages__text__sub">/{autor.total_pages}</span></h1>
                     </Col>
   
                     <Col md={2}>
                       {
                         parseInt(autor.page) < autor.total_pages ?
                         <div>
-                          <span className="autor__content__pages__number right">{(parseInt(page) +1)}</span>
-                          <Link to={`/autores/${id}/${(parseInt(page) +1)}`}><img className='autor__content__pages__icon next' src="/images/icons/previous.svg" alt="" /></Link>
+                          <span className="selection__content__pages__number right">{(parseInt(page) +1)}</span>
+                          <Link to={`/autores/${id}/${(parseInt(page) +1)}`}><img className='selection__content__pages__icon next' src="/images/icons/previous.svg" alt="" /></Link>
                         </div>
                         :null
                       }

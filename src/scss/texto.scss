@@ -3,10 +3,22 @@
 
 
 .texto {
+
+    a {
+        color: $laranja-escuro;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            color: $cinza-escuro;
+            text-decoration: none;
+        }
+    }
+
     .texto__banner {
         position: relative;
         background-size: cover;
-        height: 90vh;
+        height: 44vw;
     }
 
     .texto__header {
@@ -19,7 +31,7 @@
         .texto__header__title {
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $laranja-claro;
-            font-size: 100px;
+            font-size: 5.2vw;
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
@@ -29,7 +41,7 @@
         .texto__header__film {
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $branco;
-            font-size: 60px;
+            font-size: 3.12vw;
             font-weight: 400;
             text-transform: uppercase;
             text-align: center;
@@ -39,7 +51,7 @@
         .texto__header__date {
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $laranja;
-            font-size: 50px;
+            font-size: 2.6vw;
             font-weight: 400;
             text-transform: uppercase;
             text-align: center;
@@ -56,12 +68,16 @@
             padding-top: 4vw;
             padding-left: 20vw;
             padding-right: 20vw;
-            font-size: 18px;
+            font-size: 0.93vw;
             font-weight: 400;
             text-align: left;
             white-space: pre-wrap;
             padding-bottom: 2vw; 
-            line-height: 2;           
+            line-height: 2;    
+            
+            img {
+                width: 100%;
+            }
         }
 
         .texto__main__info {
@@ -77,7 +93,7 @@
             .texto__main__info__title {
                 font-family: "Merriweather", sans-serif;
                 color: $cinza-escuro;
-                font-size: 30px;
+                font-size: 1.40vw;
                 font-weight: 600;
                 text-align: left;
                 font-style: italic;
@@ -87,7 +103,7 @@
             .texto__main__info__author {
                 font-family: "Merriweather", sans-serif;
                 color: $cinza-escuro;
-                font-size: 26px;
+                font-size: 1.25vw;
                 font-weight: 600;
                 text-align: right;
                 font-style: italic;
@@ -99,18 +115,22 @@
             width: 80%;
             margin-left: auto;
             margin-right: auto;
+            height: 6vw;
         }
 
 
         .texto__main__gallery {
-            padding-top: 1vw;
-            padding-bottom: 1vw;
             background-color: $cinza-escuro;
+            position: sticky;
+            top: 5vw;
+            z-index: 99;
 
             .texto__main__gallery__img {
-                width: 100%;
-                padding: 0.5vw;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
                 cursor: pointer;
+                height: 4vw;
             }
         }
     }
@@ -126,7 +146,7 @@
             display: inline-block;
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $branco;
-            font-size: 30px;
+            font-size: 1.56vw;
             padding: 0.25vw;
             font-weight: 400;
             text-transform: uppercase;
@@ -145,7 +165,7 @@
             display: inline-block;
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $laranja-claro;
-            font-size: 30px;
+            font-size: 1.56vw;
             padding: 0.25vw;
             font-weight: 400;
             text-transform: uppercase;
@@ -163,23 +183,52 @@
 }
 
 .modal {
+    position: relative;
+
+    .modal__index {
+        position: absolute;
+        top: -5vw;
+        right: 0;
+        font-family: "bebas-neue-by-fontfabric", sans-serif;
+        color: $laranja;
+        font-size: 3vw;
+        font-weight: 600;
+    }
 
     .modal__img {
         width: 100%;
     }
 
     .modal__close {
+        display: block;
         font-family: "bebas-neue-by-fontfabric", sans-serif;
         color: $laranja;
-        font-size: 30px;
+        font-size: 1.56vw;
         font-weight: 600;
         text-align: center;
         background: none;
         border: none;
         margin-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
 
         &:hover {
             color: $cinza-claro;
+        }
+    }
+
+    .modal__option {
+        background: none;
+        outline: none;
+        border: none;
+        margin-top: 1vw;
+       
+        .modal__option__icon {
+            width: 10%;
+        }
+
+        .left {
+            transform: scaleX(-1);
         }
     }
 }
@@ -203,180 +252,18 @@
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 
-    .texto {
-        .texto__header {
-            .texto__header__title {
-                font-size: 60px;
-            }
-
-            .texto__header__film {
-                font-size: 30px;
-            }
-
-            .texto__header__date {
-                font-size: 20px;
-            }
-        }
-
-        .texto__main {
-            .texto__main__info {
-                .texto__main__info__title {
-                    font-size: 20px;
-                }
-
-                .texto__main__info__author {
-                    font-size: 16px;
-                }
-            }
-
-            .texto__main__text {
-                font-size: 14px;
-            }
-        }
-
-        .texto__footer {
-            .texto__footer__categories {
-                font-size: 20px;
-            }
-
-            .texto__footer__tags {
-                font-size: 20px;
-            }
-        }
-    }
-
 
 }
 
 @media only screen and (min-width:1025px) and (max-width:1399px) {
-
-    .texto {
-        .texto__header {
-            .texto__header__title {
-                font-size: 70px;
-            }
-
-            .texto__header__film {
-                font-size: 40px;
-            }
-
-            .texto__header__date {
-                font-size: 30px;
-            }
-        }
-
-        .texto__main {
-            .texto__main__info {
-                .texto__main__info__title {
-                    font-size: 22px;
-                }
-
-                .texto__main__info__author {
-                    font-size: 18px;
-                }
-            }
-
-            .texto__main__text {
-                font-size: 14px;
-            }
-        }
-
-        .texto__footer {
-            .texto__footer__categories {
-                font-size: 22px;
-            }
-
-            .texto__footer__tags {
-                font-size: 22px;
-            }
-        }
-    }
 
 
 }
 
 @media only screen and (min-width:1400px) and (max-width:1599px) {
 
-    .texto {
-        .texto__header {
-            .texto__header__title {
-                font-size: 80px;
-            }
-
-            .texto__header__film {
-                font-size: 50px;
-            }
-
-            .texto__header__date {
-                font-size: 40px;
-            }
-        }
-
-        .texto__main {
-            .texto__main__info {
-                .texto__main__info__title {
-                    font-size: 24px;
-                }
-
-                .texto__main__info__author {
-                    font-size: 20px;
-                }
-            }
-
-        }
-
-        .texto__footer {
-            .texto__footer__categories {
-                font-size: 26px;
-            }
-
-            .texto__footer__tags {
-                font-size: 26px;
-            }
-        }
-    }
-
 }
 
 @media only screen and (min-width:1600px) and (max-width:1799px) {
-
-    .texto {
-        .texto__header {
-            .texto__header__title {
-                font-size: 80px;
-            }
-
-            .texto__header__film {
-                font-size: 50px;
-            }
-
-            .texto__header__date {
-                font-size: 40px;
-            }
-        }
-
-        .texto__main {
-            .texto__main__info {
-                .texto__main__info__title {
-                    font-size: 24px;
-                }
-
-                .texto__main__info__author {
-                    font-size: 20px;
-                }
-            }
-
-        }
-
-        .texto__footer {
-            .texto__footer__categories {
-                font-size: 26px;
-            }
-
-            .texto__footer__tags {
-                font-size: 26px;
-            }
-        }
-    }
 
 }

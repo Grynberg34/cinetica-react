@@ -60,6 +60,16 @@ const getImgLinkReducer = (link = null, action) => {
   return link;
 };
 
+const getImgIndexReducer = (index = null, action) => {
+  if (action.type === 'GET_IMG_INDEX') {
+
+    return action.payload;
+    
+  }
+  
+  return index;
+};
+
 const getCategoriesReducer = (categorias = null, action) => {
   if (action.type === 'GET_CATEGORIES') {
 
@@ -156,6 +166,7 @@ export default combineReducers({
   biblioteca: getBibliotecaReducer,
   texto: getTextReducer,
   link: getImgLinkReducer,
+  index: getImgIndexReducer,
   categorias: getCategoriesReducer,
   tags: getTagsReducer,
   autores: getAuthorsReducer,
