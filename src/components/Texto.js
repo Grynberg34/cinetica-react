@@ -162,7 +162,7 @@ function Texto(props) {
         <Footer></Footer>
 
         <Modal show={show} onHide={handleClose} className="modal">
-          <span className="modal__index">#{index}</span>
+          <span className="modal__index">#{index+1}</span>
           <img className='modal__img' src={link} alt="" />
           <Container fluid>
             <Row>
