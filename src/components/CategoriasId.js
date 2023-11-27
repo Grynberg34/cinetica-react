@@ -124,12 +124,12 @@ function CategoriasId(props) {
                           <Container fluid>
                             <Row>
                               <Col md={8}>
-                                <Link className='selection__content__texts__text__inner__link' to="/">
-                                  <div className="selection__content__texts__text__inner__info">
-                                    <h2 className="selection__content__texts__text__inner__info__title"> {text.Texto.titulo.length > 25 ? <span>{text.Texto.titulo.substring(0, 25) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
-                                    <h3 className='selection__content__texts__text__inner__info__film'>{text.Texto.filme}</h3>
-                                  </div>
-                                </Link>
+  
+                                <div className="selection__content__texts__text__inner__info">
+                                  <h2 className="selection__content__texts__text__inner__info__title"> {text.Texto.titulo.length > 25 ? <span>{text.Texto.titulo.substring(0, 25) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
+                                  <h3 className='selection__content__texts__text__inner__info__film'>{text.Texto.filme}</h3>
+                                </div>
+
                               </Col>
                               <Col md={4}>
                                 <h4 className="selection__content__texts__text__inner__date">{moment(text.Texto.data).utcOffset('+000').format('D/M/Y')}</h4>
