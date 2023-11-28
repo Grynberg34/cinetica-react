@@ -31,7 +31,7 @@ function Anos(props) {
         </div>
   
         <div className='anos__content'>
-          <h2 className='anos__content__title'>Anos</h2>
+          <h2 className='anos__content__title'>Por anos</h2>
   
           <div>
             <Container fluid>

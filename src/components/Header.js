@@ -85,7 +85,7 @@ function Header() {
                             </Col>
 
                             <Col md={3}>
-                              <NavLink className="header__sub__link" to="/anos">Anos</NavLink>
+                              <NavLink className="header__sub__link" to="/anos">Por anos</NavLink>
                             </Col>
                           </Row>
                         </Container>
