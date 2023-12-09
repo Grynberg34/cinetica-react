@@ -159,6 +159,79 @@ const getAnoReducer = (ano = null, action) => {
   return ano;
 };
 
+const getFieldsReducer = (pesquisa = null, action) => {
+  switch(action.type){
+    case 'GET_FIELDS':
+      return action.payload;
+    case 'GET_SELECTED_FIELD':
+      return {
+        ...pesquisa,
+        active: action.payload
+      };
+    default:
+      return pesquisa;
+    }
+};
+
+const getFilteredReducer = (filter = null, action) => {
+  if (action.type === 'GET_FILTERED') {
+
+    return action.payload;
+    
+  }
+  
+  return filter;
+};
+
+const searchReducer = (search = {título: null, filme: null, categoria: [], tag: [], ano: null, autor: []}, action) => {
+  switch(action.type){
+    case 'SEARCH':
+      return action.payload;
+      case 'REMOVE_TÍTULO':
+        return {
+          ...search,
+          título: action.payload
+        }
+      case 'REMOVE_FILME':
+        return {
+          ...search,
+          filme: action.payload
+        }
+      case 'REMOVE_ANO':
+        return {
+          ...search,
+          ano: action.payload
+        }
+      case 'REMOVE_AUTOR':
+        return {
+          ...search,
+          autor: action.payload
+        }
+      case 'REMOVE_CATEGORIA':
+        return {
+          ...search,
+          categoria: action.payload
+        }
+      case 'REMOVE_TAG':
+        return {
+          ...search,
+          tag: action.payload
+        }
+    default:
+      return search;
+    }
+};
+
+const getResultsReducer = (resultados = null, action) => {
+  if (action.type === 'SHOW_RESULTS') {
+
+    return action.payload;
+    
+  }
+  
+  return resultados;
+};
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
@@ -175,4 +248,8 @@ export default combineReducers({
   tag: getTagReducer,
   autor: getAuthorReducer,
   ano: getAnoReducer,
+  pesquisa: getFieldsReducer,
+  filter: getFilteredReducer,
+  search: searchReducer,
+  resultados: getResultsReducer,
 });

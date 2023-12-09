@@ -214,3 +214,131 @@ export const GetAno = (id, page) => async dispatch => {
     })
 
 };
+
+export const GetFields = () => async dispatch => {
+
+    await api.get(`/front/pesquisar/campos`, {
+    }).then(async function(response){
+
+        dispatch({ type: 'GET_FIELDS', payload: response.data });
+    })  
+    .catch(function(err){
+        console.log(err)
+    })
+
+};
+
+export const SelectField = (index) => async dispatch => {
+
+    dispatch({ type: 'GET_SELECTED_FIELD', payload: index});
+
+    dispatch({ type: 'GET_FILTERED', payload: null});
+
+};
+
+export const FilterTerm = (filter, list) => async dispatch => {
+
+    var new_filter = filter.toLowerCase();
+
+    var filtered;
+    
+    if (list.campo === 'título') {
+        filtered = list.items.filter(value => value.titulo.toLowerCase().includes(new_filter))
+    } else if (list.campo === 'filme') {
+       filtered = list.items.filter(value => value.filme.toLowerCase().includes(new_filter))
+    } else if (list.campo === 'categoria') {
+       filtered = list.items.filter(value => value.categoria.toLowerCase().includes(new_filter))
+    } else if (list.campo === 'tag') {
+        filtered = list.items.filter(value => value.tag.toLowerCase().includes(new_filter))
+    } else if (list.campo === 'ano') {
+        filtered = list.items.filter(value => value.numero.toLowerCase().includes(new_filter))
+    } else if (list.campo === 'autor') {
+        filtered = list.items.filter(value => value.nome.toLowerCase().includes(new_filter))
+    }
+
+    dispatch({ type: 'GET_FILTERED', payload: filtered});
+
+};
+
+export const RemoveField = (field, search) => async dispatch => {
+
+    if (field === 'título') {
+        dispatch({ type: 'REMOVE_TÍTULO', payload: null});
+    } else if (field === 'filme') {
+        dispatch({ type: 'REMOVE_FILME', payload: null});
+    } else if (field === 'ano') {
+        dispatch({ type: 'REMOVE_ANO', payload: null});
+    } else if (field === 'autor') {
+        dispatch({ type: 'REMOVE_AUTOR', payload: []});
+    } else if (field === 'categoria') {
+        dispatch({ type: 'REMOVE_CATEGORIA', payload: []});
+    } else if (field === 'tag') {
+        dispatch({ type: 'REMOVE_TAG', payload: []});
+    } 
+
+    if (field === 'categoria' || field === 'tag' || field === 'autor') {
+        search[field] = [];
+    } else {
+        search[field] = null;
+    }
+
+    dispatch({ type: 'GET_TEXT', payload: null});
+
+    if (!(search.título === null && search.filme == null && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
+        await api.post('/front/pesquisar', search).then(function(response){
+            dispatch({ type: 'SHOW_RESULTS', payload: response.data });
+        })  
+        .catch(function(err){
+            console.log(err)
+        })
+    } else {
+        dispatch({ type: 'SHOW_RESULTS', payload: null });
+    }
+
+
+
+    dispatch({ type: 'GET_FILTERED', payload: null});
+
+};
+
+export const SearchTexts = (term, field, search) => async dispatch => {
+
+    if (field === 'categoria' || field === 'tag' || field === 'autor') {
+
+        if (!search[field].includes(term)) {
+            search[field].push(term);
+        }
+        search.título = null;
+        dispatch({ type: 'GET_TEXT', payload: null});
+    }
+    else if (field === 'título') {
+        search = {
+            título: term,
+            filme: null,
+            categoria: [],
+            tag: [],
+            ano: null,
+            autor: []
+        }
+
+        dispatch({ type: 'GET_TEXT', payload: null});
+    }
+    else {
+        search[field] = term;
+        search.título = null;
+
+        dispatch({ type: 'GET_TEXT', payload: null});
+    }
+
+    dispatch({ type: 'GET_FILTERED', payload: null});
+
+    dispatch({ type: 'SEARCH', payload: search});
+
+    await api.post('/front/pesquisar', search).then(function(response){
+        dispatch({ type: 'SHOW_RESULTS', payload: response.data });
+    })  
+    .catch(function(err){
+        console.log(err)
+    })
+    
+};

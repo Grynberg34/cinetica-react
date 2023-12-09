@@ -168,7 +168,7 @@ function Texto(props) {
             <Row>
               <Col xs={4}>
                 { index-1 > -1?
-                  <button className="modal__option" onClick={() => getPrevImage(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${texto.galeria[index-1].imagem}`, index-1)}><img className="modal__option__icon left" src="/images/icons/galeria.svg" alt="" /></button>
+                  <button className="modal__option" onClick={() => getPrevImage(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${texto.galeria[index-1].imagem}`, index-1)}><img className="modal__option__icon" src="/images/icons/galeria-right.png" alt="" /></button>
                   :null
                 }
               </Col>
@@ -177,7 +177,7 @@ function Texto(props) {
               </Col>
               <Col xs={4}>
                 { texto.galeria.length > index+1?
-                  <button className="modal__option" onClick={() => getNextImage(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${texto.galeria[index+1].imagem}`, index+1)}><img className="modal__option__icon" src="/images/icons/galeria.svg" alt="" /></button>
+                  <button className="modal__option" onClick={() => getNextImage(`https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Galeria/${texto.galeria[index+1].imagem}`, index+1)}><img className="modal__option__icon" src="/images/icons/galeria.png" alt="" /></button>
                   :null
                 }
               </Col>

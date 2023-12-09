@@ -64,7 +64,7 @@ function Header() {
 
                       <Col md={1}>
 
-                        <Link to="/"><img className="header__sub__lens" src="/images/header/lupa.svg" alt="" /></Link>
+                        <Link to="/pesquisar"><img className="header__sub__lens" src="/images/header/lupa.svg" alt="" /></Link>
                         
                       </Col>
 
@@ -85,7 +85,7 @@ function Header() {
                             </Col>
 
                             <Col md={3}>
-                              <NavLink className="header__sub__link" to="/anos">Por anos</NavLink>
+                              <NavLink className="header__sub__link" to="/anos">Por ano</NavLink>
                             </Col>
                           </Row>
                         </Container>

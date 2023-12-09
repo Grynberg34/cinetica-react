@@ -12,6 +12,7 @@ import CategoriasId from './components/CategoriasId.js';
 import TagsId from './components/TagsId.js';
 import AutoresId from './components/AutoresId.js';
 import AnosId from './components/AnosId.js';
+import Pesquisar from './components/Pesquisar.js';
 import {store} from './store.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -30,6 +31,7 @@ ReactDOM.render(
         <Route path="/autores/:id/:page" element={<AutoresId />}></Route>
         <Route path="/anos" element={<Anos />}></Route>
         <Route path="/anos/:id/:page" element={<AnosId />}></Route>
+        <Route path="/pesquisar" element={<Pesquisar />}></Route>
       </Routes>
     </BrowserRouter>
 
