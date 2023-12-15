@@ -24,12 +24,7 @@ function Anos(props) {
     return (
       <div id='anos' className='anos'>
         <Header></Header>
-        
-        <div className='anos__banner'>
-          <img className='anos__banner__img' src="/images/banner/banner-explore.png" alt="" />
-          <h1 className='anos__banner__text'>Explore nossa biblioteca</h1>
-        </div>
-  
+
         <div className='anos__content'>
           <h2 className='anos__content__title'>Por anos</h2>
   

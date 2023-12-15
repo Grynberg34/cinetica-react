@@ -179,6 +179,11 @@
                     padding: 1vw;
                     height: 18vw;
                     overflow-y: hidden;
+
+                    .selection__content__texts__text__inner__container {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
         
                     .selection__content__texts__text__inner__img {
                         height: 10vw;
@@ -199,6 +204,7 @@
                             font-weight: 700;
                             text-transform: uppercase;
                             margin-bottom: 0.5vw;
+                            text-wrap: balance;
                         }
         
                         .selection__content__texts__text__inner__info__film {

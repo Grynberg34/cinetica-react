@@ -29,11 +29,6 @@ function Tags(props) {
     return (
       <div id='tags' className='tags'>
         <Header></Header>
-        
-        <div className='tags__banner'>
-          <img className='tags__banner__img' src="/images/banner/banner-explore.png" alt="" />
-          <h1 className='tags__banner__text'>Explore nossa biblioteca</h1>
-        </div>
   
         <div className='tags__content'>
           <div className='tags__content__header'>

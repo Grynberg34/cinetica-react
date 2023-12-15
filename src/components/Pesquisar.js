@@ -267,17 +267,17 @@ function Anos(props) {
                         <div className='pesquisar__content__resultados__text__inner'>
     
                           <div className='pesquisar__content__resultados__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}></div>
-                          <Container fluid>
+                          <Container fluid className='pesquisar__content__resultados__text__inner__container'>
                             <Row>
-                              <Col md={8}>
+                              <Col md={9}>
   
                                 <div className="pesquisar__content__resultados__text__inner__info">
-                                  <h2 className="pesquisar__content__resultados__text__inner__info__title"> {text.titulo.length > 25 ? <span>{text.titulo.substring(0, 25) + '...'}</span>: <span>{text.titulo}</span>}</h2>
+                                  <h2 className="pesquisar__content__resultados__text__inner__info__title"> {text.titulo.length > 40 ? <span>{text.titulo.substring(0, 40) + '...'}</span>: <span>{text.titulo}</span>}</h2>
                                   <h3 className='pesquisar__content__resultados__text__inner__info__film'>{text.filme}</h3>
                                 </div>
 
                               </Col>
-                              <Col md={4}>
+                              <Col md={3}>
                                 <h4 className="pesquisar__content__resultados__text__inner__date">{moment(text.data).utcOffset('+000').format('D/M/Y')}</h4>
                               </Col>
                             </Row>

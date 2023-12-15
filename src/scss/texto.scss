@@ -61,15 +61,16 @@
     }
 
     .texto__main {
+        position: relative;
         padding-top: 4vw;
         padding-bottom: 4vw;
 
         .texto__main__text {
             font-family: "Merriweather", sans-serif;
             padding-top: 4vw;
-            padding-left: 20vw;
-            padding-right: 20vw;
-            font-size: 0.93vw;
+            padding-left: 25vw;
+            padding-right: 25vw;
+            font-size: 1vw;
             font-weight: 400;
             text-align: left;
             white-space: pre-wrap;
@@ -85,11 +86,16 @@
             background-color: $cinza-claro;
             padding-top: 2vw;
             padding-bottom:1vw;
-            padding-left: 20vw;
-            padding-right: 20vw;
+            padding-left: 25vw;
+            padding-right: 25vw;
             position: sticky;
             top: 0;
             z-index: 99;
+
+            .texto__main__info__container {
+                padding-left: 0;
+                padding-right: 0;
+            }
 
             .texto__main__info__title {
                 font-family: "Merriweather", sans-serif;
@@ -97,7 +103,6 @@
                 font-size: 1.40vw;
                 font-weight: 600;
                 text-align: left;
-                font-style: italic;
                 text-wrap: balance;
 
             }
@@ -108,33 +113,37 @@
                 font-size: 1.25vw;
                 font-weight: 600;
                 text-align: right;
-                font-style: italic;
 
             }
         }
 
-        .texto__main__carousel {
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            height: 6vw;
-            justify-content: center;
-        }
+        .texto__main__font {
+            margin-top: 4vw;
+            padding-left: 25vw;
+            padding-right: 25vw;
+            text-align: right;
+            user-select: none;
 
+            .texto__main__font__title {
+                font-family: "Merriweather", sans-serif;
+                font-size: 1vw;
+                font-weight: 400;   
+                color: $cinza-escuro;
+            }
 
-        .texto__main__gallery {
-            background-color: $cinza-escuro;
-            position: sticky;
-            top: 5vw;
-            z-index: 99;
-
-            
-            .texto__main__gallery__img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
+            .texto__main__font__size {
+                display: inline-block;
+                margin-left: 0.25vw;
+                margin-right: 0.25vw;
+                font-family: "Merriweather", sans-serif;
+                font-size: 1vw;
+                font-weight: 400;   
+                color: $cinza-escuro;
+                padding-left: 0.25vw;
+                padding-right: 0.25vw;
+                border-radius: 0.2vw;
+                border: 0.1vw solid #171717;
                 cursor: pointer;
-                height: 4vw;
             }
         }
     }
@@ -184,73 +193,6 @@
             }
         }
     }
-}
-
-.modal {
-    position: relative;
-
-    .modal__index {
-        position: absolute;
-        top: -5vw;
-        right: 0;
-        font-family: "bebas-neue-by-fontfabric", sans-serif;
-        color: $laranja;
-        font-size: 3vw;
-        font-weight: 600;
-    }
-
-    .modal__img {
-        width: 100%;
-    }
-
-    .modal__close {
-        display: block;
-        font-family: "bebas-neue-by-fontfabric", sans-serif;
-        color: $laranja;
-        font-size: 1.56vw;
-        font-weight: 600;
-        text-align: center;
-        background: none;
-        border: none;
-        margin-top: 1vw;
-        margin-left: auto;
-        margin-right: auto;
-
-        &:hover {
-            color: $cinza-claro;
-        }
-    }
-
-    .modal__option {
-        background: none;
-        outline: none;
-        border: none;
-        margin-top: 1vw;
-       
-        .modal__option__icon {
-            width: 7.5%;
-        }
-
-        .left {
-            transform: scaleX(-1);
-        }
-    }
-}
-
-.modal-content {
-    margin-top: 10vw;
-    background-color:none !important;
-    background: none !important;
-    border: none;
-
-}
-
-.modal.show .modal-dialog {
-    min-width: 44vw;
-}
-
-.modal-backdrop.show {
-    opacity: 0.9 !important;
 }
 
 

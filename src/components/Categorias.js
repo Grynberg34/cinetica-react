@@ -24,11 +24,6 @@ function Categorias(props) {
     return (
       <div id='categorias' className='categorias'>
         <Header></Header>
-        
-        <div className='categorias__banner'>
-          <img className='categorias__banner__img' src="/images/banner/banner-explore.png" alt="" />
-          <h1 className='categorias__banner__text'>Explore nossa biblioteca</h1>
-        </div>
   
         <div className='categorias__content'>
           <h2 className='categorias__content__title'>Categorias</h2>

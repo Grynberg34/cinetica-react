@@ -232,6 +232,26 @@ const getResultsReducer = (resultados = null, action) => {
   return resultados;
 };
 
+const setFontSizeReducer = (font = 1, action) => {
+  if (action.type === 'SET_FONT_SIZE') {
+
+    return action.payload;
+    
+  }
+  
+  return font;
+};
+
+const setTextColorsReducer = (cores = { texto: null, fundo: null }, action) => {
+  if (action.type === 'SET_TEXT_COLORS') {
+
+    return action.payload;
+    
+  }
+  
+  return cores;
+};
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
@@ -252,4 +272,6 @@ export default combineReducers({
   filter: getFilteredReducer,
   search: searchReducer,
   resultados: getResultsReducer,
+  font: setFontSizeReducer,
+  cores: setTextColorsReducer
 });

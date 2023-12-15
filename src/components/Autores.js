@@ -24,11 +24,6 @@ function Autores(props) {
     return (
       <div id='autores' className='autores'>
         <Header></Header>
-        
-        <div className='autores__banner'>
-          <img className='autores__banner__img' src="/images/banner/banner-explore.png" alt="" />
-          <h1 className='autores__banner__text'>Explore nossa biblioteca</h1>
-        </div>
   
         <div className='autores__content'>
           <h2 className='autores__content__title'>Autores</h2>

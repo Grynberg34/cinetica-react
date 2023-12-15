@@ -121,15 +121,15 @@ function TagsIdId(props) {
                         <div className='selection__content__texts__text__inner'>
     
                           <div className='selection__content__texts__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.Texto.imagem}')`}}></div>
-                          <Container fluid>
+                          <Container fluid className='selection__content__texts__text__inner__container'>
                             <Row>
-                              <Col md={8}>
+                              <Col md={9}>
                                 <div className="selection__content__texts__text__inner__info">
-                                  <h2 className="selection__content__texts__text__inner__info__title"> {text.Texto.titulo.length > 25 ? <span>{text.Texto.titulo.substring(0, 25) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
+                                  <h2 className="selection__content__texts__text__inner__info__title"> {text.Texto.titulo.length > 40 ? <span>{text.Texto.titulo.substring(0, 40) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
                                   <h3 className='selection__content__texts__text__inner__info__film'>{text.Texto.filme}</h3>
                                 </div>
                               </Col>
-                              <Col md={4}>
+                              <Col md={3}>
                                 <h4 className="selection__content__texts__text__inner__date">{moment(text.Texto.data).utcOffset('+000').format('D/M/Y')}</h4>
                               </Col>
                             </Row>
