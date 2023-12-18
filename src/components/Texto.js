@@ -13,6 +13,7 @@ import "../scss/texto.scss";
 import moment from 'moment';
 import 'react-multi-carousel/lib/styles.css';
 import parse from 'html-react-parser';
+import "../scss/loader.scss";
 
 function Texto(props) {
 
@@ -38,7 +39,11 @@ function Texto(props) {
 
 
     return (
-      <div></div>
+      <div id='loader'>
+        <Header></Header>
+
+        <div class="spinner"></div>
+      </div>
     )
   } else {
 

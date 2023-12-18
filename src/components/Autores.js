@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "../scss/autores.scss";
+import "../scss/loader.scss";
 
 
 function Autores(props) {
@@ -18,7 +19,11 @@ function Autores(props) {
     store.dispatch(GetAuthors())
 
     return (
-      <div></div>
+      <div id='loader'>
+        <Header></Header>
+
+        <div class="spinner"></div>
+      </div>
     )
   } else if (autores !== null) {
     return (

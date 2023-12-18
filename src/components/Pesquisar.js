@@ -14,6 +14,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "../scss/pesquisar.scss";
 import moment from 'moment';
+import "../scss/loader.scss";
 
 function Anos(props) {
 
@@ -63,7 +64,11 @@ function Anos(props) {
     store.dispatch(GetFields())
 
     return (
-      <div></div>
+      <div id='loader'>
+        <Header></Header>
+
+        <div class="spinner"></div>
+      </div>
     )
   } else if (pesquisa !== null) {
     return (

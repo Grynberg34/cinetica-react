@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "../scss/tags.scss";
+import "../scss/loader.scss";
 
 
 function Tags(props) {
@@ -23,7 +24,11 @@ function Tags(props) {
     store.dispatch(GetTags())
 
     return (
-      <div></div>
+      <div id='loader'>
+        <Header></Header>
+
+        <div class="spinner"></div>
+      </div>
     )
   } else if (tags !== null) {
     return (

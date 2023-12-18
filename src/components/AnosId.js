@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import moment from 'moment';
 import "../scss/selection.scss";
+import "../scss/loader.scss";
 
 
 function AnosId(props) {
@@ -32,8 +33,10 @@ function AnosId(props) {
     store.dispatch(GetAno(id, page))
 
     return (
-      <div>
+      <div id='loader'>
+        <Header></Header>
 
+        <div class="spinner"></div>
       </div>
     )
   } else {
@@ -46,7 +49,11 @@ function AnosId(props) {
       
 
       return (
-        <div></div>
+        <div id='loader'>
+          <Header></Header>
+
+          <div class="spinner"></div>
+        </div>
       )
     } else {
       return (

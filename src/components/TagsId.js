@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import moment from 'moment';
 import "../scss/selection.scss";
+import "../scss/loader.scss";
 
 function TagsIdId(props) {
 
@@ -31,8 +32,10 @@ function TagsIdId(props) {
     store.dispatch(GetTag(id, page))
 
     return (
-      <div>
+      <div id='loader'>
+        <Header></Header>
 
+        <div class="spinner"></div>
       </div>
     )
   } else {
@@ -45,7 +48,11 @@ function TagsIdId(props) {
       
 
       return (
-        <div></div>
+        <div id='loader'>
+          <Header></Header>
+
+          <div class="spinner"></div>
+        </div>
       )
     } else {
       return (

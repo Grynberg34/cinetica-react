@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "../scss/categorias.scss";
+import "../scss/loader.scss";
 
 
 function Categorias(props) {
@@ -18,7 +19,11 @@ function Categorias(props) {
     store.dispatch(GetCategories())
 
     return (
-      <div></div>
+      <div id='loader'>
+        <Header></Header>
+
+        <div class="spinner"></div>
+      </div>
     )
   } else if (categorias !== null) {
     return (

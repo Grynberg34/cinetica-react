@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import "../scss/anos.scss";
+import "../scss/loader.scss";
 
 
 function Anos(props) {
@@ -18,7 +19,11 @@ function Anos(props) {
     store.dispatch(GetYears())
 
     return (
-      <div></div>
+      <div id='loader'>
+        <Header></Header>
+
+        <div class="spinner"></div>
+      </div>
     )
   } else if (anos !== null) {
     return (
