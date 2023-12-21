@@ -29,6 +29,16 @@
         margin-bottom: 2vw;
         padding: 1vw;
 
+        .recentes__text__container {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .recentes__text__link {
+            display: block;
+            overflow: hidden;
+        }
+
         .recentes__text__inner {
             padding: 0.25vw;
             height: 30vw;
@@ -37,6 +47,11 @@
             .recentes__text__inner__img {
                 height: 15vw;
                 background-size: cover;
+
+                &:hover {
+                    -webkit-animation: kenburns-bottom 40s ease-out infinite both;
+                    animation: kenburns-bottom 40s ease-out infinite both;
+                }
             }
 
             .recentes__text__inner__link {
@@ -139,11 +154,118 @@
     }
 }
 
+@media only screen and (max-width: 767px) {
+    
+    .recentes {
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+
+        .recentes__title {
+            font-size: 10vw;
+            margin-bottom: 10vw;
+        }
+
+        .recentes__text {
+            height: 105vw;
+
+            .recentes__text__inner {
+                padding: 4vw;
+                height: 100vw;
+    
+                .recentes__text__inner__img {
+                    height: 50vw;
+                    background-size: cover;
+
+                    &:hover {
+                        animation: none;
+                        -webkit-animation: none;
+                    }
+                }
+
+                .recentes__text__inner__info {
+                    padding-top: 1vw;
+    
+                    .recentes__text__inner__info__title {
+                        font-size: 5vw;
+                        margin-top: 4vw;
+                        margin-bottom: 6vw;
+                    }
+    
+                    .recentes__text__inner__info__film {
+                        font-size: 1.25vw;
+                        margin-bottom: 0.5vw;
+                    }
+
+                }
+
+                .recentes__text__inner__date {
+                    padding-top: 4vw;
+                    font-size: 4vw;
+                }
+
+                
+                .recentes__text__inner__words {
+                    padding-top: 1vw;
+                    padding-left: 1.25vw;
+                    padding-right: 1.25vw;
+                    padding-bottom: 2vw;
+                    height: 25vw;
+                    overflow-y: auto;
+
+                    
+                    .recentes__text__inner__words__categories {
+                        font-size: 4vw;
+                        padding: 1vw;
+                        margin-right: 2vw;
+                        margin-bottom: 2vw;
+
+                        &:hover {
+                            border: 1px solid $laranja-escuro;
+                        }
+                    }
+
+                    .recentes__text__inner__words__tag {
+                        font-size: 4vw;
+                        padding: 1vw;
+                        font-weight: 400;
+                        margin-right: 2vw;
+                        margin-bottom: 2vw;
+
+                        &:hover {
+                            border: 1px solid $laranja-escuro;
+                        }
+                    }
+                }
+                
+
+                .recentes__text__inner__words::-webkit-scrollbar {
+                    width: 3vw;
+                }
+               
+            }
+        }
+
+    }
+
+    #recentes > a.carousel-control-next > span.carousel-control-next-icon, #recentes > a.carousel-control-prev > span.carousel-control-prev-icon {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #recentes > a.carousel-control-next {
+        right: -14%;
+    }
+
+    #recentes > a.carousel-control-prev {
+        left: -14%;
+    }
+
+}
+
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 
     .recentes {
-
 
         .recentes__text {
     

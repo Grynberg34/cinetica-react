@@ -9,6 +9,8 @@ function Banner(props) {
 
   var banner = props.banner;
 
+  var mobile = props.mobile
+
   if (banner === null) {
     store.dispatch(GetBannerTexts())
 
@@ -26,7 +28,9 @@ function Banner(props) {
 
             <Link  to={`/texto/${text.id}`}>
 
-              <div className="banner__item" style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}>
+              <div className="banner__item">
+
+                <div className={mobile === false?'banner__item__img kenburns-bottom':'banner__item__img bg-pan-right'} style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}></div>
 
                 <div className="banner__item__caption">
 
@@ -56,7 +60,8 @@ function Banner(props) {
 
 function mapStateToProps(state) {
   return {
-    banner: state.banner
+    banner: state.banner,
+    mobile: state.mobile
   }
 }
 

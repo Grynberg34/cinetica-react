@@ -365,3 +365,13 @@ export const SetTextColors = () => async dispatch => {
 
     dispatch({ type: 'SET_TEXT_COLORS', payload: cores });
 };
+
+export const OpenCloseMenu = (value) => async dispatch => {
+
+    dispatch({ type: 'OPEN_CLOSE_MENU', payload: value });
+};
+
+export const CheckMobile = (value) => async dispatch => {
+
+    dispatch({ type: 'CHECK_MOBILE', payload: value });
+};

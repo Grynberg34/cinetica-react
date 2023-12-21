@@ -16,9 +16,13 @@
     }
 
     .texto__banner {
-        position: relative;
-        background-size: cover;
-        height: 44vw;
+        overflow: hidden;
+        
+        .texto__banner__img {
+            position: relative;
+            background-size: cover;
+            height: 44vw;
+        }
     }
 
     .texto__header {

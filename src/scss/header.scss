@@ -88,6 +88,103 @@
 
 }
 
+@media only screen and (max-width:767px) {
+
+    #header {
+        .header {
+            padding-left: 5vw;
+            padding-right: 5vw;
+    
+            .header__logo {
+                padding-top: 4vw;
+                padding-bottom: 4vw;
+            }
+    
+    
+            .header__search {
+                display: block;
+                margin-top: 7vw;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+                border-radius: 12vw;
+                border: 2px solid $branco;
+            }
+    
+            .header__mobile {
+                display: block;
+                padding-top: 9vw;
+                width: 40%;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+            }
+    
+
+            .header__social-mobile {
+                padding-top: 10vw;
+                display: flex;
+                justify-content: center;
+    
+                .header__social-mobile__container {
+                    padding-left: 4vw;
+                    padding-right: 4vw;
+                }
+                
+                .header__social-mobile__img {
+                    display: inline-block;
+                    width: 5vw;
+                    margin-left: 2vw;
+                    margin-right: 2vw;
+                }
+    
+            }
+
+            .header__sub {
+                margin-top: 4vw;
+                margin-bottom: 6vw;
+
+                .header__sub__container {
+                    padding: 0;
+                }
+
+                .header__sub__lens {
+                    display: none;
+                }
+
+                .header__sub__link {
+                    font-size: 3.7vw;
+                    padding: 1vw;
+                }
+            }
+
+            .header__menu {
+                padding-top: 4vw;
+                padding-bottom: 4vw;
+                margin-top: 2vw;
+                border-top: 0.5vw solid $laranja-claro;
+                border-bottom: 0.5vw solid $laranja-claro;
+
+                .header__menu__link {
+                    font-size: 4.2vw;
+                }
+            }
+
+            .header__arrow {
+                display: block;
+                position: absolute;
+                width: 10%;
+                left: 45%;
+                bottom: -10%;
+                z-index: 9999;
+            }
+        }
+
+    }
+
+}
+
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 

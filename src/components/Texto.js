@@ -42,7 +42,7 @@ function Texto(props) {
       <div id='loader'>
         <Header></Header>
 
-        <div class="spinner"></div>
+        <div className="spinner"></div>
       </div>
     )
   } else {
@@ -53,7 +53,9 @@ function Texto(props) {
         <Header></Header>
         
         <div className='texto'>
-          <div className='texto__banner' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
+          <div className='texto__banner'>
+            <div className='texto__banner__img kenburns-bottom' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
+          </div>
 
           <div className='texto__header'>
 

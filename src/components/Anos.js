@@ -22,7 +22,7 @@ function Anos(props) {
       <div id='loader'>
         <Header></Header>
 
-        <div class="spinner"></div>
+        <div className="spinner"></div>
       </div>
     )
   } else if (anos !== null) {
@@ -31,7 +31,7 @@ function Anos(props) {
         <Header></Header>
 
         <div className='anos__content'>
-          <h2 className='anos__content__title'>Por anos</h2>
+          <h2 className='anos__content__title'>Por ano</h2>
   
           <div>
             <Container fluid>
@@ -39,7 +39,8 @@ function Anos(props) {
               { anos.map( (ano, index) =>
   
                 <Col key={index} md={4}>
-                  <div className='anos__content__ano' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${ano.imagem}')`}}>
+                  <div className='anos__content__ano'>
+                  <div className='anos__content__ano__img' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${ano.imagem}')`}}></div>
                     <Link className='anos__content__ano__title'  to={`/anos/${ano.numero}/1`}>{ano.numero}</Link>
                   </div>
                 </Col>

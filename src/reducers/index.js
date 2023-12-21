@@ -252,6 +252,26 @@ const setTextColorsReducer = (cores = { texto: null, fundo: null }, action) => {
   return cores;
 };
 
+const openCloseReducer = (open = false, action) => {
+  if (action.type === 'OPEN_CLOSE_MENU') {
+
+    return action.payload;
+    
+  }
+  
+  return open;
+};
+
+const checkMobileReducer = (mobile = false, action) => {
+  if (action.type === 'CHECK_MOBILE') {
+
+    return action.payload;
+    
+  }
+  
+  return mobile;
+};
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
@@ -273,5 +293,7 @@ export default combineReducers({
   search: searchReducer,
   resultados: getResultsReducer,
   font: setFontSizeReducer,
-  cores: setTextColorsReducer
+  cores: setTextColorsReducer,
+  open: openCloseReducer,
+  mobile: checkMobileReducer
 });

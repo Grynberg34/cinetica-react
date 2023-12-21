@@ -41,6 +41,11 @@
             .destaques__text__inner__img {
                 height: 15vw;
                 background-size: cover;
+
+                &:hover {
+                    -webkit-animation: kenburns-bottom 40s ease-out infinite both;
+                    animation: kenburns-bottom 40s ease-out infinite both;
+                }
             }
 
             .destaques__text__inner__link {
@@ -158,6 +163,127 @@ div.destaques > div > div > div:nth-child(4) > div {
 div.destaques > div > div > div:nth-child(6) > div {
     background-color: $laranja-escuro;
 }
+
+@media only screen and (max-width: 767px) {
+    
+    .destaques {
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+
+        .destaques__title {
+            font-size: 10vw;
+            margin-bottom: 10vw;
+        }
+
+        .destaques__text {
+            height: 105vw;
+            margin-bottom: 10vw;
+
+            .destaques__text__container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .destaques__text__link {
+                display: block;
+                overflow: hidden;
+            }
+
+
+            .destaques__text__inner {
+                padding: 4vw;
+                height: 100vw;
+    
+                .destaques__text__inner__img {
+                    height: 50vw;
+                    background-size: cover;
+
+                    &:hover {
+                        animation: none;
+                        -webkit-animation: none;
+                    }
+                }
+
+                .destaques__text__inner__info {
+                    padding-top: 1vw;
+    
+                    .destaques__text__inner__info__title {
+                        font-size: 5vw;
+                        margin-top: 4vw;
+                        margin-bottom: 6vw;
+                    }
+    
+                    .destaques__text__inner__info__film {
+                        font-size: 1.25vw;
+                        margin-bottom: 0.5vw;
+                    }
+
+                }
+
+                .destaques__text__inner__date {
+                    padding-top: 4vw;
+                    font-size: 4vw;
+                }
+
+                
+                .destaques__text__inner__words {
+                    padding-top: 1vw;
+                    padding-left: 1.25vw;
+                    padding-right: 1.25vw;
+                    padding-bottom: 2vw;
+                    height: 25vw;
+                    overflow-y: auto;
+
+                    
+                    .destaques__text__inner__words__categories {
+                        font-size: 4vw;
+                        padding: 1vw;
+                        margin-right: 2vw;
+                        margin-bottom: 2vw;
+
+                        &:hover {
+                            border: 1px solid $laranja-escuro;
+                        }
+                    }
+
+                    .destaques__text__inner__words__tag {
+                        font-size: 4vw;
+                        padding: 1vw;
+                        font-weight: 400;
+                        margin-right: 2vw;
+                        margin-bottom: 2vw;
+
+                        &:hover {
+                            border: 1px solid $laranja-escuro;
+                        }
+                    }
+                }
+                
+
+                .destaques__text__inner__words::-webkit-scrollbar {
+                    width: 3vw;
+                }
+               
+            }
+        }
+
+    }
+
+    #destaques > a.carousel-control-next > span.carousel-control-next-icon, #destaques > a.carousel-control-prev > span.carousel-control-prev-icon {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #destaques > a.carousel-control-next {
+        right: -14%;
+    }
+
+    #destaques > a.carousel-control-prev {
+        left: -14%;
+    }
+
+}
+
 
 
 @media only screen and (min-width:768px) and (max-width:1024px) {

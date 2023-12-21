@@ -55,6 +55,33 @@
     }
 }
 
+@media only screen and (max-width:767px) {
+
+    .footer {
+        .footer__left {
+            .footer__left__title {
+                padding-top: 6vw;
+
+                .footer__left__title__link {
+                    font-size: 8vw;
+                }
+            }
+
+            .footer__left__info {
+                font-size: 5vw;
+            }
+        }
+
+        .footer__right {
+            .footer__right__img {
+                width: 50%;
+                padding-top: 8vw;
+            }
+        }
+    }
+
+}
+
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 

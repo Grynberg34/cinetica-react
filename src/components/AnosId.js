@@ -4,6 +4,7 @@ import { GetAno } from '../actions';
 import { GetText } from '../actions';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Header from './Header';
+import SelectionBanner from './SelectionBanner';
 import Footer from './Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -36,7 +37,7 @@ function AnosId(props) {
       <div id='loader'>
         <Header></Header>
 
-        <div class="spinner"></div>
+        <div className="spinner"></div>
       </div>
     )
   } else {
@@ -52,7 +53,7 @@ function AnosId(props) {
         <div id='loader'>
           <Header></Header>
 
-          <div class="spinner"></div>
+          <div className="spinner"></div>
         </div>
       )
     } else {
@@ -60,47 +61,7 @@ function AnosId(props) {
         <div className='selection'>
           <Header></Header>
   
-          <div className='selection__banner' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}>
-  
-            <Container fluid>
-              <Row>
-                <Col md={6}>
-
-                  <h2 className="selection__banner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
-                  <h1 className="selection__banner__title">{texto.titulo}</h1>
-                  <h1 className="selection__banner__film">{texto.filme}</h1>
-                  <h2 className="selection__banner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
-
-                </Col>
-
-                <Col md={4}>
-
-                  <div className="selection__banner__words">
-
-                  { texto.categorias.map( (item, index) =>
-
-                    <Link key={item.id} className="selection__banner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
-
-                    )}
-
-                    { texto.tags.map( (item, index) =>
-
-                    <Link key={item.id} className="selection__banner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
-
-                  )}
-
-
-                  </div>
-
-                </Col>
-
-                <Col md={2}>
-                  <Link className="selection__banner__link" to={`/texto/${texto.id}`}>Acessar</Link>
-                </Col>
-              </Row>
-            </Container>
-  
-          </div>
+          <SelectionBanner></SelectionBanner>
   
           <div className='selection__content'>
             

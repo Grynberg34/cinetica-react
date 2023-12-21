@@ -33,10 +33,12 @@ function Biblioteca(props) {
 
                 { biblioteca.map( (item, index) =>
 
-                  <Col md={6} className='biblioteca__col' key={item.categoria.toLowerCase()}>
-                    {console.log(item.categoria.toLowerCase())}
+                  <Col md={6} xs={6} className='biblioteca__col' key={item.categoria.toLowerCase()}>
                     <Link to={`/categorias/${item.categoria.toLowerCase()}/1`}>
-                      <div className='biblioteca__categorias__categoria' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${item.imagem}')`}}>
+                      <div className='biblioteca__categorias__categoria'>
+
+                        <div className='biblioteca__categorias__categoria__img' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${item.imagem}')`}}></div>
+
                         <h1 className='biblioteca__categorias__categoria__title'>{item.categoria}</h1>
                       </div>
                     </Link>

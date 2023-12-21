@@ -35,6 +35,18 @@
             background-size: cover;;
             background-color: $cinza-escuro;
             margin-bottom: 0.5vw;
+            overflow: hidden;
+
+            .biblioteca__categorias__categoria__img {
+                height: 100%;
+
+                &:hover {
+                    -webkit-animation: kenburns-bottom 10s ease-out infinite both;
+                    animation: kenburns-bottom 10s ease-out infinite both;
+                }
+    
+            }
+
 
             .biblioteca__categorias__categoria__title {
                 position: absolute;
@@ -52,6 +64,27 @@
 
                 &:hover {
                     color: $laranja;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .biblioteca {
+        padding-top: 12vw;
+        padding-bottom: 12vw;
+
+        .biblioteca__title {
+            font-size: 10vw;
+            margin-bottom: 10vw;
+        }
+
+        .biblioteca__categorias {
+            .biblioteca__categorias__categoria {
+                .biblioteca__categorias__categoria__title {
+                    font-size: 5vw;
                 }
             }
         }

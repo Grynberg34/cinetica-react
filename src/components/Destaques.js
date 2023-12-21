@@ -33,9 +33,9 @@ function Destaques(props) {
                 <div className='destaques__text__inner'>
 
                   <Link to={`/texto/${text.Texto.id}`}><div className='destaques__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.Texto.imagem}')`}}></div></Link>
-                  <Container fluid>
+                  <Container fluid className='destaques__text__container'>
                     <Row>
-                      <Col md={8}>
+                      <Col md={8} xs={8}>
                         <Link className='destaques__text__inner__link' to="/">
                           <div className="destaques__text__inner__info">
                             <h2 className="destaques__text__inner__info__title"> {text.Texto.titulo.length > 30 ? <span>{text.Texto.titulo.substring(0, 30) + '...'}</span>: <span>{text.Texto.titulo}</span>}</h2>
@@ -43,7 +43,7 @@ function Destaques(props) {
                           </div>
                         </Link>
                       </Col>
-                      <Col md={4}>
+                      <Col md={4} xs={4}>
                         <h4 className="destaques__text__inner__date">{moment(text.Texto.data).utcOffset('+000').format('D/M/Y')}</h4>
                       </Col>
                     </Row>

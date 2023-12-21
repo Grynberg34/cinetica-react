@@ -67,7 +67,7 @@ function Anos(props) {
       <div id='loader'>
         <Header></Header>
 
-        <div class="spinner"></div>
+        <div className="spinner"></div>
       </div>
     )
   } else if (pesquisa !== null) {

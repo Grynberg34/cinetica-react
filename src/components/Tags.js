@@ -27,7 +27,7 @@ function Tags(props) {
       <div id='loader'>
         <Header></Header>
 
-        <div class="spinner"></div>
+        <div className="spinner"></div>
       </div>
     )
   } else if (tags !== null) {
@@ -46,7 +46,7 @@ function Tags(props) {
 
                 <Col md={6}>
 
-                  <label className='tags__content__header__label'>Filtrar tag</label>
+                  <label className='tags__content__header__label'>Filtrar</label>
                   <input onChange={(e)=> searchTag(e.target.value)} className="tags__content__header__input" type="text" />
 
                 </Col>

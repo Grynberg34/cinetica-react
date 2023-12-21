@@ -3,33 +3,17 @@
 
 #bannerhome {
     .banner {
+        height: 44vw;
 
-        .banner__first {
-            position: relative;
-            background-size: cover;
-            height: 44vw;
-    
-            .banner__first__caption {
-                position: absolute;
-                bottom: 10%;
-                left: 15%;
-                width: 100%;
-    
-                .banner__first__caption__title {
-                    font-family: "bebas-neue-by-fontfabric", sans-serif;
-                    color: $branco;
-                    font-size: 4.16vw;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                }
-    
-            }
-        }
-    
         .banner__item {
             position: relative;
             background-size: cover;
-            height: 44vw;
+
+            .banner__item__img {
+                height: 44vw;
+                position: relative;
+                background-size: cover;
+            }
     
     
             .banner__item__caption {
@@ -63,6 +47,37 @@
     }
 }
 
+
+@media only screen and (max-width:767px) {
+
+    #bannerhome {
+
+        .banner {
+            height: 60vh;
+            .banner__item {
+                .banner__item__img {
+                    height: 60vh;
+                    background-position-x: 50%;
+                }
+
+                .banner__item__caption {
+                    width: 70%;
+
+                    .banner__item__caption__title {
+                        font-size: 8vw;
+                        margin-bottom: 2vw;
+                    }
+
+                    .banner__item__caption__author {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 
