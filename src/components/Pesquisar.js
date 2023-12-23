@@ -6,6 +6,7 @@ import { SelectField } from '../actions';
 import { FilterTerm } from '../actions';
 import { SearchTexts } from '../actions';
 import { RemoveField } from '../actions';
+import { SetResultsPage } from '../actions';
 import { Link } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
@@ -27,6 +28,8 @@ function Anos(props) {
   var resultados = props.resultados;
 
   var texto = props.texto;
+
+  var page = props.page;
 
   function getField(index) {
 
@@ -58,6 +61,10 @@ function Anos(props) {
 
   function getTextBanner(id) {
     store.dispatch(GetText(id))
+  }
+
+  function setResultsPage(page) {
+    store.dispatch(SetResultsPage(page))
   }
 
   if (pesquisa === null) {
@@ -262,11 +269,11 @@ function Anos(props) {
             resultados !== null ?
             <div className="pesquisar__content__resultados">
 
-              <h3 className="pesquisar__content__resultados__length">{resultados.length} resultado(s) encontrado(s)</h3>
+              <h3 className="pesquisar__content__resultados__length">{resultados.number} resultado(s) encontrado(s)</h3>
 
               <Container fluid>
                 <Row>
-                  { resultados.map( (text, index) =>
+                  { resultados.results[page].map( (text, index) =>
                     <Col key={text.id} md={3}>
                       <div onClick={()=> getTextBanner(text.id)} className='pesquisar__content__resultados__text'>
                         <div className='pesquisar__content__resultados__text__inner'>
@@ -295,6 +302,42 @@ function Anos(props) {
                   )}
                 </Row>
               </Container> 
+
+
+                <div className="pesquisar__content__resultados__pages">
+                <Container fluid>
+                  <Row>
+                    <Col md={2}>
+                      {
+                        (page + 1) - 1 > 0 ?
+                        <div>
+                          <img  onClick={()=> setResultsPage(page-1)} className='pesquisar__content__resultados__pages__icon' src="/images/icons/previous.svg" alt="" />
+                          <span className="pesquisar__content__resultados__pages__number left">{(page)}</span>
+                        </div>
+                        :null
+                      }
+                    </Col>
+                    
+                    <Col md={8}>
+                      <h1 className='pesquisar__content__resultados__pages__text'>{page+1}<span className="pesquisar__content__resultados__pages__text__sub">/{resultados.results.length}</span></h1>
+                    </Col>
+  
+                    <Col md={2}>
+                      {
+                        page < resultados.results.length ?
+                        <div>
+                          <span className="pesquisar__content__resultados__pages__number right">{(page + 2)}</span>
+                          <img onClick={()=> setResultsPage(page+1)} className='pesquisar__content__resultados__pages__icon next' src="/images/icons/previous.svg" alt="" />
+                        </div>
+                        :null
+                      }
+                    </Col>
+  
+                  </Row>
+                </Container>
+              </div>
+
+
             </div>
             :null
           }
@@ -315,6 +358,7 @@ function mapStateToProps(state) {
     search: state.search,
     resultados: state.resultados,
     texto: state.texto,
+    page: state.page,
   }
 }
 

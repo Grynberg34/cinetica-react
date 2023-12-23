@@ -272,6 +272,17 @@ const checkMobileReducer = (mobile = false, action) => {
   return mobile;
 };
 
+const setResultsPageReducer = (page = null, action) => {
+  if (action.type === 'SET_RESULTS_PAGE') {
+
+    return action.payload;
+    
+  }
+  
+  return page;
+};
+
+
 export default combineReducers({
   banner: getBannerTextsReducer,
   recentes: getRecentTextsReducer,
@@ -295,5 +306,6 @@ export default combineReducers({
   font: setFontSizeReducer,
   cores: setTextColorsReducer,
   open: openCloseReducer,
-  mobile: checkMobileReducer
+  mobile: checkMobileReducer,
+  page: setResultsPageReducer,
 });

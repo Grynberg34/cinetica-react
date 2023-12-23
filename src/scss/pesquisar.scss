@@ -340,6 +340,63 @@
         
                 }
             }
+
+            .pesquisar__content__resultados__pages {
+                position: relative;
+                padding: 2vw;
+                border: 1px solid $cinza-claro;
+                margin-top: 2vw;
+                margin-right: var(--bs-gutter-x,.75rem);
+                margin-left: var(--bs-gutter-x,.75rem);
+    
+                .pesquisar__content__resultados__pages__icon {
+                    display: block;
+                    width: 25%;
+                    margin-right: auto;
+                    cursor: pointer;
+                }
+    
+                .next {
+                    transform: scaleX(-1);
+                    margin-left: auto;
+                    margin-right: unset;
+                }
+    
+                .pesquisar__content__resultados__pages__text {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $cinza-claro;
+                    font-size: 2.08vw;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-top: 0.5vw;
+    
+                    .pesquisar__content__resultados__pages__text__sub {
+                        font-size: 1.25vw;
+                    }
+                }
+    
+                .pesquisar__content__resultados__pages__number {
+                    position: absolute;
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $cinza-claro;
+                    font-size: 2.08vw;
+                    font-weight: 700;
+                }
+    
+                .left {
+                    top: 2vw;
+                    left: 8vw;
+                    transform: rotate(90deg);
+                }
+    
+                .right {
+                    top: 2vw;
+                    right: 8vw;
+                    transform: rotate(-90deg);
+                }
+            }
+
         }
     }
 

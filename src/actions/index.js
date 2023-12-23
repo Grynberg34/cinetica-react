@@ -286,12 +286,14 @@ export const RemoveField = (field, search) => async dispatch => {
 
     if (!(search.título === null && search.filme == null && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
         await api.post('/front/pesquisar', search).then(function(response){
+            dispatch({ type: 'SET_RESULTS_PAGE', payload: 0 });
             dispatch({ type: 'SHOW_RESULTS', payload: response.data });
         })  
         .catch(function(err){
             console.log(err)
         })
     } else {
+        dispatch({ type: 'SET_RESULTS_PAGE', payload: null });
         dispatch({ type: 'SHOW_RESULTS', payload: null });
     }
 
@@ -335,6 +337,7 @@ export const SearchTexts = (term, field, search) => async dispatch => {
     dispatch({ type: 'SEARCH', payload: search});
 
     await api.post('/front/pesquisar', search).then(function(response){
+        dispatch({ type: 'SET_RESULTS_PAGE', payload: 0 });
         dispatch({ type: 'SHOW_RESULTS', payload: response.data });
     })  
     .catch(function(err){
@@ -374,4 +377,9 @@ export const OpenCloseMenu = (value) => async dispatch => {
 export const CheckMobile = (value) => async dispatch => {
 
     dispatch({ type: 'CHECK_MOBILE', payload: value });
+};
+
+export const SetResultsPage = (page) => async dispatch => {
+
+    dispatch({ type: 'SET_RESULTS_PAGE', payload: page });
 };
