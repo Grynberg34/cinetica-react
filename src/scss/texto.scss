@@ -268,7 +268,41 @@
                 padding-right: 10vw;
                 font-size: 5vw;
                 text-align: justify;
-                margin-bottom: 30vw;
+                margin-bottom: 20vw;
+            }
+        }
+
+        .texto__footer {
+            padding-top: 10vw;
+            padding-bottom: 6vw;
+            padding-left: 10vw;
+            padding-right: 10vw;
+    
+            .texto__footer__categories {
+                font-size: 4vw;
+                padding: 2vw;
+                border: 1px solid $branco;
+                margin-right: 4vw;
+                margin-bottom: 4vw;
+    
+                &:hover {
+                    border: 1px solid $cinza-escuro;
+                }
+            }
+    
+            .texto__footer__tags {
+                font-size: 4vw;
+                padding: 2vw;
+                font-weight: 400;
+                text-transform: uppercase;
+                border: 1px solid $laranja-claro;
+                text-decoration: none;
+                margin-right: 4vw;
+                margin-bottom: 4vw;
+    
+                &:hover {
+                    border: 1px solid $cinza-escuro;
+                }
             }
         }
     }
