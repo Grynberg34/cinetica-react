@@ -25,6 +25,12 @@ function Texto(props) {
 
   var cores = props.cores;
 
+  var mobile = props.mobile;
+
+  if (window.innerWidth < 768 && font === 1) {
+    store.dispatch(SetFontSize(4))
+  }
+
   function setFontSize(font) {
 
     if (font > 0.7 && font < 1.5) {
@@ -34,8 +40,6 @@ function Texto(props) {
 
   if (texto === null || parseInt(id) !== texto.id) {
     store.dispatch(GetText(id))
-
-    store.dispatch(SetTextColors())
 
 
     return (
@@ -54,7 +58,7 @@ function Texto(props) {
         
         <div className='texto'>
           <div className='texto__banner'>
-            <div className='texto__banner__img kenburns-bottom' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
+            <div className={mobile === false?'texto__banner__img kenburns-bottom':'texto__banner__img bg-pan-right'} style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
           </div>
 
           <div className='texto__header'>
@@ -120,7 +124,8 @@ function mapStateToProps(state) {
     link: state.link,
     index: state.index,
     font: state.font,
-    cores: state.cores
+    cores: state.cores,
+    mobile: state.mobile
   }
 }
 

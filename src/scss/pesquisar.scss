@@ -16,12 +16,26 @@
             background-color: $cinza-escuro;
             background-size: cover;
             background-position-y: 30%;
-            padding-left: 10vw;
-            padding-right: 10vw;
             position: sticky;
             top: 0;
             z-index: 99;
             border-bottom: 1px solid $laranja;
+            overflow: hidden;
+
+            .pesquisa__content__banner__img {
+                height: 15vw;
+                background-size: cover;
+                background-position-y: 30%;
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+
+            .pesquisa__content__banner__container {
+                padding-left: 10vw;
+                padding-right: 10vw;
+            }
+    
     
             .pesquisa__content__banner__title {
                 font-family: "bebas-neue-by-fontfabric", sans-serif;

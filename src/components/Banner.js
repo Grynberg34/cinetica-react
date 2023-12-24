@@ -9,7 +9,7 @@ function Banner(props) {
 
   var banner = props.banner;
 
-  var mobile = props.mobile
+  var mobile = props.mobile;
 
   if (banner === null) {
     store.dispatch(GetBannerTexts())

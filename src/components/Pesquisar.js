@@ -86,45 +86,47 @@ function Anos(props) {
 
           {
             (resultados !== null && texto !== null)?
-            <div className='pesquisa__content__banner' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}>
-  
-            <Container fluid>
-              <Row>
-                <Col md={6}>
+            <div className='pesquisa__content__banner'>
+              
+              <div className='pesquisa__content__banner__img kenburns-bottom' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
 
-                  <h2 className="pesquisa__content__banner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
-                  <h1 className="pesquisa__content__banner__title">{texto.titulo}</h1>
-                  <h1 className="pesquisa__content__banner__film">{texto.filme}</h1>
-                  <h2 className="pesquisa__content__banner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
+              <Container fluid className='pesquisa__content__banner__container'>
+                <Row>
+                  <Col md={6}>
 
-                </Col>
+                    <h2 className="pesquisa__content__banner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
+                    <h1 className="pesquisa__content__banner__title">{texto.titulo}</h1>
+                    <h1 className="pesquisa__content__banner__film">{texto.filme}</h1>
+                    <h2 className="pesquisa__content__banner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
 
-                <Col md={4}>
+                  </Col>
 
-                  <div className="pesquisa__content__banner__words">
+                  <Col md={4}>
 
-                  { texto.categorias.map( (item, index) =>
+                    <div className="pesquisa__content__banner__words">
 
-                    <Link key={item.id} className="pesquisa__content__banner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+                    { texto.categorias.map( (item, index) =>
+
+                      <Link key={item.id} className="pesquisa__content__banner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+
+                      )}
+
+                      { texto.tags.map( (item, index) =>
+
+                      <Link key={item.id} className="pesquisa__content__banner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
 
                     )}
 
-                    { texto.tags.map( (item, index) =>
 
-                    <Link key={item.id} className="pesquisa__content__banner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+                    </div>
 
-                  )}
+                  </Col>
 
-
-                  </div>
-
-                </Col>
-
-                <Col md={2}>
-                  <Link className="pesquisa__content__banner__link" to={`/texto/${texto.id}`}>Acessar</Link>
-                </Col>
-              </Row>
-            </Container>
+                  <Col md={2}>
+                    <Link className="pesquisa__content__banner__link" to={`/texto/${texto.id}`}>Acessar</Link>
+                  </Col>
+                </Row>
+              </Container>
   
             </div>
             :null
@@ -324,7 +326,7 @@ function Anos(props) {
   
                     <Col md={2}>
                       {
-                        page < resultados.results.length ?
+                        (page + 1) < resultados.results.length ?
                         <div>
                           <span className="pesquisar__content__resultados__pages__number right">{(page + 2)}</span>
                           <img onClick={()=> setResultsPage(page+1)} className='pesquisar__content__resultados__pages__icon next' src="/images/icons/previous.svg" alt="" />

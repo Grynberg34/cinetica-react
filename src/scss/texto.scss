@@ -4,6 +4,7 @@
 
 .texto {
 
+
     a {
         color: $laranja-escuro;
         font-weight: 700;
@@ -199,6 +200,82 @@
     }
 }
 
+
+@media only screen and (max-width:767px) {
+
+    .texto {
+
+        .texto__banner {
+            overflow: hidden;
+            
+            .texto__banner__img {
+                position: relative;
+                background-size: cover;
+                height: 44vh;
+            }
+
+        }
+
+        .texto__header {
+            padding-top: 10vw;
+            padding-bottom: 10vw;
+
+            .texto__header__title {
+                font-size: 10vw;
+                margin-bottom: 4vw;
+            }
+
+            .texto__header__film {
+                font-size: 6vw;
+                margin-bottom: 4vw;
+            }
+
+            .texto__header__date {
+                font-size: 6vw;
+            }
+        }
+
+        .texto__main {
+            padding-top: 14vw;
+    
+            .texto__main__info {
+                display: none;
+            }
+
+            .texto__main__font {
+                padding-left: 10vw;
+                padding-right: 10vw;
+                padding-bottom: 5vw;
+
+                .texto__main__font__title {
+                    font-size: 4vw;
+                }
+
+                .texto__main__font__size {
+                    margin-left: 2vw;
+                    margin-right: 2vw;
+                    font-size: 5vw;
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                    border-radius: 2vw;
+                    border: 0.25vw solid #171717;
+                }
+            }
+
+            .texto__main__text {
+                padding-top: 10vw;
+                padding-left: 10vw;
+                padding-right: 10vw;
+                font-size: 5vw;
+                text-align: justify;
+                margin-bottom: 30vw;
+            }
+        }
+    }
+    
+
+
+}
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 

@@ -58,7 +58,10 @@
 @media only screen and (max-width:767px) {
 
     .footer {
+        border-top: 1px solid $cinza-escuro;
+
         .footer__left {
+
             .footer__left__title {
                 padding-top: 6vw;
 
@@ -73,6 +76,8 @@
         }
 
         .footer__right {
+            border-left: 1px solid $cinza-escuro;
+            
             .footer__right__img {
                 width: 50%;
                 padding-top: 8vw;

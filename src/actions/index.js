@@ -52,6 +52,22 @@ export const GetText = (id) => async dispatch => {
 
     await api.get(`/front/texto/${id}`, {
     }).then(async function(response){
+
+        var numero_fundo = Math.floor(Math.random() * 4);
+
+        var numero_texto= Math.floor(Math.random() * 4);
+      
+        var cores_fundo = ["#fae9e5","#f4e0d8","#f4f4f4","#e9e9e9"];
+      
+        var cores_texto = ["#212020", "#2a2a2a", "#782323", "#530000"];
+    
+        var cores = {
+            texto : cores_texto[numero_texto],
+            fundo: cores_fundo[numero_fundo]
+        }
+    
+        dispatch({ type: 'SET_TEXT_COLORS', payload: cores });
+
         dispatch({ type: 'GET_TEXT', payload: response.data });
     })  
     .catch(function(err){
@@ -349,24 +365,6 @@ export const SearchTexts = (term, field, search) => async dispatch => {
 export const SetFontSize = (font) => async dispatch => {
 
     dispatch({ type: 'SET_FONT_SIZE', payload: font});
-};
-
-export const SetTextColors = () => async dispatch => {
-
-    var numero_fundo = Math.floor(Math.random() * 4);
-
-    var numero_texto= Math.floor(Math.random() * 4);
-  
-    var cores_fundo = ["#fae9e5","#f4e0d8","#f4f4f4","#e9e9e9"];
-  
-    var cores_texto = ["#212020", "#2a2a2a", "#782323", "#530000"];
-
-    var cores = {
-        texto : cores_texto[numero_texto],
-        fundo: cores_fundo[numero_fundo]
-    }
-
-    dispatch({ type: 'SET_TEXT_COLORS', payload: cores });
 };
 
 export const OpenCloseMenu = (value) => async dispatch => {
