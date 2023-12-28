@@ -147,6 +147,46 @@
 
 
 
+@media only screen and (max-width:767px) {
+
+    .tags {
+
+        .tags__content {
+            padding-top: 20vw;
+
+            .tags__content__header {
+
+                .tags__content__header__title {
+                    font-size: 10vw;
+                    margin-bottom: 10vw;
+                }
+
+                .tags__content__header__label {
+                    font-size: 4vw;
+                }
+
+            }
+
+            .tags__content__tag {
+                height: 20vw;
+                margin-bottom: 4vw;
+
+                .tags__content__tag__img {
+                    height: 20vw;
+                }
+                
+                .tags__content__tag__title {
+                    font-size: 4vw;
+                    height: 20vw;
+                }
+
+            }
+        }
+    }
+
+}
+
+
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 

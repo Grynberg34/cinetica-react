@@ -11,18 +11,16 @@
     .pesquisar__content {
         margin-bottom: 20vw;
 
-        .pesquisa__content__banner {
+        .pesquisar__content__banner {
             height: 15vw;
             background-color: $cinza-escuro;
-            background-size: cover;
-            background-position-y: 30%;
             position: sticky;
             top: 0;
             z-index: 99;
             border-bottom: 1px solid $laranja;
             overflow: hidden;
-
-            .pesquisa__content__banner__img {
+    
+            .pesquisar__content__banner__img {
                 height: 15vw;
                 background-size: cover;
                 background-position-y: 30%;
@@ -30,14 +28,13 @@
                 width: 100%;
                 z-index: -1;
             }
-
-            .pesquisa__content__banner__container {
+    
+            .pesquisar__content__banner__container {
                 padding-left: 10vw;
                 padding-right: 10vw;
             }
     
-    
-            .pesquisa__content__banner__title {
+            .pesquisar__content__banner__title {
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $cinza-claro;
                 font-size: 1.77vw;
@@ -48,7 +45,7 @@
             }
     
             
-            .pesquisa__content__banner__film{
+            .pesquisar__content__banner__film{
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $cinza-claro;
                 font-size: 1vw;
@@ -56,7 +53,7 @@
                 text-transform: uppercase;
             }
     
-            .pesquisa__content__banner__date {
+            .pesquisar__content__banner__date {
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $laranja;
                 font-size: 1.56vw;
@@ -66,16 +63,16 @@
                 margin-top: 3vw;
             }
     
-            .pesquisa__content__banner__author {
+            .pesquisar__content__banner__author {
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $laranja-claro;
-                font-size: 22px;
+                font-size: 1.14vw;
                 font-weight: 400;
                 text-transform: uppercase;
                 margin-top: 1vw;
             }
     
-            .pesquisa__content__banner__link {
+            .pesquisar__content__banner__link {
                 display: block;
                 font-family: "bebas-neue-by-fontfabric", sans-serif;
                 color: $cinza-claro;
@@ -94,7 +91,7 @@
                 }
             }
             
-            .pesquisa__content__banner__words {
+            .pesquisar__content__banner__words {
                 margin-top: 6vw;
                 padding-left: 1.25vw;
                 padding-right: 1.25vw;
@@ -103,7 +100,7 @@
                 margin-right: 8vw;
                 overflow-y: auto;
     
-                .pesquisa__content__banner__words__categories {
+                .pesquisar__content__banner__words__categories {
                     display: inline-flex;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $laranja-claro;
@@ -121,7 +118,7 @@
                     }
                 }
         
-                .pesquisa__content__banner__words__tag {
+                .pesquisar__content__banner__words__tag {
                     display: inline-flex;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $branco;
@@ -141,22 +138,21 @@
                 }
             }
     
-            .pesquisa__content__banner__words::-webkit-scrollbar-track {
+            .pesquisar__content__banner__words::-webkit-scrollbar-track {
                 border: 2px solid $laranja-claro;
             }
                
-            .pesquisa__content__banner__words::-webkit-scrollbar-thumb {
+            .pesquisar__content__banner__words::-webkit-scrollbar-thumb {
                 background-color: $laranja-escuro;
                 outline: none;
             }
     
-            .pesquisa__content__banner__words::-webkit-scrollbar {
+            .pesquisar__content__banner__words::-webkit-scrollbar {
                 width: 1vw;
             }
     
         }
     
-
         .pesquisar__content__pesquisa {
             position: relative;
             margin-left: auto;
@@ -416,25 +412,320 @@
 
 }
 
+@media only screen and (max-width:767px) {
+    .pesquisar {
 
-@media only screen and (min-width:768px) and (max-width:1024px) {
-
-
-}
-
-@media only screen and (min-width:1025px) and (max-width:1399px) {
+        .pesquisar__content {
+            min-height: 80vh;
 
 
+            .pesquisar__content__banner {
+                height: 44vw;
+                border-bottom: 2px solid $laranja;
+                z-index: 9;
+        
+                .pesquisar__content__banner__img {
+                    height: 44vw;
+                    background-position-y: 30%;
+                }
+        
+                .pesquisar__content__banner__container {
+                    padding-left: 7vw;
+                    padding-right: 7vw;
+                }
+        
+                .pesquisar__content__banner__title {
+                    font-size: 5vw;
+                    margin-bottom: 2vw;
+                    text-wrap: none;
+                }
+        
+                
+                .pesquisar__content__banner__film{
+                    font-size: 4vw;
+                    font-weight: 400;
+                }
+        
+                .pesquisar__content__banner__date {
+                    font-size: 3.5vw;
+                    margin-bottom: 2vw;
+                    margin-top: 14vw;
+                }
+        
+                .pesquisar__content__banner__author {
+                    font-size: 3.5vw;
+                    margin-top: 1vw;
+                }
+        
+                .pesquisar__content__banner__link {
+                    padding: 1vw;
+                    font-size: 3vw;
+                    margin-top: 25vw;
+                    font-weight: 400;
+                    border: 1px solid $laranja;
+    
+                }
+    
+                .pesquisar__content__banner__tag {
+                    display: block;
+                    position: relative;
+                    width: 70%;
+                    margin-top: 25vw;
+                    border: 1px solid $laranja;
+                }
+                
+                .pesquisar__content__banner__words {
+                    display: none;
+                }
+        
+                .pesquisar__content__banner__words::-webkit-scrollbar-track {
+                    border: 2px solid $laranja-claro;
+                }
+                   
+                .pesquisar__content__banner__words::-webkit-scrollbar-thumb {
+                    background-color: $laranja-escuro;
+                    outline: none;
+                }
+        
+                .pesquisar__content__banner__words::-webkit-scrollbar {
+                    width: 1vw;
+                }
+    
+        
+            }
 
-}
+            .pesquisar__content__pesquisa {
+                padding-top: 20vw;
+                width: 80vw;
+    
+                .pesquisar__content__pesquisa__campo {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $branco;
+                    font-size: 6vw;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding: 4vw;
+                    border: 0.1vw solid $laranja;
+                    margin-bottom: 8vw;
+                    width: 100%;
+                }
+    
+                .pesquisar__content__pesquisa__icon {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 6vw;
+                    padding: 0.5vw;
+                    width: 50%;
+                    cursor: pointer;
+                }
+    
+                .pesquisar__content__pesquisa__input {
+                    display: block;
+                    background: none;
+                    outline: none;
+                    border: 0.1vw solid $laranja;
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $branco;
+                    font-size: 5vw;
+                    margin-bottom: 4vw;
+    
+                }
+    
+                .pesquisar__content__pesquisa__termos {
+                    display: block;
+                    position: absolute;
+                    top: 60vw;
+                    background-color: $cinza-claro;
+                    padding: 4vw;
+                    width: 100%;
+                    height: fit-content;
+                    max-height: 70vw;
+                    overflow: auto;
+                    border: 0.1vw solid $cinza-escuro;
+    
+                    .pesquisar__content__pesquisa__termos__termo {
+                        font-family: "bebas-neue-by-fontfabric", sans-serif;
+                        color: $cinza-escuro;
+                        font-size: 4vw;
+                        font-weight: 400;
+                        padding-bottom: 4vw;
+                        margin-bottom: 0;
+                        cursor: pointer;
+                        text-align: center;
+    
+                        &:last-of-type {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+    
+                .pesquisar__content__pesquisa__termos::-webkit-scrollbar-track {
+                    border: 2px solid $laranja;
+                }
+                   
+                .pesquisar__content__pesquisa__termos::-webkit-scrollbar-thumb {
+                    background-color: $laranja;
+                    outline: none;
+                }
+    
+                .pesquisar__content__pesquisa__termos::-webkit-scrollbar {
+                    width: 4vw;
+                }
+            }
+    
+            .pesquisar__content__campos {
+                padding-left: 5vw;
+                padding-right: 5vw;
+                padding-top: 6vw;
+    
+                .pesquisar__content__campos__campo {
+                    margin-bottom: 6vw;
+    
+                    .pesquisar__content__campos__campo__title {
+                        font-family: "bebas-neue-by-fontfabric", sans-serif;
+                        color: $laranja;
+                        font-size: 5vw;
+                        font-weight: 700;
+                        text-align: center;
+                        margin-bottom: 1vw;
+                    }
+    
+                    .pesquisar__content__campos__campo__selected {
+                        font-family: "Merriweather", sans-serif;
+                        color: $cinza-claro;
+                        font-size: 3vw;
+                        font-weight: 400;
+                        line-height: 2;
+                        text-align: center;
+                        margin-bottom: 0.5vw;
+                    }
+    
+                    .pesquisar__content__campos__campo__img {
+                        width: 4vw;
+                        margin-left: 1vw;
+                        cursor: pointer;
+                    }
+                }
+            }
+    
+            .pesquisar__content__resultados {
+                margin-top: 8vw;
+                padding-left: 5vw;
+                padding-right: 5vw;
+    
+                .pesquisar__content__resultados__length {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $cinza-claro;
+                    font-size: 5vw;
+                    font-weight: 400;
+                    text-align: center;
+                    font-style: italic;
+                    margin-bottom: 8vw;
+                }
+    
 
-@media only screen and (min-width:1400px) and (max-width:1599px) {
+                .pesquisar__content__resultados__text {
+                    height: 50vw;
+                    margin-bottom: 6vw;
+            
+                    .pesquisar__content__resultados__text__inner {
+                        border: 1px solid $laranja-claro;
+                        padding: 3vw;
+                        height: 50vw;
+                        overflow: hidden;
+    
+                        .pesquisar__content__resultados__text__inner__container {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+            
+                        .pesquisar__content__resultados__text__inner__img {
+                            height: 20vw;
+                            background-size: cover;
+                        }
+            
+                        .pesquisar__content__resultados__text__inner__link {
+                            text-decoration: none;
+                        }
+            
+                        .pesquisar__content__resultados__text__inner__info {
+                            padding-top: 3vw;
+            
+                            .pesquisar__content__resultados__text__inner__info__title {
+                                font-size: 4vw;
+                                margin-bottom: 2vw;
+                            }
+            
+                            .pesquisar__content__resultados__text__inner__info__film {
+                                font-size: 3vw;
+                                margin-bottom: 2vw;
+                            }
+                        }
+            
+                        .pesquisar__content__resultados__text__inner__date {
+                            padding-top: 1vw;
+                            font-size: 3vw;
+                            font-weight: 300;
+                            text-align: left;
+                        }
+            
+                    }
+                
+                }
+    
+                .pesquisar__content__resultados__pages {
+                    padding: 2vw;
+                    border: 1px solid $cinza-claro;
+                    margin-top: 10vw;
+                    margin-right: var(--bs-gutter-x,.75rem);
+                    margin-left: var(--bs-gutter-x,.75rem);
+        
+                    .pesquisar__content__resultados__pages__icon {
+                        width: 60%;
+                        margin-top: 1vw;
+                    }
+        
+                    .next {
+                        transform: scaleX(-1);
+                        margin-left: auto;
+                        margin-right: unset;
+                    }
+        
+                    .pesquisar__content__resultados__pages__text {
+                        font-size: 7vw;
+                        font-weight: 700;
+                        margin-top: 0.5vw;
+        
+                        .pesquisar__content__resultados__pages__text__sub {
+                            font-size: 5vw;
+                        }
+                    }
+        
+                    .pesquisar__content__resultados__pages__number {
+                        display: none;
+                    }
+        
+                    .left {
+                        top: 2vw;
+                        left: 8vw;
+                    }
+        
+                    .right {
+                        top: 2vw;
+                        right: 8vw;
+                    }
+                }
 
+    
+            }
 
-}
+        }
 
-@media only screen and (min-width:1600px) and (max-width:1799px) {
-
-
-
+    }
 }

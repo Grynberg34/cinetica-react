@@ -90,6 +90,38 @@
 
 }
 
+@media only screen and (max-width:767px) {
+
+    .categorias {
+
+        .categorias__content {
+            padding-top: 20vw;
+            padding-bottom: 40vw;
+
+            .categorias__content__title {
+                font-size: 10vw;
+                margin-bottom: 10vw;
+            }
+
+            .categorias__content__categoria {
+                height: 20vw;
+                margin-bottom: 4vw;
+
+                .categorias__content__categoria__img {
+                    height: 20vw;
+                }
+                
+                .categorias__content__categoria__title {
+                    font-size: 4vw;
+                    height: 20vw;
+                }
+
+            }
+        }
+    }
+
+}
+
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 

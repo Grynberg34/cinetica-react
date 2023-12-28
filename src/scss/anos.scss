@@ -90,6 +90,39 @@
 
 }
 
+@media only screen and (max-width:767px) {
+
+    .anos {
+
+        .anos__content {
+            padding-top: 20vw;
+            min-height: 80vh;
+
+            .anos__content__title {
+                font-size: 10vw;
+                margin-bottom: 10vw;
+            }
+
+            .anos__content__ano {
+                height: 20vw;
+                margin-bottom: 4vw;
+
+                .anos__content__ano__img {
+                    height: 20vw;
+                }
+                
+                .anos__content__ano__title {
+                    font-size: 4vw;
+                    height: 20vw;
+                }
+
+            }
+        }
+    }
+
+}
+
+
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 

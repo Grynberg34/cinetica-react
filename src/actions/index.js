@@ -381,3 +381,8 @@ export const SetResultsPage = (page) => async dispatch => {
 
     dispatch({ type: 'SET_RESULTS_PAGE', payload: page });
 };
+
+export const OpenCloseTagsMobile = (value) => async dispatch => {
+
+    dispatch({ type: 'OPEN_TAGS_MOBILE', payload: value });
+};

@@ -38,7 +38,7 @@ function Categorias(props) {
               <Row>
               { categorias.map( (categoria, index) =>
   
-                <Col key={index} md={4}>
+                <Col key={index} md={4} xs={6}>
                   <div className='categorias__content__categoria'>
                     <div className='categorias__content__categoria__img' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${categoria.imagem}')`}}></div>
                     <Link className='categorias__content__categoria__title'  to={`/categorias/${categoria.categoria.toLowerCase()}/1`}>{categoria.categoria}</Link>

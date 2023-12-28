@@ -113,6 +113,42 @@
     }
 }
 
+@media only screen and (max-width:767px) {
+
+    .autores {
+
+        .autores__content {
+            padding-top: 20vw;
+            min-height: 80vh;
+
+            .autores__content__title {
+                font-size: 10vw;
+                margin-bottom: 10vw;
+            }
+
+            .autores__content__autor {
+                height: 20vw;
+                margin-bottom: 4vw;
+
+                .autores__content__autor__img {
+                    height: 20vw;
+                }
+                
+                .autores__content__autor__title {
+                    font-size: 4vw;
+                    height: 20vw;
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
 @media only screen and (min-width:768px) and (max-width:1024px) {
 
 

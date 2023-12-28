@@ -38,7 +38,7 @@ function Anos(props) {
               <Row>
               { anos.map( (ano, index) =>
   
-                <Col key={index} md={4}>
+                <Col key={index} md={4} xs={6}>
                   <div className='anos__content__ano'>
                   <div className='anos__content__ano__img' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${ano.imagem}')`}}></div>
                     <Link className='anos__content__ano__title'  to={`/anos/${ano.numero}/1`}>{ano.numero}</Link>

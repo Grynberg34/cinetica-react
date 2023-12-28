@@ -38,7 +38,7 @@ function Autores(props) {
               <Row>
               { autores.map( (autor, index) =>
   
-                <Col key={index} md={4}>
+                <Col key={index} md={4} xs={6}>
                   <div className='autores__content__autor'>
                     <Link className='autores__content__autor__title'  to={`/autores/${autor.nome.toLowerCase()}/1`}>{autor.nome}</Link>
                   </div>

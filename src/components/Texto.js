@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import { store } from '../store';
 import { GetText } from '../actions';
 import { SetFontSize } from '../actions';
-import { SetTextColors } from '../actions';
 import { Link, useParams } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';

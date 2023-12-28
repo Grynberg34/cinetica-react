@@ -40,11 +40,11 @@ function Tags(props) {
             <Container fluid>
               <Row>
 
-                <Col md={6}>
+                <Col md={6} xs={6}>
                   <h2 className='tags__content__header__title'>Tags</h2>
                 </Col>
 
-                <Col md={6}>
+                <Col md={6} xs={6}>
 
                   <label className='tags__content__header__label'>Filtrar</label>
                   <input onChange={(e)=> searchTag(e.target.value)} className="tags__content__header__input" type="text" />
@@ -61,7 +61,7 @@ function Tags(props) {
               <Row>
               { tags.filter.map( (tag, index) =>
   
-                <Col key={index} md={4}>
+                <Col key={index} md={4} xs={6}>
                   <div className='tags__content__tag'>
                     <Link className='tags__content__tag__title'  to={`/tags/${tag.tag.toLowerCase()}/1`}>{tag.tag}</Link>
                   </div>
