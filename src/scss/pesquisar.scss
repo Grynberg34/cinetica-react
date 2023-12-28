@@ -413,8 +413,10 @@
 }
 
 @media only screen and (max-width:767px) {
-    .pesquisar {
 
+    
+    .pesquisar {
+        
         .pesquisar__content {
             min-height: 80vh;
 
@@ -728,4 +730,49 @@
         }
 
     }
+
+    .search_menu {
+        display: block;
+        position: absolute;
+        top: 65vw;
+        right: 15vw;
+        background-color: $cinza-claro;
+        z-index: 9999;
+        width: 40vw;
+
+        .search_menu__categories {
+            display: block;
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $laranja-escuro;
+            border-bottom: 1px solid $laranja;
+            font-size: 4vw;
+            padding: 2vw;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-right: 0.5vw;
+            margin-bottom: 1vw;
+            text-align: center;
+        }
+
+        .search_menu__tag {
+            display: block;
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $cinza-escuro;
+            border-bottom: 1px solid $laranja;
+            font-size: 4vw;
+            padding: 2vw;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-right: 0.5vw;
+            margin-bottom: 0;
+            text-align: center;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+
 }

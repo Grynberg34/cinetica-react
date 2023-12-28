@@ -378,14 +378,14 @@ function Anos(props) {
 
         {
           mobile === true && tags_menu === true?
-          <div className='menu'>
+          <div className='search_menu'>
                     
             { texto.categorias.map( (item, index) =>
-              <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+              <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="search_menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
             )}
 
             { texto.tags.map( (item, index) =>
-              <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+              <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="search_menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
             )}
           </div>
           :null
