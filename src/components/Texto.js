@@ -26,13 +26,21 @@ function Texto(props) {
 
   var mobile = props.mobile;
 
+  var font_value = 0.1;
+
   if (window.innerWidth < 768 && font === 1) {
     store.dispatch(SetFontSize(4))
-  }
+  } 
+
+  if (window.innerWidth < 768) {
+    font_value = 1
+  } 
 
   function setFontSize(font) {
 
     if (font > 0.7 && font < 1.5) {
+      store.dispatch(SetFontSize(font))
+    } else if (font > 2 && font < 7) {
       store.dispatch(SetFontSize(font))
     }
   }
@@ -84,7 +92,7 @@ function Texto(props) {
             </div>
 
             <div className="texto__main__font">
-              <h5 className="texto__main__font__title">Tamanho da fonte: <span onClick={()=> setFontSize(font-0.1)} className="texto__main__font__size">-</span> <span onClick={()=> setFontSize(font+0.1)} className="texto__main__font__size">+</span></h5>
+              <h5 className="texto__main__font__title">Tamanho da fonte: <span onClick={()=> setFontSize(font-font_value)} className="texto__main__font__size">-</span> <span onClick={()=> setFontSize(font+font_value)} className="texto__main__font__size">+</span></h5>
             </div>
 
             <p className='texto__main__text' style={{color: `${cores.texto}`, fontSize: `${font}vw`}}>{parse(texto.texto)}</p>
