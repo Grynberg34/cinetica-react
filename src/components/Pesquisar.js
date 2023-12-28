@@ -300,7 +300,7 @@ function Anos(props) {
                     { resultados.results[page]?.map( (text, index) =>
                       <Col key={text.id} md={3} xs={6}>
                         {console.log(text)}
-                        <div onClick={()=> {getTextBanner(text.Texto.id); setMenu(false)}} className='pesquisar__content__resultados__text'>
+                        <div onClick={()=> {getTextBanner(text.id); setMenu(false)}} className='pesquisar__content__resultados__text'>
                           <div className='pesquisar__content__resultados__text__inner'>
       
                             <div className='pesquisar__content__resultados__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}></div>
@@ -338,7 +338,7 @@ function Anos(props) {
                             {
                               (page + 1) - 1 > 0 ?
                               <div>
-                                <img  nClick={()=> {setResultsPage(page-1); setMenu(false)}}  className='pesquisar__content__resultados__pages__icon' src="/images/icons/seta-esquerda.svg" alt="" />
+                                <img  onClick={()=> {setResultsPage(page-1); setMenu(false)}}  className='pesquisar__content__resultados__pages__icon' src="/images/icons/seta-esquerda.svg" alt="" />
                                 <span className="pesquisar__content__resultados__pages__number left">{(page)}</span>
                               </div>
                               :null
