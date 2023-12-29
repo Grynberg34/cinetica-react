@@ -149,6 +149,10 @@
                 border-radius: 0.2vw;
                 border: 0.1vw solid #171717;
                 cursor: pointer;
+                
+                &:first-of-type {
+                    margin-left: 4vw;
+                }
             }
         }
     }
@@ -248,13 +252,15 @@
                 padding-bottom: 5vw;
 
                 .texto__main__font__title {
-                    font-size: 4vw;
+                    font-size: 3.5vw;
                 }
 
                 .texto__main__font__size {
                     margin-left: 2vw;
                     margin-right: 2vw;
-                    font-size: 5vw;
+                    font-size: 4vw;
+                    padding-top: 1vw;
+                    padding-bottom: 1vw;
                     padding-left: 2vw;
                     padding-right: 2vw;
                     border-radius: 2vw;

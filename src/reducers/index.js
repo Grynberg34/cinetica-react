@@ -283,15 +283,6 @@ const setResultsPageReducer = (page = null, action) => {
 };
 
 
-const openCloseTagsMobile = (tags_menu = false, action) => {
-  if (action.type === 'OPEN_TAGS_MOBILE') {
-
-    return action.payload;
-    
-  }
-  
-  return tags_menu;
-};
 
 export default combineReducers({
   banner: getBannerTextsReducer,
@@ -318,5 +309,4 @@ export default combineReducers({
   open: openCloseReducer,
   mobile: checkMobileReducer,
   page: setResultsPageReducer,
-  tags_menu: openCloseTagsMobile
 });

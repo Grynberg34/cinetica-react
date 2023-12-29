@@ -50,23 +50,23 @@ export const GetBiblioteca = () => async dispatch => {
 
 export const GetText = (id) => async dispatch => {
 
+    var numero_fundo = Math.floor(Math.random() * 4);
+
+    var numero_texto= Math.floor(Math.random() * 4);
+  
+    var cores_fundo = ["#fae9e5","#f4e0d8","#f4f4f4","#e9e9e9"];
+  
+    var cores_texto = ["#212020", "#2a2a2a", "#782323", "#530000"];
+
+    var cores = {
+        texto : cores_texto[numero_texto],
+        fundo: cores_fundo[numero_fundo]
+    }
+
+    dispatch({ type: 'SET_TEXT_COLORS', payload: cores });
+
     await api.get(`/front/texto/${id}`, {
     }).then(async function(response){
-
-        var numero_fundo = Math.floor(Math.random() * 4);
-
-        var numero_texto= Math.floor(Math.random() * 4);
-      
-        var cores_fundo = ["#fae9e5","#f4e0d8","#f4f4f4","#e9e9e9"];
-      
-        var cores_texto = ["#212020", "#2a2a2a", "#782323", "#530000"];
-    
-        var cores = {
-            texto : cores_texto[numero_texto],
-            fundo: cores_fundo[numero_fundo]
-        }
-    
-        dispatch({ type: 'SET_TEXT_COLORS', payload: cores });
 
         dispatch({ type: 'GET_TEXT', payload: response.data });
     })  
@@ -147,20 +147,28 @@ export const GetYears = () => async dispatch => {
 
 };
 
-export const GetCategory = (id, page) => async dispatch => {
+export const GetSection = (id, page, type) => async dispatch => {
 
-    await api.get(`/front/categorias/${id}/${page}`, {
+    await api.get(`/front/${type}/${id}/${page}`, {
     }).then(async function(response){
 
-        var categoria = {
+        var section = {
             titulo : response.data.titulo,
             textos: response.data.textos,
             total_pages: response.data.total_pages,
             page: page
-
         }
 
-        dispatch({ type: 'GET_CATEGORY', payload: categoria });
+        if (type === 'categorias') {
+            dispatch({ type: 'GET_CATEGORY', payload: section });
+        } else if (type === 'tags') {
+            dispatch({ type: 'GET_TAG', payload: section });             
+        } else if (type === 'anos') {
+            dispatch({ type: 'GET_YEAR', payload: section });
+        } else if (type === 'autores') {
+            dispatch({ type: 'GET_AUTHOR', payload: section });
+        }
+
     })  
     .catch(function(err){
         console.log(err)
@@ -168,68 +176,6 @@ export const GetCategory = (id, page) => async dispatch => {
 
 };
 
-export const GetTag = (id, page) => async dispatch => {
-
-    await api.get(`/front/tags/${id}/${page}`, {
-    }).then(async function(response){
-
-        var tag = {
-            titulo : response.data.titulo,
-            textos: response.data.textos,
-            total_pages: response.data.total_pages,
-            page: page
-
-        }
-
-        dispatch({ type: 'GET_TAG', payload: tag });
-    })  
-    .catch(function(err){
-        console.log(err)
-    })
-
-};
-
-export const GetAuthor = (id, page) => async dispatch => {
-
-    await api.get(`/front/autores/${id}/${page}`, {
-    }).then(async function(response){
-
-        var autor = {
-            titulo : response.data.titulo,
-            textos: response.data.textos,
-            total_pages: response.data.total_pages,
-            page: page
-
-        }
-
-        dispatch({ type: 'GET_AUTHOR', payload: autor });
-    })  
-    .catch(function(err){
-        console.log(err)
-    })
-
-};
-
-export const GetAno = (id, page) => async dispatch => {
-
-    await api.get(`/front/anos/${id}/${page}`, {
-    }).then(async function(response){
-
-        var ano = {
-            titulo : response.data.titulo,
-            textos: response.data.textos,
-            total_pages: response.data.total_pages,
-            page: page
-
-        }
-
-        dispatch({ type: 'GET_YEAR', payload: ano });
-    })  
-    .catch(function(err){
-        console.log(err)
-    })
-
-};
 
 export const GetFields = () => async dispatch => {
 
@@ -380,9 +326,4 @@ export const CheckMobile = (value) => async dispatch => {
 export const SetResultsPage = (page) => async dispatch => {
 
     dispatch({ type: 'SET_RESULTS_PAGE', payload: page });
-};
-
-export const OpenCloseTagsMobile = (value) => async dispatch => {
-
-    dispatch({ type: 'OPEN_TAGS_MOBILE', payload: value });
 };

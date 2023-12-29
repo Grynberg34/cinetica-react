@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
-import { store } from '../store';
 import { Link } from "react-router-dom";
-import { OpenCloseTagsMobile } from '../actions';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import moment from 'moment';
 import "../scss/selection.scss";
-
+import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react';
 
 function SelectionBanner(props) {
 
@@ -15,11 +14,12 @@ function SelectionBanner(props) {
 
   var mobile = props.mobile;
 
-  var tags_menu = props.tags_menu;
+  const [show, setShow] = useState(false);
 
-  function setMenu(value) {
-    store.dispatch(OpenCloseTagsMobile(value))
-  }
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true)
+  };
 
   return (
     <div style={{position:'relative'}}>
@@ -62,7 +62,7 @@ function SelectionBanner(props) {
         
               </Col>
               :<Col xs={2}>
-                <img onClick={() => setMenu(!tags_menu)} className="selection__banner__tag" src="/images/icons/tag.svg" alt="" />
+                <img onClick={() => handleShow()} className="selection__banner__tag" src="/images/icons/tag.svg" alt="" />
               </Col>
             }
       
@@ -75,20 +75,18 @@ function SelectionBanner(props) {
       </div>
 
 
-      {
-        mobile === true && tags_menu === true?
+      <Modal show={show} onHide={handleClose} className="modal">
         <div className='menu'>
                   
           { texto.categorias.map( (item, index) =>
-            <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+            <Link key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
           )}
 
           { texto.tags.map( (item, index) =>
-            <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+            <Link key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
           )}
         </div>
-        :null
-      }
+      </Modal>
 
 
     </div>
@@ -104,7 +102,6 @@ function mapStateToProps(state) {
   return {
     texto: state.texto,
     mobile: state.mobile,
-    tags_menu: state.tags_menu
   }
 }
 

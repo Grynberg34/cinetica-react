@@ -731,7 +731,7 @@
 
     }
 
-    .search_menu {
+    .search {
         display: block;
         position: absolute;
         top: 65vw;
@@ -740,7 +740,7 @@
         z-index: 9999;
         width: 40vw;
 
-        .search_menu__categories {
+        .search__categories {
             display: block;
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $laranja-escuro;
@@ -755,7 +755,7 @@
             text-align: center;
         }
 
-        .search_menu__tag {
+        .search__tag {
             display: block;
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $cinza-escuro;

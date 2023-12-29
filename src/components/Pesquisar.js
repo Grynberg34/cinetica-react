@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { store } from '../store';
-import { OpenCloseTagsMobile } from '../actions';
 import { GetFields } from '../actions';
 import { GetText } from '../actions';
 import { SelectField } from '../actions';
@@ -17,6 +16,8 @@ import Col from 'react-bootstrap/Col';
 import "../scss/pesquisar.scss";
 import moment from 'moment';
 import "../scss/loader.scss";
+import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react';
 
 function Anos(props) {
 
@@ -34,11 +35,12 @@ function Anos(props) {
 
   var mobile = props.mobile;
 
-  var tags_menu = props.tags_menu;
+  const [show, setShow] = useState(false);
 
-  function setMenu(value) {
-    store.dispatch(OpenCloseTagsMobile(value))
-  }
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true)
+  };
 
   function getField(index) {
 
@@ -135,7 +137,7 @@ function Anos(props) {
                 
                       </Col>
                       :<Col xs={2}>
-                        <img onClick={() => setMenu(!tags_menu)} className="pesquisar__content__banner__tag" src="/images/icons/tag.svg" alt="" />
+                        <img onClick={() => handleShow()} className="pesquisar__content__banner__tag" src="/images/icons/tag.svg" alt="" />
                       </Col>
                     }
 
@@ -300,7 +302,7 @@ function Anos(props) {
                     { resultados.results[page]?.map( (text, index) =>
                       <Col key={text.id} md={3} xs={6}>
                         {console.log(text)}
-                        <div onClick={()=> {getTextBanner(text.id); setMenu(false)}} className='pesquisar__content__resultados__text'>
+                        <div onClick={()=> {getTextBanner(text.id)}} className='pesquisar__content__resultados__text'>
                           <div className='pesquisar__content__resultados__text__inner'>
       
                             <div className='pesquisar__content__resultados__text__inner__img' style={{backgroundImage: `url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${text.imagem}')`}}></div>
@@ -338,7 +340,7 @@ function Anos(props) {
                             {
                               (page + 1) - 1 > 0 ?
                               <div>
-                                <img  onClick={()=> {setResultsPage(page-1); setMenu(false)}}  className='pesquisar__content__resultados__pages__icon' src="/images/icons/seta-esquerda.svg" alt="" />
+                                <img  onClick={()=> {setResultsPage(page-1)}}  className='pesquisar__content__resultados__pages__icon' src="/images/icons/seta-esquerda.svg" alt="" />
                                 <span className="pesquisar__content__resultados__pages__number left">{(page)}</span>
                               </div>
                               :null
@@ -354,7 +356,7 @@ function Anos(props) {
                               (page + 1) < resultados.results.length ?
                               <div>
                                 <span className="pesquisar__content__resultados__pages__number right">{(page + 2)}</span>
-                                <img onClick={()=> {setResultsPage(page+1); setMenu(false)}} className='pesquisar__content__resultados__pages__icon next' src="/images/icons/seta-esquerda.svg" alt="" />
+                                <img onClick={()=> {setResultsPage(page+1)}} className='pesquisar__content__resultados__pages__icon next' src="/images/icons/seta-esquerda.svg" alt="" />
                               </div>
                               :null
                             }
@@ -376,20 +378,18 @@ function Anos(props) {
           <Footer></Footer>
         </div>
 
-        {
-          mobile === true && tags_menu === true?
-          <div className='search_menu'>
+        <Modal show={show} onHide={handleClose} className="modal">
+          <div className='search'>
                     
             { texto.categorias.map( (item, index) =>
-              <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="search_menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+              <Link key={item.id} className="search__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
             )}
 
             { texto.tags.map( (item, index) =>
-              <Link onClick={()=> setMenu(!tags_menu)}  key={item.id} className="search_menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+              <Link key={item.id} className="search__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
             )}
           </div>
-          :null
-        }
+        </Modal>
 
       </div>
     )
@@ -406,7 +406,6 @@ function mapStateToProps(state) {
     texto: state.texto,
     page: state.page,
     mobile: state.mobile,
-    tags_menu: state.tags_menu
   }
 }
 
