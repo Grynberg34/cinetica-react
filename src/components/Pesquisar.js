@@ -378,18 +378,22 @@ function Anos(props) {
           <Footer></Footer>
         </div>
 
-        <Modal show={show} onHide={handleClose} className="modal">
-          <div className='search'>
-                    
-            { texto.categorias.map( (item, index) =>
-              <Link key={item.id} className="search__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
-            )}
+        {
+          texto !== null?
+            <Modal show={show} onHide={handleClose} className="modal">
+            <div className='search'>
+                      
+              { texto.categorias.map( (item, index) =>
+                <Link key={item.id} className="search__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+              )}
 
-            { texto.tags.map( (item, index) =>
-              <Link key={item.id} className="search__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
-            )}
-          </div>
-        </Modal>
+              { texto.tags.map( (item, index) =>
+                <Link key={item.id} className="search__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+              )}
+            </div>
+          </Modal>
+          :null
+        }
 
       </div>
     )
