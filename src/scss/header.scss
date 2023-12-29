@@ -84,6 +84,10 @@
             }
 
         }
+
+        .header__mobile {
+            display: none;
+        }
     }
 
 }
@@ -139,6 +143,10 @@
                     margin-right: 2vw;
                 }
     
+            }
+
+            .header__social {
+                display: none;
             }
 
             .header__sub {

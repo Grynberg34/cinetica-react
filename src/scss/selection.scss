@@ -308,6 +308,8 @@
             height: 44vw;
             border-bottom: 2px solid $laranja;
             z-index: 9;
+            position: sticky;
+            top: 20vw;
     
             .selection__banner__img {
                 height: 44vw;
@@ -396,7 +398,6 @@
                 .selection__content__header__icon {
                     font-size: 2.08vw;
                     width: 100%;
-    
                 }
             }
     
