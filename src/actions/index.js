@@ -327,3 +327,16 @@ export const SetResultsPage = (page) => async dispatch => {
 
     dispatch({ type: 'SET_RESULTS_PAGE', payload: page });
 };
+
+export const ResetResults = () => async dispatch => {
+
+    dispatch({ type: 'SET_RESULTS_PAGE', payload: null });
+    dispatch({ type: 'SHOW_RESULTS', payload: null });
+    dispatch({ type: 'REMOVE_TÍTULO', payload: null});
+    dispatch({ type: 'REMOVE_FILME', payload: null});
+    dispatch({ type: 'REMOVE_ANO', payload: null});
+    dispatch({ type: 'REMOVE_AUTOR', payload: []});
+    dispatch({ type: 'REMOVE_CATEGORIA', payload: []});
+    dispatch({ type: 'REMOVE_TAG', payload: []});
+    
+};

@@ -93,9 +93,6 @@ function SelectionBanner(props) {
 
   )
 
-
-
-
 }
 
 function mapStateToProps(state) {

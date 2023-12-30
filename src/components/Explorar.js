@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { store } from '../store';
 import { GetSection } from '../actions';
 import { GetText } from '../actions';
+import { ResetResults } from '../actions';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Header from './Header';
 import SelectionBanner from './SelectionBanner';
@@ -65,6 +66,8 @@ function Explorar(props) {
 
       if (section.textos[0]) {
         store.dispatch(GetText(section.textos[0].Texto.id))
+
+        store.dispatch(ResetResults())
       }
       
 
