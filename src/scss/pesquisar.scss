@@ -12,145 +12,147 @@
         margin-bottom: 20vw;
 
         .pesquisar__content__banner {
-            height: 15vw;
-            background-color: $cinza-escuro;
             position: sticky;
             top: 0;
             z-index: 99;
-            border-bottom: 1px solid $laranja;
             overflow: hidden;
-    
-            .pesquisar__content__banner__img {
+
+            .pesquisar__content__banner__inner {
                 height: 15vw;
-                background-size: cover;
-                background-position-y: 30%;
-                position: absolute;
-                width: 100%;
-                z-index: -1;
-            }
-    
-            .pesquisar__content__banner__container {
-                padding-left: 10vw;
-                padding-right: 10vw;
-            }
-    
-            .pesquisar__content__banner__title {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $cinza-claro;
-                font-size: 1.77vw;
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-bottom: 0.5vw;
-                text-wrap: balance;
-            }
-    
-            
-            .pesquisar__content__banner__film{
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $cinza-claro;
-                font-size: 1vw;
-                font-weight: 400;
-                text-transform: uppercase;
-            }
-    
-            .pesquisar__content__banner__date {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $laranja;
-                font-size: 1.56vw;
-                font-weight: 400;
-                text-transform: uppercase;
-                margin-bottom: 1vw;
-                margin-top: 3vw;
-            }
-    
-            .pesquisar__content__banner__author {
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $laranja-claro;
-                font-size: 1.14vw;
-                font-weight: 400;
-                text-transform: uppercase;
-                margin-top: 1vw;
-            }
-    
-            .pesquisar__content__banner__link {
-                display: block;
-                font-family: "bebas-neue-by-fontfabric", sans-serif;
-                color: $cinza-claro;
-                padding: 0.5vw;
-                font-size: 1.56vw;
-                font-weight:700;
-                text-transform: uppercase;
-                margin-top: 6vw;
-                text-decoration: none;
-                border: 2px solid $laranja;
-                text-align: center;
-    
-                &:hover {
-                    color: $cinza-claro;
-                    border: 2px solid $cinza-claro;
+                border-bottom: 1px solid $laranja;
+        
+                .pesquisar__content__banner__inner__img {
+                    height: 15vw;
+                    background-size: cover;
+                    background-position-y: 30%;
+                    position: absolute;
+                    width: 100%;
+                    z-index: -1;
                 }
-            }
-            
-            .pesquisar__content__banner__words {
-                margin-top: 6vw;
-                padding-left: 1.25vw;
-                padding-right: 1.25vw;
-                padding-bottom: 2vw;
-                height: 5vw;
-                margin-right: 8vw;
-                overflow-y: auto;
-    
-                .pesquisar__content__banner__words__categories {
-                    display: inline-flex;
+        
+                .pesquisar__content__banner__inner__container {
+                    padding-left: 10vw;
+                    padding-right: 10vw;
+                }
+        
+                .pesquisar__content__banner__inner__title {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $cinza-claro;
+                    font-size: 1.77vw;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 0.5vw;
+                    text-wrap: balance;
+                }
+        
+                
+                .pesquisar__content__banner__inner__film{
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $cinza-claro;
+                    font-size: 1vw;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+        
+                .pesquisar__content__banner__inner__date {
+                    font-family: "bebas-neue-by-fontfabric", sans-serif;
+                    color: $laranja;
+                    font-size: 1.56vw;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    margin-bottom: 1vw;
+                    margin-top: 3vw;
+                }
+        
+                .pesquisar__content__banner__inner__author {
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
                     color: $laranja-claro;
-                    font-size: 1vw;
-                    padding: 0.25vw;
+                    font-size: 1.14vw;
                     font-weight: 400;
                     text-transform: uppercase;
-                    border: 1px solid $laranja-escuro;
-                    text-decoration: none;
-                    margin-right: 0.5vw;
-                    margin-bottom: 0.5vw;
-        
-                    &:hover {
-                        border: 1px solid $laranja-claro;
-                    }
+                    margin-top: 1vw;
                 }
         
-                .pesquisar__content__banner__words__tag {
-                    display: inline-flex;
+                .pesquisar__content__banner__inner__link {
+                    display: block;
                     font-family: "bebas-neue-by-fontfabric", sans-serif;
-                    color: $branco;
-                    font-size: 1vw;
-                    padding: 0.25vw;
-                    font-weight: 400;
+                    color: $cinza-claro;
+                    padding: 0.5vw;
+                    font-size: 1.56vw;
+                    font-weight:700;
                     text-transform: uppercase;
-                    border: 1px solid $laranja-escuro;
+                    margin-top: 6vw;
                     text-decoration: none;
-                    margin-right: 0.5vw;
-                    margin-bottom: 0.5vw;
-                    width: fit-content;
+                    border: 2px solid $laranja;
+                    text-align: center;
         
                     &:hover {
-                        border: 1px solid $branco;
+                        color: $cinza-claro;
+                        border: 2px solid $cinza-claro;
                     }
                 }
+                
+                .pesquisar__content__banner__inner__words {
+                    margin-top: 6vw;
+                    padding-left: 1.25vw;
+                    padding-right: 1.25vw;
+                    padding-bottom: 2vw;
+                    height: 5vw;
+                    margin-right: 8vw;
+                    overflow-y: auto;
+        
+                    .pesquisar__content__banner__inner__words__categories {
+                        display: inline-flex;
+                        font-family: "bebas-neue-by-fontfabric", sans-serif;
+                        color: $laranja-claro;
+                        font-size: 1vw;
+                        padding: 0.25vw;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        border: 1px solid $laranja-escuro;
+                        text-decoration: none;
+                        margin-right: 0.5vw;
+                        margin-bottom: 0.5vw;
+            
+                        &:hover {
+                            border: 1px solid $laranja-claro;
+                        }
+                    }
+            
+                    .pesquisar__content__banner__inner__words__tag {
+                        display: inline-flex;
+                        font-family: "bebas-neue-by-fontfabric", sans-serif;
+                        color: $branco;
+                        font-size: 1vw;
+                        padding: 0.25vw;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        border: 1px solid $laranja-escuro;
+                        text-decoration: none;
+                        margin-right: 0.5vw;
+                        margin-bottom: 0.5vw;
+                        width: fit-content;
+            
+                        &:hover {
+                            border: 1px solid $branco;
+                        }
+                    }
+                }
+        
+                .pesquisar__content__banner__inner__words::-webkit-scrollbar-track {
+                    border: 2px solid $laranja-claro;
+                }
+                   
+                .pesquisar__content__banner__inner__words::-webkit-scrollbar-thumb {
+                    background-color: $laranja-escuro;
+                    outline: none;
+                }
+        
+                .pesquisar__content__banner__inner__words::-webkit-scrollbar {
+                    width: 1vw;
+                }
+        
             }
-    
-            .pesquisar__content__banner__words::-webkit-scrollbar-track {
-                border: 2px solid $laranja-claro;
-            }
-               
-            .pesquisar__content__banner__words::-webkit-scrollbar-thumb {
-                background-color: $laranja-escuro;
-                outline: none;
-            }
-    
-            .pesquisar__content__banner__words::-webkit-scrollbar {
-                width: 1vw;
-            }
-    
         }
     
         .pesquisar__content__pesquisa {
@@ -422,78 +424,80 @@
 
 
             .pesquisar__content__banner {
-                height: 44vw;
-                border-bottom: 2px solid $laranja;
-                z-index: 9;
-        
-                .pesquisar__content__banner__img {
+                .pesquisar__content__banner__inner {
                     height: 44vw;
-                    background-position-y: 30%;
-                }
+                    border-bottom: 2px solid $laranja;
+                    z-index: 9;
+            
+                    .pesquisar__content__banner__inner__img {
+                        height: 44vw;
+                        background-position-y: 30%;
+                    }
+            
+                    .pesquisar__content__banner__inner__container {
+                        padding-left: 7vw;
+                        padding-right: 7vw;
+                    }
+            
+                    .pesquisar__content__banner__inner__title {
+                        font-size: 5vw;
+                        margin-bottom: 2vw;
+                        text-wrap: none;
+                    }
+            
+                    
+                    .pesquisar__content__banner__inner__film{
+                        font-size: 4vw;
+                        font-weight: 400;
+                    }
+            
+                    .pesquisar__content__banner__inner__date {
+                        font-size: 3.5vw;
+                        margin-bottom: 2vw;
+                        margin-top: 14vw;
+                    }
+            
+                    .pesquisar__content__banner__inner__author {
+                        font-size: 3.5vw;
+                        margin-top: 1vw;
+                    }
+            
+                    .pesquisar__content__banner__inner__link {
+                        padding: 1vw;
+                        font-size: 3vw;
+                        margin-top: 25vw;
+                        font-weight: 400;
+                        border: 1px solid $laranja;
         
-                .pesquisar__content__banner__container {
-                    padding-left: 7vw;
-                    padding-right: 7vw;
-                }
+                    }
         
-                .pesquisar__content__banner__title {
-                    font-size: 5vw;
-                    margin-bottom: 2vw;
-                    text-wrap: none;
-                }
+                    .pesquisar__content__banner__inner__tag {
+                        display: block;
+                        position: relative;
+                        width: 70%;
+                        margin-top: 25vw;
+                        border: 1px solid $laranja;
+                    }
+                    
+                    .pesquisar__content__banner__inner__words {
+                        display: none;
+                    }
+            
+                    .pesquisar__content__banner__inner__words::-webkit-scrollbar-track {
+                        border: 2px solid $laranja-claro;
+                    }
+                       
+                    .pesquisar__content__banner__inner__words::-webkit-scrollbar-thumb {
+                        background-color: $laranja-escuro;
+                        outline: none;
+                    }
+            
+                    .pesquisar__content__banner__inner__words::-webkit-scrollbar {
+                        width: 1vw;
+                    }
         
-                
-                .pesquisar__content__banner__film{
-                    font-size: 4vw;
-                    font-weight: 400;
+            
                 }
-        
-                .pesquisar__content__banner__date {
-                    font-size: 3.5vw;
-                    margin-bottom: 2vw;
-                    margin-top: 14vw;
-                }
-        
-                .pesquisar__content__banner__author {
-                    font-size: 3.5vw;
-                    margin-top: 1vw;
-                }
-        
-                .pesquisar__content__banner__link {
-                    padding: 1vw;
-                    font-size: 3vw;
-                    margin-top: 25vw;
-                    font-weight: 400;
-                    border: 1px solid $laranja;
-    
-                }
-    
-                .pesquisar__content__banner__tag {
-                    display: block;
-                    position: relative;
-                    width: 70%;
-                    margin-top: 25vw;
-                    border: 1px solid $laranja;
-                }
-                
-                .pesquisar__content__banner__words {
-                    display: none;
-                }
-        
-                .pesquisar__content__banner__words::-webkit-scrollbar-track {
-                    border: 2px solid $laranja-claro;
-                }
-                   
-                .pesquisar__content__banner__words::-webkit-scrollbar-thumb {
-                    background-color: $laranja-escuro;
-                    outline: none;
-                }
-        
-                .pesquisar__content__banner__words::-webkit-scrollbar {
-                    width: 1vw;
-                }
-    
-        
             }
 
             .pesquisar__content__pesquisa {

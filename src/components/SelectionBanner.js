@@ -22,7 +22,6 @@ function SelectionBanner(props) {
   };
 
   return (
-    <div style={{position:'relative'}}>
       <div className='selection__banner'>
       
         <div className='selection__banner__img kenburns-bottom' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
@@ -71,25 +70,24 @@ function SelectionBanner(props) {
             </Col>
           </Row>
         </Container>
+
+        <Modal show={show} onHide={handleClose} className="modal">
+          <div className='menu'>
+                    
+            { texto.categorias.map( (item, index) =>
+              <Link key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+            )}
+
+            { texto.tags.map( (item, index) =>
+              <Link key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+            )}
+          </div>
+        </Modal>
       
       </div>
 
 
-      <Modal show={show} onHide={handleClose} className="modal">
-        <div className='menu'>
-                  
-          { texto.categorias.map( (item, index) =>
-            <Link key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
-          )}
 
-          { texto.tags.map( (item, index) =>
-            <Link key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
-          )}
-        </div>
-      </Modal>
-
-
-    </div>
 
   )
 

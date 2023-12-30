@@ -16,8 +16,6 @@ function PesquisarBanner(props) {
   var texto = props.texto;
 
   var mobile = props.mobile;
-  
-  console.log(resultados);
 
   const [show, setShow] = useState(false);
 
@@ -27,24 +25,24 @@ function PesquisarBanner(props) {
   };
 
   return (
-    <div style={{position:'relative'}}> 
+    <div className='pesquisar__content__banner'> 
 
       {
         (resultados !== null && texto !== null)?
-        <div className='pesquisar__content__banner'>
+        <div className='pesquisar__content__banner__inner'>
 
           {}
           
-          <div className='pesquisar__content__banner__img kenburns-bottom' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
+          <div className='pesquisar__content__banner__inner__img kenburns-bottom' style={{backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url('https://cinetica.nyc3.digitaloceanspaces.com/Trabalhos/Cin%C3%A9tica/Imagens/${texto.imagem}')`}}></div>
 
-          <Container fluid className='pesquisar__content__banner__container'>
+          <Container fluid className='pesquisar__content__banner__inner__container'>
             <Row>
               <Col md={6} xs={7}>
 
-              <h2 style={{marginTop: mobile === true && texto.titulo.length > 25?'8vw':''}} className="pesquisar__content__banner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
-                <h1 className="pesquisar__content__banner__title">{texto.titulo}</h1>
-                <h1 className="pesquisar__content__banner__film">{texto.filme}</h1>
-                <h2 className="pesquisar__content__banner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
+              <h2 style={{marginTop: mobile === true && texto.titulo.length > 25?'8vw':''}} className="pesquisar__content__banner__inner__date">{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
+                <h1 className="pesquisar__content__banner__inner__title">{texto.titulo}</h1>
+                <h1 className="pesquisar__content__banner__inner__film">{texto.filme}</h1>
+                <h2 className="pesquisar__content__banner__inner__author">{texto.autores[0].nome} {texto.autores[1] !== undefined? <span>| {texto.autores[1].nome}</span>: null} {texto.autores[2] !== undefined? <span>| {texto.autores[2].nome}</span>: null} {texto.autores[3] !== undefined? <span>| {texto.autores[3].nome}</span>: null} </h2>
 
               </Col>
 
@@ -52,17 +50,17 @@ function PesquisarBanner(props) {
                 mobile === false?
                 <Col md={4}>
           
-                  <div className="pesquisar__content__banner__words">
+                  <div className="pesquisar__content__banner__inner__words">
           
                   { texto.categorias.map( (item, index) =>
           
-                    <Link key={item.id} className="pesquisar__content__banner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+                    <Link key={item.id} className="pesquisar__content__banner__inner__words__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
           
                     )}
           
                     { texto.tags.map( (item, index) =>
           
-                    <Link key={item.id} className="pesquisar__content__banner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+                    <Link key={item.id} className="pesquisar__content__banner__inner__words__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
           
                   )}
           
@@ -71,12 +69,12 @@ function PesquisarBanner(props) {
           
                 </Col>
                 :<Col xs={2}>
-                  <img onClick={() => handleShow()} className="pesquisar__content__banner__tag" src="/images/icons/tag.svg" alt="" />
+                  <img onClick={() => handleShow()} className="pesquisar__content__banner__inner__tag" src="/images/icons/tag.svg" alt="" />
                 </Col>
               }
 
               <Col md={2} xs={3}>
-                <Link className="pesquisar__content__banner__link" to={`/texto/${texto.id}`}>Acessar</Link>
+                <Link className="pesquisar__content__banner__inner__link" to={`/texto/${texto.id}`}>Acessar</Link>
               </Col>
             </Row>
           </Container>
