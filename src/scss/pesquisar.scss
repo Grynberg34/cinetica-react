@@ -554,6 +554,7 @@
                     max-height: 70vw;
                     overflow: auto;
                     border: 0.1vw solid $cinza-escuro;
+                    z-index: 9999;
     
                     .pesquisar__content__pesquisa__termos__termo {
                         font-family: "bebas-neue-by-fontfabric", sans-serif;

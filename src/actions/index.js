@@ -50,6 +50,19 @@ export const GetBiblioteca = () => async dispatch => {
 
 export const GetText = (id) => async dispatch => {
 
+    await api.get(`/front/texto/${id}`, {
+    }).then(async function(response){
+
+        dispatch({ type: 'GET_TEXT', payload: response.data });
+    })  
+    .catch(function(err){
+        console.log(err)
+    })
+
+};
+
+export const GetTextColors = () => async dispatch => {
+
     var numero_fundo = Math.floor(Math.random() * 4);
 
     var numero_texto= Math.floor(Math.random() * 4);
@@ -64,15 +77,6 @@ export const GetText = (id) => async dispatch => {
     }
 
     dispatch({ type: 'SET_TEXT_COLORS', payload: cores });
-
-    await api.get(`/front/texto/${id}`, {
-    }).then(async function(response){
-
-        dispatch({ type: 'GET_TEXT', payload: response.data });
-    })  
-    .catch(function(err){
-        console.log(err)
-    })
 
 };
 
@@ -246,7 +250,7 @@ export const RemoveField = (field, search) => async dispatch => {
 
     dispatch({ type: 'GET_TEXT', payload: null});
 
-    if (!(search.título === null && search.filme == null && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
+    if (!(search.título === null && search.filme === null && search.autor === null && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
         await api.post('/front/pesquisar', search).then(function(response){
             dispatch({ type: 'SET_RESULTS_PAGE', payload: 0 });
             dispatch({ type: 'SHOW_RESULTS', payload: response.data });

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { store } from '../store';
 import { GetText } from '../actions';
+import { GetTextColors } from '../actions';
 import { SetFontSize } from '../actions';
 import { Link, useParams } from "react-router-dom";
 import Header from './Header';
@@ -43,6 +44,11 @@ function Texto(props) {
     } else if (font > 2 && font < 7) {
       store.dispatch(SetFontSize(font))
     }
+  }
+
+  if (cores.texto === null) {
+
+    store.dispatch(GetTextColors())
   }
 
   if (texto === null || parseInt(id) !== texto.id) {
