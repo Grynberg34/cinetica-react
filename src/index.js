@@ -10,6 +10,7 @@ import Anos from './components/Anos';
 import Tags from './components/Tags';
 import Explorar from './components/Explorar.js';
 import Pesquisar from './components/Pesquisar.js';
+import ScrollToTop from './components/ScrollToTop.js';
 import {store} from './store.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
+      <ScrollToTop></ScrollToTop>
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="/texto/:id" element={<Texto />}></Route>
