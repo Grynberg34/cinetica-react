@@ -419,16 +419,36 @@
     
     .pesquisar {
         
+        #header {
+            position: sticky;
+            top: 0;
+        }
+
         .pesquisar__content {
             min-height: 80vh;
 
 
             .pesquisar__content__banner {
+                z-index: 9;
+                top: 30vw;
+
                 .pesquisar__content__banner__inner {
                     height: 44vw;
                     border-bottom: 2px solid $laranja;
-                    z-index: 9;
-            
+
+                    .pesquisar__content__banner__inner__menu {
+                        position: relative;
+                
+                        .pesquisar__content__banner__inner__menu__tag {
+                            display: block;
+                            position: relative;
+                            width: 70%;
+                            margin-top: 25vw;
+                            border: 1px solid $laranja;
+                        }
+                    }
+                    
+                    
                     .pesquisar__content__banner__inner__img {
                         height: 44vw;
                         background-position-y: 30%;
@@ -471,14 +491,6 @@
         
                     }
         
-                    .pesquisar__content__banner__inner__tag {
-                        display: block;
-                        position: relative;
-                        width: 70%;
-                        margin-top: 25vw;
-                        border: 1px solid $laranja;
-                    }
-                    
                     .pesquisar__content__banner__inner__words {
                         display: none;
                     }
@@ -780,4 +792,8 @@
         }
     }
 
+
+    #menu {
+        position: relative;
+    }
 }

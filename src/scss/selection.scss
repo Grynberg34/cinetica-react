@@ -18,6 +18,7 @@
         overflow: hidden;
 
         .selection__banner__img {
+            position: relative;
             height: 15vw;
             background-size: cover;
             background-position-y: 30%;
@@ -303,13 +304,18 @@
 
 @media only screen and (max-width:767px) {
     .selection {
+
+        #header {
+            position: sticky;
+            top: 0;
+        }
     
         .selection__banner {
             height: 44vw;
             border-bottom: 2px solid $laranja;
             z-index: 9;
             position: sticky;
-            top: 0;
+            top: 30vw;
     
             .selection__banner__img {
                 height: 44vw;
@@ -501,8 +507,8 @@
 
     .menu {
         display: block;
-        position: absolute;
-        top: 62vw;
+        position: fixed;
+        top: 64vw;
         right: 15vw;
         background-color: $cinza-claro;
         z-index: 9999;

@@ -60,8 +60,20 @@ function SelectionBanner(props) {
                 </div>
         
               </Col>
-              :<Col xs={2}>
+              :<Col xs={2} id='menu'>
                 <img onClick={() => handleShow()} className="selection__banner__tag" src="/images/icons/tag.svg" alt="" />
+                <Modal show={show} onHide={handleClose} className="modal">
+                  <div className='menu'>
+                            
+                    { texto.categorias.map( (item, index) =>
+                      <Link key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+                    )}
+
+                    { texto.tags.map( (item, index) =>
+                      <Link key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+                    )}
+                  </div>
+                </Modal>
               </Col>
             }
       
@@ -71,18 +83,6 @@ function SelectionBanner(props) {
           </Row>
         </Container>
 
-        <Modal show={show} onHide={handleClose} className="modal">
-          <div className='menu'>
-                    
-            { texto.categorias.map( (item, index) =>
-              <Link key={item.id} className="menu__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
-            )}
-
-            { texto.tags.map( (item, index) =>
-              <Link key={item.id} className="menu__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
-            )}
-          </div>
-        </Modal>
       
       </div>
 

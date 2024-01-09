@@ -68,8 +68,24 @@ function PesquisarBanner(props) {
                   </div>
           
                 </Col>
-                :<Col xs={2}>
-                  <img onClick={() => handleShow()} className="pesquisar__content__banner__inner__tag" src="/images/icons/tag.svg" alt="" />
+                :<Col xs={2} className='pesquisar__content__banner__inner__menu'>
+                  <img onClick={() => handleShow()} className="pesquisar__content__banner__inner__menu__tag" src="/images/icons/tag.svg" alt="" />
+                  {
+                    texto !== null?
+                      <Modal show={show} onHide={handleClose} className="modal">
+                      <div className='search'>
+                                
+                        { texto.categorias.map( (item, index) =>
+                          <Link key={item.id} className="search__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
+                        )}
+
+                        { texto.tags.map( (item, index) =>
+                          <Link key={item.id} className="search__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
+                        )}
+                      </div>
+                    </Modal>
+                    :null
+                  }
                 </Col>
               }
 
@@ -80,24 +96,6 @@ function PesquisarBanner(props) {
           </Container>
 
         </div>
-        :null
-      }
-
-
-      {
-        texto !== null?
-          <Modal show={show} onHide={handleClose} className="modal">
-          <div className='search'>
-                    
-            { texto.categorias.map( (item, index) =>
-              <Link key={item.id} className="search__categories" to={`/categorias/${item.categoria.toLowerCase()}/1`}>{item.categoria}</Link>
-            )}
-
-            { texto.tags.map( (item, index) =>
-              <Link key={item.id} className="search__tag"  to={!item.tag.includes('20')?`/tags/${item.tag.toLowerCase()}/1`:`/anos/${item.tag.toLowerCase()}/1`}>{item.tag}</Link>
-            )}
-          </div>
-        </Modal>
         :null
       }
 
