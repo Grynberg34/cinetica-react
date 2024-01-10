@@ -12,6 +12,7 @@ import Explorar from './components/Explorar.js';
 import Pesquisar from './components/Pesquisar.js';
 import ScrollToTop from './components/ScrollToTop.js';
 import {store} from './store.js';
+import { Navigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Route path="/anos" element={<Anos />}></Route>
         <Route path="/:type/:id/:page" element={<Explorar />}></Route>
         <Route path="/pesquisar" element={<Pesquisar />}></Route>
+        <Route path='*' element={<Navigate to='/' />} />
       </Routes>
     </BrowserRouter>
 
