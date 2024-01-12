@@ -18,6 +18,8 @@ function PesquisarCampos(props) {
 
   var filter = props.filter;
 
+  console.log(search);
+
   function getField(index) {
 
     if (index < 0) {

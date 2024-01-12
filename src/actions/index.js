@@ -252,7 +252,7 @@ export const RemoveField = (field, search) => async dispatch => {
 
     dispatch({ type: 'GET_TEXT', payload: null});
 
-    if (!(search.título === null && search.filme === null && search.autor === null && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
+    if (!(search.título === null && search.filme === null && search.autor.length === 0 && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
         await api.post('/front/pesquisar', search).then(function(response){
             dispatch({ type: 'SET_RESULTS_PAGE', payload: 0 });
             dispatch({ type: 'SHOW_RESULTS', payload: response.data });
@@ -270,8 +270,6 @@ export const RemoveField = (field, search) => async dispatch => {
 };
 
 export const SearchTexts = (term, field, search) => async dispatch => {
-
-    console.log(term)
 
     if (field === 'categoria' || field === 'tag' || field === 'autor') {
 
