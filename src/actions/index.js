@@ -228,6 +228,8 @@ export const FilterTerm = (filter, list) => async dispatch => {
 
 export const RemoveField = (field, search) => async dispatch => {
 
+    console.log(field)
+
     if (field === 'título') {
         dispatch({ type: 'REMOVE_TÍTULO', payload: null});
     } else if (field === 'filme') {
@@ -263,13 +265,13 @@ export const RemoveField = (field, search) => async dispatch => {
         dispatch({ type: 'SHOW_RESULTS', payload: null });
     }
 
-
-
     dispatch({ type: 'GET_FILTERED', payload: null});
 
 };
 
 export const SearchTexts = (term, field, search) => async dispatch => {
+
+    console.log(term)
 
     if (field === 'categoria' || field === 'tag' || field === 'autor') {
 
