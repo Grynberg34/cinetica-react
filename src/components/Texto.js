@@ -78,6 +78,7 @@ function Texto(props) {
 
             <h1 className='texto__header__title'>{texto.titulo}</h1>
             <h2 className='texto__header__film'>{texto.filme}</h2>
+            <h2 className='texto__header__director'>{texto.diretor}</h2>
             <h2 className='texto__header__date'>{moment(texto.data).utcOffset('+000').format('D/M/Y')}</h2>
 
           </div>

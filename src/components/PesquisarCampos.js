@@ -23,10 +23,10 @@ function PesquisarCampos(props) {
   function getField(index) {
 
     if (index < 0) {
-      index = 5
+      index = 6
     }
 
-    if (index > 5) {
+    if (index > 6) {
       index = 0
     }
 
@@ -121,6 +121,18 @@ function PesquisarCampos(props) {
                       <h3 className="pesquisar__content__campos__campo__title">Filme <img onClick={() => removeField('filme')} className='pesquisar__content__campos__campo__img' src="/images/icons/remove.png" alt="" /></h3>
 
                       <h4 className="pesquisar__content__campos__campo__selected">{search.filme}</h4>
+                    </div>
+                  </Col>
+                  :null
+                } 
+
+                {
+                  search.diretor !== null ?
+                  <Col md={4} xs={6}>
+                    <div className="pesquisar__content__campos__campo">
+                      <h3 className="pesquisar__content__campos__campo__title">Diretor <img onClick={() => removeField('diretor')} className='pesquisar__content__campos__campo__img' src="/images/icons/remove.png" alt="" /></h3>
+
+                      <h4 className="pesquisar__content__campos__campo__selected">{search.diretor}</h4>
                     </div>
                   </Col>
                   :null

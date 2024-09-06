@@ -180,7 +180,6 @@ export const GetSection = (id, page, type) => async dispatch => {
 
 };
 
-
 export const GetFields = () => async dispatch => {
 
     await api.get(`/front/pesquisar/campos`, {
@@ -212,6 +211,8 @@ export const FilterTerm = (filter, list) => async dispatch => {
         filtered = list.items.filter(value => value.titulo.toLowerCase().includes(new_filter))
     } else if (list.campo === 'filme') {
        filtered = list.items.filter(value => value.filme.toLowerCase().includes(new_filter))
+    } else if (list.campo === 'diretor') {
+        filtered = list.items.filter(value => value.diretor.toLowerCase().includes(new_filter))
     } else if (list.campo === 'categoria') {
        filtered = list.items.filter(value => value.categoria.toLowerCase().includes(new_filter))
     } else if (list.campo === 'tag') {
@@ -228,12 +229,12 @@ export const FilterTerm = (filter, list) => async dispatch => {
 
 export const RemoveField = (field, search) => async dispatch => {
 
-    console.log(field)
-
     if (field === 'título') {
         dispatch({ type: 'REMOVE_TÍTULO', payload: null});
     } else if (field === 'filme') {
         dispatch({ type: 'REMOVE_FILME', payload: null});
+    } else if (field === 'diretor') {
+        dispatch({ type: 'REMOVE_DIRETOR', payload: null});
     } else if (field === 'ano') {
         dispatch({ type: 'REMOVE_ANO', payload: null});
     } else if (field === 'autor') {
@@ -252,7 +253,7 @@ export const RemoveField = (field, search) => async dispatch => {
 
     dispatch({ type: 'GET_TEXT', payload: null});
 
-    if (!(search.título === null && search.filme === null && search.autor.length === 0 && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
+    if (!(search.título === null && search.filme === null && search.diretor === null && search.autor.length === 0 && search.ano === null && search.categoria.length === 0 && search.tag.length === 0)) {
         await api.post('/front/pesquisar', search).then(function(response){
             dispatch({ type: 'SET_RESULTS_PAGE', payload: 0 });
             dispatch({ type: 'SHOW_RESULTS', payload: response.data });
@@ -283,6 +284,7 @@ export const SearchTexts = (term, field, search) => async dispatch => {
         search = {
             título: term,
             filme: null,
+            diretor:null,
             categoria: [],
             tag: [],
             ano: null,
@@ -338,6 +340,7 @@ export const ResetResults = () => async dispatch => {
     dispatch({ type: 'SHOW_RESULTS', payload: null });
     dispatch({ type: 'REMOVE_TÍTULO', payload: null});
     dispatch({ type: 'REMOVE_FILME', payload: null});
+    dispatch({ type: 'REMOVE_DIRETOR', payload: null});
     dispatch({ type: 'REMOVE_ANO', payload: null});
     dispatch({ type: 'REMOVE_AUTOR', payload: []});
     dispatch({ type: 'REMOVE_CATEGORIA', payload: []});

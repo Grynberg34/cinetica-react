@@ -54,6 +54,16 @@
             margin-bottom: 1vw;
         }
 
+        .texto__header__director {
+            font-family: "bebas-neue-by-fontfabric", sans-serif;
+            color: $cinza-claro-2;
+            font-size: 2vw;
+            font-weight: 400;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 1vw;
+        }
+
         .texto__header__date {
             font-family: "bebas-neue-by-fontfabric", sans-serif;
             color: $laranja;
@@ -231,6 +241,11 @@
 
             .texto__header__film {
                 font-size: 6vw;
+                margin-bottom: 4vw;
+            }
+
+            .texto__header__director {
+                font-size: 5vw;
                 margin-bottom: 4vw;
             }
 

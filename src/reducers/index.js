@@ -183,7 +183,7 @@ const getFilteredReducer = (filter = null, action) => {
   return filter;
 };
 
-const searchReducer = (search = {título: null, filme: null, categoria: [], tag: [], ano: null, autor: []}, action) => {
+const searchReducer = (search = {título: null, filme: null, diretor: null, categoria: [], tag: [], ano: null, autor: []}, action) => {
   switch(action.type){
     case 'SEARCH':
       return action.payload;
@@ -196,6 +196,11 @@ const searchReducer = (search = {título: null, filme: null, categoria: [], tag:
         return {
           ...search,
           filme: action.payload
+        }
+      case 'REMOVE_DIRETOR':
+        return {
+          ...search,
+          diretor: action.payload
         }
       case 'REMOVE_ANO':
         return {
